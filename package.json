@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "monitor": "node scripts/monitor-mediador.mjs"
   },
   "dependencies": {
     "next": "latest",
@@ -16,6 +17,7 @@
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
-    "typescript": "latest"
+    "typescript": "latest",
+    "playwright": "latest"
   }
 }
