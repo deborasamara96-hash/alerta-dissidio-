@@ -1,0 +1,43 @@
+name: Monitorar Mediador
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'data/results.json'
+  workflow_dispatch:
+  schedule:
+    - cron: '0 10 * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Playwright
+        run: |
+          npm install --no-save playwright@1.55.0
+          npx playwright install --with-deps chromium
+
+      - name: Consultar Mediador
+        run: node scripts/monitor-mediador.mjs
+
+      - name: Persistir histórico
+        run: |
+          git config user.name 'Alerta Dissídio Bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add data/results.json
+          git diff --cached --quiet && exit 0
+          git commit -m 'chore: atualizar monitoramento do Mediador'
+          git push
