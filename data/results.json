@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-31T14:39:02.959Z",
+  "generatedAt": "2026-08-31T14:41:21.464Z",
   "source": "Mediador/MTE",
   "overallStatus": "FONTE INDISPONÍVEL",
   "pairs": [
@@ -8,99 +8,176 @@
       "patronal": "93.246.940/0001-46",
       "laboral": "89.069.835/0001-01",
       "status": "FONTE INDISPONÍVEL",
-      "error": "A fonte oficial bloqueou a consulta automática.",
-      "consultedAt": "2026-08-31T14:36:14.548Z"
+      "error": "Não foi possível obter resultados públicos para os dois CNPJs. duck HTTP 403; duck HTTP 403"
     },
     {
       "id": "02",
       "patronal": "18.006.733/0001-07",
       "laboral": "15.635.336/0001-06",
       "status": "FONTE INDISPONÍVEL",
-      "error": "A fonte oficial bloqueou a consulta automática.",
-      "consultedAt": "2026-08-31T14:36:29.769Z"
+      "error": "Não foi possível obter resultados públicos para os dois CNPJs. duck HTTP 403; duck HTTP 403"
     },
     {
       "id": "03",
       "patronal": "91.100.339/0001-15",
       "laboral": "96.757.612/0001-00",
       "status": "FONTE INDISPONÍVEL",
-      "error": "A fonte oficial bloqueou a consulta automática.",
-      "consultedAt": "2026-08-31T14:36:44.990Z"
+      "error": "Não foi possível obter resultados públicos para os dois CNPJs. duck HTTP 403; duck HTTP 403"
     },
     {
       "id": "04",
       "patronal": "89.138.168/0001-71",
       "laboral": "91.345.231/0001-92",
       "status": "FONTE INDISPONÍVEL",
-      "error": "A fonte oficial bloqueou a consulta automática.",
-      "consultedAt": "2026-08-31T14:37:00.205Z"
+      "error": "Não foi possível obter resultados públicos para os dois CNPJs. duck HTTP 403; duck HTTP 403"
     },
     {
       "id": "05",
       "patronal": "88.368.592/0001-40",
       "laboral": "97.202.535/0001-87",
       "status": "FONTE INDISPONÍVEL",
-      "error": "A fonte oficial bloqueou a consulta automática.",
-      "consultedAt": "2026-08-31T14:37:15.957Z"
+      "error": "Não foi possível obter resultados públicos para os dois CNPJs. duck HTTP 403; duck HTTP 403"
     },
     {
       "id": "06",
       "patronal": "88.368.592/0001-40",
       "laboral": "96.757.737/0001-22",
       "status": "FONTE INDISPONÍVEL",
-      "error": "A fonte oficial bloqueou a consulta automática.",
-      "consultedAt": "2026-08-31T14:37:31.169Z"
+      "error": "Não foi possível obter resultados públicos para os dois CNPJs. duck HTTP 403; duck HTTP 403"
     },
     {
       "id": "07",
       "patronal": "89.138.168/0001-71",
       "laboral": "91.343.194/0001-83",
       "status": "FONTE INDISPONÍVEL",
-      "error": "A fonte oficial bloqueou a consulta automática.",
-      "consultedAt": "2026-08-31T14:37:46.380Z"
+      "error": "Não foi possível obter resultados públicos para os dois CNPJs. duck HTTP 403; duck HTTP 403"
     },
     {
       "id": "08",
       "patronal": "92.962.919/0001-84",
       "laboral": "92.931.492/0001-57",
       "status": "FONTE INDISPONÍVEL",
-      "error": "A fonte oficial bloqueou a consulta automática.",
-      "consultedAt": "2026-08-31T14:38:01.597Z"
+      "error": "Não foi possível obter resultados públicos para os dois CNPJs. duck HTTP 403; duck HTTP 403"
     },
     {
       "id": "09",
       "patronal": "89.137.574/0001-10",
       "laboral": "93.074.185/0001-60",
       "status": "FONTE INDISPONÍVEL",
-      "error": "A fonte oficial bloqueou a consulta automática.",
-      "consultedAt": "2026-08-31T14:38:16.820Z"
+      "error": "Não foi possível obter resultados públicos para os dois CNPJs. duck HTTP 403; duck HTTP 403"
     },
     {
       "id": "10",
       "patronal": "96.755.145/0001-71",
       "laboral": "96.758.008/0001-90",
       "status": "FONTE INDISPONÍVEL",
-      "error": "A fonte oficial bloqueou a consulta automática.",
-      "consultedAt": "2026-08-31T14:38:32.507Z"
+      "error": "Não foi possível obter resultados públicos para os dois CNPJs. duck HTTP 403; duck HTTP 403"
     },
     {
       "id": "11",
       "patronal": "93.712.909/0001-53",
       "laboral": "93.074.383/0001-23",
       "status": "FONTE INDISPONÍVEL",
-      "error": "A fonte oficial bloqueou a consulta automática.",
-      "consultedAt": "2026-08-31T14:38:47.720Z"
+      "error": "Não foi possível obter resultados públicos para os dois CNPJs. duck HTTP 403; duck HTTP 403"
     },
     {
       "id": "12",
       "patronal": "93.712.909/0001-53",
       "laboral": "96.758.040/0001-76",
       "status": "FONTE INDISPONÍVEL",
-      "error": "A fonte oficial bloqueou a consulta automática.",
-      "consultedAt": "2026-08-31T14:39:02.932Z"
+      "error": "Não foi possível obter resultados públicos para os dois CNPJs. duck HTTP 403; duck HTTP 403"
     }
   ],
   "history": [
+    {
+      "at": "2026-08-31T14:41:21.464Z",
+      "pairs": [
+        {
+          "id": "01",
+          "patronal": "93.246.940/0001-46",
+          "laboral": "89.069.835/0001-01",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "Não foi possível obter resultados públicos para os dois CNPJs. duck HTTP 403; duck HTTP 403"
+        },
+        {
+          "id": "02",
+          "patronal": "18.006.733/0001-07",
+          "laboral": "15.635.336/0001-06",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "Não foi possível obter resultados públicos para os dois CNPJs. duck HTTP 403; duck HTTP 403"
+        },
+        {
+          "id": "03",
+          "patronal": "91.100.339/0001-15",
+          "laboral": "96.757.612/0001-00",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "Não foi possível obter resultados públicos para os dois CNPJs. duck HTTP 403; duck HTTP 403"
+        },
+        {
+          "id": "04",
+          "patronal": "89.138.168/0001-71",
+          "laboral": "91.345.231/0001-92",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "Não foi possível obter resultados públicos para os dois CNPJs. duck HTTP 403; duck HTTP 403"
+        },
+        {
+          "id": "05",
+          "patronal": "88.368.592/0001-40",
+          "laboral": "97.202.535/0001-87",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "Não foi possível obter resultados públicos para os dois CNPJs. duck HTTP 403; duck HTTP 403"
+        },
+        {
+          "id": "06",
+          "patronal": "88.368.592/0001-40",
+          "laboral": "96.757.737/0001-22",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "Não foi possível obter resultados públicos para os dois CNPJs. duck HTTP 403; duck HTTP 403"
+        },
+        {
+          "id": "07",
+          "patronal": "89.138.168/0001-71",
+          "laboral": "91.343.194/0001-83",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "Não foi possível obter resultados públicos para os dois CNPJs. duck HTTP 403; duck HTTP 403"
+        },
+        {
+          "id": "08",
+          "patronal": "92.962.919/0001-84",
+          "laboral": "92.931.492/0001-57",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "Não foi possível obter resultados públicos para os dois CNPJs. duck HTTP 403; duck HTTP 403"
+        },
+        {
+          "id": "09",
+          "patronal": "89.137.574/0001-10",
+          "laboral": "93.074.185/0001-60",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "Não foi possível obter resultados públicos para os dois CNPJs. duck HTTP 403; duck HTTP 403"
+        },
+        {
+          "id": "10",
+          "patronal": "96.755.145/0001-71",
+          "laboral": "96.758.008/0001-90",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "Não foi possível obter resultados públicos para os dois CNPJs. duck HTTP 403; duck HTTP 403"
+        },
+        {
+          "id": "11",
+          "patronal": "93.712.909/0001-53",
+          "laboral": "93.074.383/0001-23",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "Não foi possível obter resultados públicos para os dois CNPJs. duck HTTP 403; duck HTTP 403"
+        },
+        {
+          "id": "12",
+          "patronal": "93.712.909/0001-53",
+          "laboral": "96.758.040/0001-76",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "Não foi possível obter resultados públicos para os dois CNPJs. duck HTTP 403; duck HTTP 403"
+        }
+      ]
+    },
     {
       "at": "2026-08-31T14:39:02.959Z",
       "pairs": [
