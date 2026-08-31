@@ -7,35 +7,65 @@ const clean=s=>(s||'').replace(/\D/g,'')
 const official=u=>/^https?:\/\/mediador\.trabalho\.gov\.br\/sistemas\/mediador\/Resumo\/ResumoVisualizar\?/i.test(u||'')
 const sleep=ms=>new Promise(r=>setTimeout(r,ms))
 
+function decodeMany(value){
+ let v=value||''
+ for(let i=0;i<4;i++){try{const d=decodeURIComponent(v);if(d===v)break;v=d}catch{break}}
+ return v.replace(/&amp;/g,'&')
+}
+
 function linksFromHtml(html){
- const out=new Set(); const h=html.replace(/&amp;/g,'&')
- for(const m of h.matchAll(/https?:\/\/mediador\.trabalho\.gov\.br\/sistemas\/mediador\/Resumo\/ResumoVisualizar\?[^\"'<>\s]+/gi)) out.add(m[0].replace(/[),.;]+$/,''))
- for(const m of h.matchAll(/href=["']([^"']+)["']/gi)){
-  let u=m[1]; try{u=decodeURIComponent(u)}catch{}
-  const hit=u.match(/https?:\/\/mediador\.trabalho\.gov\.br\/sistemas\/mediador\/Resumo\/ResumoVisualizar\?[^&\s<>"']+/i)
-  if(hit) out.add(hit[0])
+ const out=new Set(); const h=decodeMany(html)
+ const patterns=[
+  /https?:\/\/mediador\.trabalho\.gov\.br\/sistemas\/mediador\/Resumo\/ResumoVisualizar\?[^\"'<>\s]+/gi,
+  /https?:\\\/\\\/mediador\.trabalho\.gov\.br\\\/sistemas\\\/mediador\\\/Resumo\\\/ResumoVisualizar\\?[^\"'<>\s]+/gi
+ ]
+ for(const re of patterns) for(const m of h.matchAll(re)) out.add(decodeMany(m[0]).replace(/[),.;]+$/,''))
+ for(const m of h.matchAll(/href\s*=\s*["']([^"']+)["']/gi)){
+  const u=decodeMany(m[1]);
+  const hit=u.match(/https?:\/\/mediador\.trabalho\.gov\.br\/sistemas\/mediador\/Resumo\/ResumoVisualizar\?[^\s<>"']+/i)
+  if(hit) out.add(hit[0].replace(/[),.;]+$/,''))
  }
- return [...out]
+ return [...out].filter(official)
+}
+
+async function collectSearchResults(page,q){
+ const urls=[
+  `https://www.google.com/search?q=${encodeURIComponent(q)}&num=20`,
+  `https://www.bing.com/search?q=${encodeURIComponent(q)}&count=20`,
+  `https://html.duckduckgo.com/html/?q=${encodeURIComponent(q)}`
+ ]
+ const candidates=new Set(); let ok=0; const errors=[]
+ for(const url of urls){
+  try{
+   const r=await page.goto(url,{waitUntil:'domcontentloaded',timeout:30000});
+   if(!r||!r.ok()) throw new Error(`HTTP ${r?.status()||0}`)
+   ok++; await sleep(900)
+   const html=await page.content(); for(const u of linksFromHtml(html)) candidates.add(u)
+   const anchors=await page.locator('a').evaluateAll(as=>as.map(a=>a.href||a.getAttribute('href')||''))
+   for(const raw of anchors){const u=decodeMany(raw);const hit=u.match(/https?:\/\/mediador\.trabalho\.gov\.br\/sistemas\/mediador\/Resumo\/ResumoVisualizar\?[^\s<>"']+/i);if(hit)candidates.add(hit[0])}
+  }catch(e){errors.push(e instanceof Error?e.message:String(e))}
+ }
+ return {ok,candidates:[...candidates],errors}
 }
 
 async function discoverPair(page,patronal,laboral){
- const q=`site:mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar "${patronal}" "${laboral}"`
- const urls=[`https://www.bing.com/search?q=${encodeURIComponent(q)}&count=20`,`https://www.google.com/search?q=${encodeURIComponent(q)}&num=20`]
- let ok=0, candidates=new Set(), errors=[]
- for(const url of urls){
-  try{
-   const r=await page.goto(url,{waitUntil:'domcontentloaded',timeout:30000}); if(!r||!r.ok()) throw new Error(`HTTP ${r?.status()||0}`)
-   ok++; await sleep(700); for(const u of linksFromHtml(await page.content())) candidates.add(u)
-  }catch(e){errors.push(e instanceof Error?e.message:String(e))}
- }
- if(!ok) return {available:false,candidates:[],error:errors.join('; ')}
- return {available:true,candidates:[...candidates],error:null}
+ const p=clean(patronal), l=clean(laboral)
+ const queries=[
+  `site:mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar "${patronal}" "${laboral}"`,
+  `site:mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar "${p}" "${l}"`,
+  `site:mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar "${patronal}"`,
+  `site:mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar "${laboral}"`
+ ]
+ const all=new Set(); let ok=0; const errors=[]
+ for(const q of queries){const r=await collectSearchResults(page,q);ok+=r.ok;for(const u of r.candidates)all.add(u);errors.push(...r.errors)}
+ return {available:ok>0,candidates:[...all],error:ok?null:errors.join('; ')}
 }
 
 async function validate(page,url,patronal,laboral){
  if(!official(url)) return null
  const r=await page.goto(url,{waitUntil:'domcontentloaded',timeout:30000}); if(!r||!r.ok()) return null
- await sleep(250); const text=await page.locator('body').innerText(); const n=clean(text)
+ await sleep(350)
+ const text=await page.locator('body').innerText(); const n=clean(text)
  if(!n.includes(clean(patronal))||!n.includes(clean(laboral))) return null
  const registro=text.match(/N[ÚU]MERO DE REGISTRO NO MTE:\s*([^\n]+)/i)?.[1]?.trim()||''
  const solicitacao=text.match(/N[ÚU]MERO DA SOLICITA[CÇ][AÃ]O:\s*([^\n]+)/i)?.[1]?.trim()||''
@@ -47,7 +77,22 @@ async function validate(page,url,patronal,laboral){
 async function main(){
  let store={generatedAt:null,source:'Mediador/MTE',overallStatus:'NOT_RUN',pairs:[],history:[]}; try{store=JSON.parse(await fs.readFile(OUT,'utf8'))}catch{}
  const browser=await chromium.launch({headless:true}); const context=await browser.newContext({userAgent:'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/126 Safari/537.36',locale:'pt-BR'}); const results=[]
- try{for(const [id,patronal,laboral] of pairs){const discovery=await context.newPage();const validation=await context.newPage();try{const d=await discoverPair(discovery,patronal,laboral);if(!d.available){results.push({id,patronal,laboral,status:'FONTE INDISPONÍVEL',error:d.error,consultedAt:new Date().toISOString()});continue}const instrumentos=[];for(const u of d.candidates.slice(0,30)){const doc=await validate(validation,u,patronal,laboral);if(doc)instrumentos.push(doc)}const unique=[...new Map(instrumentos.map(x=>[x.registro||x.url,x])).values()];results.push({id,patronal,laboral,status:'CONSULTADO',metodo:'busca por ambos os CNPJs + validação no documento oficial do Mediador',instrumentos:unique,candidatosVerificados:d.candidates.length,consultedAt:new Date().toISOString()})}catch(e){results.push({id,patronal,laboral,status:'FONTE INDISPONÍVEL',error:e instanceof Error?e.message:String(e),consultedAt:new Date().toISOString()})}finally{await discovery.close();await validation.close()}}}finally{await context.close();await browser.close()}
- const run={at:new Date().toISOString(),pairs:results};store.generatedAt=run.at;store.source='Mediador/MTE';store.overallStatus=results.some(x=>x.status==='FONTE INDISPONÍVEL')?'FONTE INDISPONÍVEL':'CONSULTADO';store.pairs=results;store.history=[run,...(store.history||[])].slice(0,90);await fs.writeFile(OUT,JSON.stringify(store,null,2)+'\n')
+ try{
+  for(const [id,patronal,laboral] of pairs){
+   const page=await context.newPage()
+   try{
+    const d=await discoverPair(page,patronal,laboral)
+    if(!d.available){results.push({id,patronal,laboral,status:'FONTE INDISPONÍVEL',error:d.error,consultedAt:new Date().toISOString()});continue}
+    const instrumentos=[]
+    for(const u of d.candidates.slice(0,80)){const doc=await validate(page,u,patronal,laboral);if(doc)instrumentos.push(doc)}
+    const unique=[...new Map(instrumentos.map(x=>[x.registro||x.url,x])).values()]
+    results.push({id,patronal,laboral,status:'CONSULTADO',metodo:'descoberta pública + validação dos dois CNPJs no documento oficial do Mediador',instrumentos:unique,candidatosVerificados:d.candidates.length,consultedAt:new Date().toISOString()})
+   }catch(e){results.push({id,patronal,laboral,status:'FONTE INDISPONÍVEL',error:e instanceof Error?e.message:String(e),consultedAt:new Date().toISOString()})}
+   finally{await page.close()}
+  }
+ }finally{await context.close();await browser.close()}
+ const run={at:new Date().toISOString(),pairs:results}
+ store.generatedAt=run.at; store.source='Mediador/MTE'; store.overallStatus=results.some(x=>x.status==='FONTE INDISPONÍVEL')?'FONTE INDISPONÍVEL':'CONSULTADO'; store.pairs=results; store.history=[run,...(store.history||[])].slice(0,90)
+ await fs.writeFile(OUT,JSON.stringify(store,null,2)+'\n')
 }
 main().catch(e=>{console.error(e);process.exit(1)})
