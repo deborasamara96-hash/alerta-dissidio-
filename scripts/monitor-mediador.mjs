@@ -1,45 +1,87 @@
 import { chromium } from 'playwright'
 import fs from 'node:fs/promises'
 
-const URL = 'https://mediador.trabalho.gov.br/sistemas/mediador/ConsultarInstColetivo'
+const MEDIADOR = 'https://mediador.trabalho.gov.br/sistemas/mediador'
 const OUT = 'data/results.json'
 const pairs = [['01','93.246.940/0001-46','89.069.835/0001-01'],['02','18.006.733/0001-07','15.635.336/0001-06'],['03','91.100.339/0001-15','96.757.612/0001-00'],['04','89.138.168/0001-71','91.345.231/0001-92'],['05','88.368.592/0001-40','97.202.535/0001-87'],['06','88.368.592/0001-40','96.757.737/0001-22'],['07','89.138.168/0001-71','91.343.194/0001-83'],['08','92.962.919/0001-84','92.931.492/0001-57'],['09','89.137.574/0001-10','93.074.185/0001-60'],['10','96.755.145/0001-71','96.758.008/0001-90'],['11','93.712.909/0001-53','93.074.383/0001-23'],['12','93.712.909/0001-53','96.758.040/0001-76']]
 const clean = s => (s || '').replace(/\D/g,'')
 const sleep = ms => new Promise(r => setTimeout(r, ms))
+const official = href => /^https?:\/\/mediador\.trabalho\.gov\.br\/sistemas\/mediador\//i.test(href || '')
 
-async function searchCnpj(page, rawCnpj) {
-  await page.goto(URL, {waitUntil:'domcontentloaded', timeout:30000})
-  await page.waitForLoadState('networkidle', {timeout:15000}).catch(()=>{})
-  const body = (await page.locator('body').innerText()).slice(0,12000)
-  if (/403|forbidden|access denied|captcha|cloudflare/i.test(body)) throw new Error('A fonte oficial bloqueou a consulta automática.')
-  const cnpj = clean(rawCnpj)
-  const all = await page.locator('input').evaluateAll(els => els.map((e,i)=>({i,id:e.id,name:e.getAttribute('name')||'',placeholder:e.getAttribute('placeholder')||'',aria:e.getAttribute('aria-label')||'',title:e.getAttribute('title')||''})))
-  const idx = all.findIndex(x => /cnpj/i.test(`${x.id} ${x.name} ${x.placeholder} ${x.aria} ${x.title}`) && !/processo|registro|solicita/i.test(`${x.id} ${x.name}`))
-  if (idx < 0) throw new Error('Campo de CNPJ não localizado na página oficial.')
-  await page.locator('input').nth(idx).fill(cnpj)
-  const buttons = page.locator('button,input[type="submit"],input[type="button"]')
-  const n = await buttons.count()
-  let clicked = false
-  for (let i=0;i<n;i++) { const b=buttons.nth(i); const txt=((await b.innerText().catch(()=>''))+' '+(await b.getAttribute('value').catch(()=>''))).trim(); if (/consultar|pesquisar|buscar|filtrar/i.test(txt)) { await b.click(); clicked=true; break } }
-  if (!clicked) throw new Error('Botão de consulta não localizado na página oficial.')
-  await page.waitForLoadState('networkidle',{timeout:15000}).catch(()=>{})
-  await sleep(1000)
-  const text = await page.locator('body').innerText()
-  if (/nenhum (instrumento|registro)|não foram encontrados|nenhum resultado/i.test(text)) return []
-  const links = await page.locator('a').evaluateAll(as => as.map(a => ({text:(a.textContent||'').trim(),href:a.href})).filter(x=>/ResumoVisualizar|instrumento|extrato/i.test(`${x.text} ${x.href}`)))
-  const rows = await page.locator('tr').evaluateAll(trs => trs.map(tr => (tr.innerText||'').trim()).filter(Boolean))
-  if (!links.length && !rows.length) throw new Error('A página respondeu, mas o formato dos resultados não pôde ser validado.')
-  const resultMap = new Map()
-  for (const l of links) resultMap.set(l.href,{key:l.href,type:'',summary:l.text})
-  for (const row of rows) { const m=row.match(/([A-Z]{2}\d{6,}\/\d{4})/i); if(m){const key=m[1].toUpperCase(); if(!resultMap.has(key)) resultMap.set(key,{key,type:'',summary:row.slice(0,500)}); else resultMap.get(key).summary=row.slice(0,500)}}
-  return [...resultMap.values()]
+function extractOfficialLinks(html) {
+  const out = new Set()
+  const decoded = html.replace(/&amp;/g,'&').replace(/\\u0026/g,'&')
+  const patterns = [
+    /https?:\/\/mediador\.trabalho\.gov\.br\/sistemas\/mediador\/Resumo\/ResumoVisualizar\?[^\"'<>\s]+/gi,
+    /https?:\/\/mediador\.trabalho\.gov\.br\/sistemas\/mediador\/[^\"'<>\s]+/gi,
+  ]
+  for (const re of patterns) for (const m of decoded.matchAll(re)) {
+    const href = m[0].replace(/[),.;]+$/,'')
+    if (official(href)) out.add(href)
+  }
+  for (const m of decoded.matchAll(/href=["']([^"']+)["']/gi)) {
+    let href = m[1]
+    try { href = decodeURIComponent(href) } catch {}
+    const hit = href.match(/https?:\/\/mediador\.trabalho\.gov\.br\/sistemas\/mediador\/[^&\s<>"']+/i)
+    if (hit && official(hit[0])) out.add(hit[0])
+  }
+  return [...out].slice(0, 20)
 }
-function intersect(a,b){const B=new Map(b.map(x=>[x.key,x]));return a.filter(x=>B.has(x.key)).map(x=>({...x,...B.get(x.key)}))}
+
+async function searchEngine(page, cnpj, engine) {
+  const q = `site:mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar "${cnpj}"`
+  const url = engine === 'bing' ? `https://www.bing.com/search?q=${encodeURIComponent(q)}&count=10` : `https://html.duckduckgo.com/html/?q=${encodeURIComponent(q)}`
+  const response = await page.goto(url, {waitUntil:'domcontentloaded', timeout:30000})
+  if (!response || !response.ok()) throw new Error(`${engine} HTTP ${response?.status() || 'sem resposta'}`)
+  await sleep(700)
+  return extractOfficialLinks(await page.content())
+}
+
+async function discoverByCnpj(page, cnpj) {
+  let last = null
+  for (const engine of ['bing','duck']) {
+    try {
+      const links = await searchEngine(page, cnpj, engine)
+      if (links.length) return {links, engine}
+      last = new Error(`${engine}: nenhum resultado oficial indexado`)
+    } catch (e) { last = e }
+  }
+  return {links:[], error:last?.message || 'nenhum resultado'}
+}
+
+async function validateOfficialDocument(page, url, cnpjs) {
+  if (!official(url)) return null
+  const response = await page.goto(url, {waitUntil:'domcontentloaded', timeout:30000})
+  if (!response || !response.ok()) return null
+  await sleep(300)
+  const text = await page.locator('body').innerText()
+  const normalized = clean(text)
+  if (!cnpjs.every(c => normalized.includes(clean(c)))) return null
+  const reg = text.match(/N[ÚU]MERO DE REGISTRO NO MTE:\s*([^\n]+)/i)?.[1]?.trim() || ''
+  const req = text.match(/N[ÚU]MERO DA SOLICITA[CÇ][AÃ]O:\s*([^\n]+)/i)?.[1]?.trim() || ''
+  const date = text.match(/DATA DE REGISTRO NO MTE:\s*([^\n]+)/i)?.[1]?.trim() || ''
+  const title = text.match(/^(Acordo Coletivo[^\n]*|Conven[cç][aã]o Coletiva[^\n]*|Termo Aditivo[^\n]*)/im)?.[1]?.trim() || 'Instrumento coletivo'
+  return {url, registro:reg, solicitacao:req, dataRegistro:date, titulo:title, validatedAt:new Date().toISOString()}
+}
+
+async function searchPair(context, id, patronal, laboral) {
+  const discovery = await context.newPage(); const validation = await context.newPage()
+  try {
+    const a = await discoverByCnpj(discovery, patronal); const b = await discoverByCnpj(discovery, laboral)
+    if (a.error && b.error) return {id, patronal, laboral, status:'FONTE INDISPONÍVEL', error:`Não foi possível obter resultados públicos para os dois CNPJs. ${a.error}; ${b.error}`}
+    const candidates = [...new Set(a.links.filter(x => b.links.includes(x)))]
+    const instrumentos = []
+    for (const url of candidates.slice(0,20)) { const doc = await validateOfficialDocument(validation,url,[patronal,laboral]); if (doc) instrumentos.push(doc) }
+    const unique = [...new Map(instrumentos.map(x => [x.registro || x.url, x])).values()]
+    return {id, patronal, laboral, status:'CONSULTADO', metodo:'descoberta pública + validação no documento oficial do Mediador', instrumentos:unique, consultedAt:new Date().toISOString(), candidatosVerificados:candidates.length}
+  } finally { await discovery.close(); await validation.close() }
+}
+
 async function main(){
   let store={generatedAt:null,source:'Mediador/MTE',overallStatus:'NOT_RUN',pairs:[],history:[]}
   try{store=JSON.parse(await fs.readFile(OUT,'utf8'))}catch{}
-  const browser=await chromium.launch({headless:true}); const results=[]
-  try{for(const [id,patronal,laboral] of pairs){const page=await browser.newPage();try{const a=await searchCnpj(page,patronal);const b=await searchCnpj(page,laboral);results.push({id,patronal,laboral,status:'CONSULTADO',instrumentos:intersect(a,b),consultedAt:new Date().toISOString()})}catch(error){results.push({id,patronal,laboral,status:'FONTE INDISPONÍVEL',error:error instanceof Error?error.message:'erro desconhecido',consultedAt:new Date().toISOString()})}finally{await page.close()}}}finally{await browser.close()}
-  const run={at:new Date().toISOString(),pairs:results}; store.generatedAt=run.at;store.source='Mediador/MTE';store.overallStatus=results.some(x=>x.status==='FONTE INDISPONÍVEL')?'FONTE INDISPONÍVEL':'CONSULTADO';store.pairs=results;store.history=[run,...(store.history||[])].slice(0,90);await fs.writeFile(OUT,JSON.stringify(store,null,2)+'\n')
+  const browser=await chromium.launch({headless:true}); const context=await browser.newContext({userAgent:'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/126 Safari/537.36',locale:'pt-BR'}); const results=[]
+  try { for (const [id,patronal,laboral] of pairs) { try { results.push(await searchPair(context,id,patronal,laboral)) } catch (error) { results.push({id,patronal,laboral,status:'FONTE INDISPONÍVEL',error:error instanceof Error?error.message:'erro desconhecido',consultedAt:new Date().toISOString()}) } } } finally { await context.close(); await browser.close() }
+  const run={at:new Date().toISOString(),pairs:results}; store.generatedAt=run.at; store.source='Mediador/MTE'; store.overallStatus=results.every(x=>x.status==='FONTE INDISPONÍVEL')?'FONTE INDISPONÍVEL':'CONSULTADO'; store.pairs=results; store.history=[run,...(store.history||[])].slice(0,90); await fs.writeFile(OUT,JSON.stringify(store,null,2)+'\n')
 }
 main().catch(e=>{console.error(e);process.exit(1)})
