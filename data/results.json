@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-31T12:03:35.041Z",
+  "generatedAt": "2026-08-31T14:25:28.169Z",
   "source": "Mediador/MTE",
   "overallStatus": "FONTE INDISPONÍVEL",
   "pairs": [
@@ -9,7 +9,7 @@
       "laboral": "89.069.835/0001-01",
       "status": "FONTE INDISPONÍVEL",
       "error": "A fonte oficial bloqueou a consulta automática.",
-      "consultedAt": "2026-08-31T12:00:46.904Z"
+      "consultedAt": "2026-08-31T14:22:41.107Z"
     },
     {
       "id": "02",
@@ -17,7 +17,7 @@
       "laboral": "15.635.336/0001-06",
       "status": "FONTE INDISPONÍVEL",
       "error": "A fonte oficial bloqueou a consulta automática.",
-      "consultedAt": "2026-08-31T12:01:02.105Z"
+      "consultedAt": "2026-08-31T14:22:56.260Z"
     },
     {
       "id": "03",
@@ -25,7 +25,7 @@
       "laboral": "96.757.612/0001-00",
       "status": "FONTE INDISPONÍVEL",
       "error": "A fonte oficial bloqueou a consulta automática.",
-      "consultedAt": "2026-08-31T12:01:17.311Z"
+      "consultedAt": "2026-08-31T14:23:11.400Z"
     },
     {
       "id": "04",
@@ -33,7 +33,7 @@
       "laboral": "91.345.231/0001-92",
       "status": "FONTE INDISPONÍVEL",
       "error": "A fonte oficial bloqueou a consulta automática.",
-      "consultedAt": "2026-08-31T12:01:32.567Z"
+      "consultedAt": "2026-08-31T14:23:26.541Z"
     },
     {
       "id": "05",
@@ -41,7 +41,7 @@
       "laboral": "97.202.535/0001-87",
       "status": "FONTE INDISPONÍVEL",
       "error": "A fonte oficial bloqueou a consulta automática.",
-      "consultedAt": "2026-08-31T12:01:47.780Z"
+      "consultedAt": "2026-08-31T14:23:41.682Z"
     },
     {
       "id": "06",
@@ -49,7 +49,7 @@
       "laboral": "96.757.737/0001-22",
       "status": "FONTE INDISPONÍVEL",
       "error": "A fonte oficial bloqueou a consulta automática.",
-      "consultedAt": "2026-08-31T12:02:03.385Z"
+      "consultedAt": "2026-08-31T14:23:56.987Z"
     },
     {
       "id": "07",
@@ -57,7 +57,7 @@
       "laboral": "91.343.194/0001-83",
       "status": "FONTE INDISPONÍVEL",
       "error": "A fonte oficial bloqueou a consulta automática.",
-      "consultedAt": "2026-08-31T12:02:18.593Z"
+      "consultedAt": "2026-08-31T14:24:12.123Z"
     },
     {
       "id": "08",
@@ -65,7 +65,7 @@
       "laboral": "92.931.492/0001-57",
       "status": "FONTE INDISPONÍVEL",
       "error": "A fonte oficial bloqueou a consulta automática.",
-      "consultedAt": "2026-08-31T12:02:33.783Z"
+      "consultedAt": "2026-08-31T14:24:27.317Z"
     },
     {
       "id": "09",
@@ -73,7 +73,7 @@
       "laboral": "93.074.185/0001-60",
       "status": "FONTE INDISPONÍVEL",
       "error": "A fonte oficial bloqueou a consulta automática.",
-      "consultedAt": "2026-08-31T12:02:48.967Z"
+      "consultedAt": "2026-08-31T14:24:42.458Z"
     },
     {
       "id": "10",
@@ -81,7 +81,7 @@
       "laboral": "96.758.008/0001-90",
       "status": "FONTE INDISPONÍVEL",
       "error": "A fonte oficial bloqueou a consulta automática.",
-      "consultedAt": "2026-08-31T12:03:04.597Z"
+      "consultedAt": "2026-08-31T14:24:57.602Z"
     },
     {
       "id": "11",
@@ -89,7 +89,7 @@
       "laboral": "93.074.383/0001-23",
       "status": "FONTE INDISPONÍVEL",
       "error": "A fonte oficial bloqueou a consulta automática.",
-      "consultedAt": "2026-08-31T12:03:19.803Z"
+      "consultedAt": "2026-08-31T14:25:12.989Z"
     },
     {
       "id": "12",
@@ -97,10 +97,111 @@
       "laboral": "96.758.040/0001-76",
       "status": "FONTE INDISPONÍVEL",
       "error": "A fonte oficial bloqueou a consulta automática.",
-      "consultedAt": "2026-08-31T12:03:35.005Z"
+      "consultedAt": "2026-08-31T14:25:28.131Z"
     }
   ],
   "history": [
+    {
+      "at": "2026-08-31T14:25:28.169Z",
+      "pairs": [
+        {
+          "id": "01",
+          "patronal": "93.246.940/0001-46",
+          "laboral": "89.069.835/0001-01",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "A fonte oficial bloqueou a consulta automática.",
+          "consultedAt": "2026-08-31T14:22:41.107Z"
+        },
+        {
+          "id": "02",
+          "patronal": "18.006.733/0001-07",
+          "laboral": "15.635.336/0001-06",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "A fonte oficial bloqueou a consulta automática.",
+          "consultedAt": "2026-08-31T14:22:56.260Z"
+        },
+        {
+          "id": "03",
+          "patronal": "91.100.339/0001-15",
+          "laboral": "96.757.612/0001-00",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "A fonte oficial bloqueou a consulta automática.",
+          "consultedAt": "2026-08-31T14:23:11.400Z"
+        },
+        {
+          "id": "04",
+          "patronal": "89.138.168/0001-71",
+          "laboral": "91.345.231/0001-92",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "A fonte oficial bloqueou a consulta automática.",
+          "consultedAt": "2026-08-31T14:23:26.541Z"
+        },
+        {
+          "id": "05",
+          "patronal": "88.368.592/0001-40",
+          "laboral": "97.202.535/0001-87",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "A fonte oficial bloqueou a consulta automática.",
+          "consultedAt": "2026-08-31T14:23:41.682Z"
+        },
+        {
+          "id": "06",
+          "patronal": "88.368.592/0001-40",
+          "laboral": "96.757.737/0001-22",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "A fonte oficial bloqueou a consulta automática.",
+          "consultedAt": "2026-08-31T14:23:56.987Z"
+        },
+        {
+          "id": "07",
+          "patronal": "89.138.168/0001-71",
+          "laboral": "91.343.194/0001-83",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "A fonte oficial bloqueou a consulta automática.",
+          "consultedAt": "2026-08-31T14:24:12.123Z"
+        },
+        {
+          "id": "08",
+          "patronal": "92.962.919/0001-84",
+          "laboral": "92.931.492/0001-57",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "A fonte oficial bloqueou a consulta automática.",
+          "consultedAt": "2026-08-31T14:24:27.317Z"
+        },
+        {
+          "id": "09",
+          "patronal": "89.137.574/0001-10",
+          "laboral": "93.074.185/0001-60",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "A fonte oficial bloqueou a consulta automática.",
+          "consultedAt": "2026-08-31T14:24:42.458Z"
+        },
+        {
+          "id": "10",
+          "patronal": "96.755.145/0001-71",
+          "laboral": "96.758.008/0001-90",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "A fonte oficial bloqueou a consulta automática.",
+          "consultedAt": "2026-08-31T14:24:57.602Z"
+        },
+        {
+          "id": "11",
+          "patronal": "93.712.909/0001-53",
+          "laboral": "93.074.383/0001-23",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "A fonte oficial bloqueou a consulta automática.",
+          "consultedAt": "2026-08-31T14:25:12.989Z"
+        },
+        {
+          "id": "12",
+          "patronal": "93.712.909/0001-53",
+          "laboral": "96.758.040/0001-76",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "A fonte oficial bloqueou a consulta automática.",
+          "consultedAt": "2026-08-31T14:25:28.131Z"
+        }
+      ]
+    },
     {
       "at": "2026-08-31T12:03:35.041Z",
       "pairs": [
