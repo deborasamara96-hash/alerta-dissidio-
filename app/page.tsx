@@ -25,33 +25,33 @@ export default function Home(){
  const [source,setSource]=useState<{status:string;message?:string;checkedAt?:string}|null>(null)
  const [store,setStore]=useState<Store|null>(null)
  const load=async()=>{
-   const [r,s]=await Promise.all([fetch('/api/results',{cache:'no-store'}),fetch('/api/monitor',{cache:'no-store'})])
+   const [r,s]=await Promise.all([fetch('/api/results?ts='+Date.now(),{cache:'no-store'}),fetch('/api/monitor?ts='+Date.now(),{cache:'no-store'})])
    const data=await r.json(); const health=await s.json(); setStore(data); setSource(health)
  }
  useEffect(()=>{load().catch(()=>{})},[])
- const check=async()=>{setChecking(true);try{await load()}catch{setSource({status:'FONTE INDISPONÍVEL',message:'Não foi possível consultar o servidor.'})}finally{setChecking(false)}}
- const unavailable=source?.status==='FONTE INDISPONÍVEL'||store?.overallStatus==='FONTE INDISPONÍVEL'
+ const check=async()=>{setChecking(true);try{await load()}catch{setSource({status:'FONTE INDISPONÍVEL',message:'Não foi possível carregar o último monitoramento.'})}finally{setChecking(false)}}
+ const unavailable=store?.overallStatus==='FONTE INDISPONÍVEL'
  const consulted=store?.pairs?.filter(p=>p.status==='CONSULTADO')||[]
  const instruments=consulted.reduce((n,p)=>n+(p.instrumentos?.length||0),0)
  return <main className="shell">
   <header className="topbar"><div className="brand"><span className="brandMark">AD</span> Alerta Dissídio</div><span className={unavailable?'sourceBadge offline':'sourceBadge'}>● Mediador / MTE — fonte oficial</span></header>
   <div className="content">
-   <section className="hero"><div><div className="eyebrow">Departamento Pessoal</div><h1>Monitoramento de Dissídios</h1><p>12 pares de sindicatos cadastrados para acompanhamento de instrumentos coletivos.</p></div><button className="refresh" onClick={check} disabled={checking}>{checking?'Consultando…':'Atualizar monitoramento'}</button></section>
+   <section className="hero"><div><div className="eyebrow">Departamento Pessoal</div><h1>Monitoramento de Dissídios</h1><p>12 pares de sindicatos cadastrados para acompanhamento de instrumentos coletivos.</p></div><button className="refresh" onClick={check} disabled={checking}>{checking?'Atualizando…':'Atualizar monitoramento'}</button></section>
    <section className="grid">
     <div className="card"><div className="muted">Pares monitorados</div><div className="metric">12</div></div>
     <div className="card"><div className="muted">Instrumentos encontrados</div><div className="metric">{store?instruments:'—'}</div></div>
     <div className="card"><div className="muted">Pares consultados</div><div className="metric">{store?consulted.length:'—'}</div></div>
     <div className="card"><div className="muted">Fonte indisponível</div><div className="metric">{store?store.pairs.filter(p=>p.status==='FONTE INDISPONÍVEL').length:'—'}</div></div>
-    <div className="card"><div className="status"><span className={`dot ${unavailable?'red':'warn'}`}/> Fonte</div><div className="metric" style={{fontSize:18}}>{unavailable?'FONTE INDISPONÍVEL':source?.status||'Aguardando consulta'}</div></div>
+    <div className="card"><div className="status"><span className={`dot ${unavailable?'red':'warn'}`}/> Fonte</div><div className="metric" style={{fontSize:18}}>{unavailable?'FONTE INDISPONÍVEL':source?.status||'Aguardando monitoramento'}</div></div>
    </section>
-   <div className={unavailable?'notice danger':'notice'}><strong>Regra de segurança:</strong> FONTE INDISPONÍVEL nunca é tratada como SEM NOVIDADE. Instrumentos só são contabilizados quando a consulta oficial e o cruzamento dos dois CNPJs do par forem validados.</div>
-   {source?.message&&<div className="notice"><strong>Status da fonte:</strong> {source.message} {source.checkedAt&&<span className="muted"> — {new Date(source.checkedAt).toLocaleString('pt-BR')}</span>}</div>}
+   <div className={unavailable?'notice danger':'notice'}><strong>Regra de segurança:</strong> FONTE INDISPONÍVEL nunca é tratada como SEM NOVIDADE. Instrumentos só são contabilizados quando o documento oficial do Mediador contém e valida os dois CNPJs do par.</div>
+   {source?.message&&<div className="notice"><strong>Status do último monitoramento:</strong> {source.message} {source.checkedAt&&<span className="muted"> — {new Date(source.checkedAt).toLocaleString('pt-BR')}</span>}</div>}
    <section className="section"><div className="sectionTitle"><h2>Sindicatos monitorados</h2><span className="muted">Histórico oficial armazenado no repositório</span></div>
     <div className="table"><div className="row head"><div>#</div><div>Entidade patronal</div><div>Entidade laboral</div><div>Fonte</div><div>Situação</div></div>
-    {pairs.map(p=>{const r=store?.pairs?.find(x=>x.id===p[0]);const off=r?.status==='FONTE INDISPONÍVEL';const count=r?.instrumentos?.length||0;return <div className="row" key={p[0]}><div className="pair">{p[0]}</div><div><strong>{p[3]}</strong><div className="cnpj">CNPJ {p[1]}</div></div><div><strong>{p[4]}</strong><div className="cnpj">CNPJ {p[2]}</div></div><div><span className="tag">Mediador/MTE</span></div><div><span className={`tag ${off?'offline':'pending'}`}>{off?'FONTE INDISPONÍVEL':r?`${count} instrumento(s) validado(s)`:'Não consultado'}</span></div></div>})}
+    {pairs.map(p=>{const r=store?.pairs?.find(x=>x.id===p[0]);const off=r?.status==='FONTE INDISPONÍVEL';const count=r?.instrumentos?.length||0;return <div className="row" key={p[0]}><div className="pair">{p[0]}</div><div><strong>{p[3]}</strong><div className="cnpj">CNPJ {p[1]}</div></div><div><strong>{p[4]}</strong><div className="cnpj">CNPJ {p[2]}</div></div><div><span className="tag">Mediador/MTE</span></div><div><span className={`tag ${off?'offline':r?'':'pending'}`}>{off?'FONTE INDISPONÍVEL':r?`${count} instrumento(s) validado(s)`:'Aguardando execução automática'}</span></div></div>})}
     </div>
    </section>
-   <div className="footer">V1 • Monitoramento automatizado por GitHub Actions. Sem dados fictícios. O documento oficial do MTE é a fonte de verdade.</div>
+   <div className="footer">V2 • Monitoramento automático diário. Descoberta pública de documentos e validação no documento oficial do MTE. Sem dados fictícios.</div>
   </div>
  </main>
 }
