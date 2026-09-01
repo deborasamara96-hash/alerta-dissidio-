@@ -39,6 +39,14 @@ jobs:
       - name: Consultar Mediador
         run: node scripts/monitor-mediador.mjs
 
+      - name: Publicar resultado do teste
+        uses: actions/upload-artifact@v4
+        with:
+          name: results-${{ github.run_number }}
+          path: data/results.json
+          if-no-files-found: error
+          retention-days: 14
+
       - name: Persistir histórico
         run: |
           git config user.name 'Alerta Dissídio Bot'
