@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-01T16:46:24.890Z",
+  "generatedAt": "2026-09-01T17:25:50.181Z",
   "source": "Mediador/MTE",
   "overallStatus": "FONTE INDISPONÍVEL",
   "pairs": [
@@ -8,123 +8,248 @@
       "patronal": "93.246.940/0001-46",
       "laboral": "89.069.835/0001-01",
       "status": "FONTE INDISPONÍVEL",
-      "error": "locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"93246940000146\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n; locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"89069835000101\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n",
+      "error": "locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"93246940000146\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n; locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"89069835000101\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-01T16:45:26.850Z"
+      "consultedAt": "2026-09-01T17:13:56.689Z"
     },
     {
       "id": "02",
       "patronal": "18.006.733/0001-07",
       "laboral": "15.635.336/0001-06",
       "status": "FONTE INDISPONÍVEL",
-      "error": "locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"18006733000107\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n; locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"15635336000106\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n",
+      "error": "locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"18006733000107\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n; locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"15635336000106\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-01T16:45:31.352Z"
+      "consultedAt": "2026-09-01T17:15:01.142Z"
     },
     {
       "id": "03",
       "patronal": "91.100.339/0001-15",
       "laboral": "96.757.612/0001-00",
       "status": "FONTE INDISPONÍVEL",
-      "error": "locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"91100339000115\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n; locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"96757612000100\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n",
+      "error": "locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"91100339000115\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n; locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"96757612000100\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-01T16:45:41.914Z"
+      "consultedAt": "2026-09-01T17:16:07.127Z"
     },
     {
       "id": "04",
       "patronal": "89.138.168/0001-71",
       "laboral": "91.345.231/0001-92",
       "status": "FONTE INDISPONÍVEL",
-      "error": "locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"89138168000171\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n; locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"91345231000192\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n",
+      "error": "locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"89138168000171\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n; locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"91345231000192\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-01T16:45:47.265Z"
+      "consultedAt": "2026-09-01T17:17:12.544Z"
     },
     {
       "id": "05",
       "patronal": "88.368.592/0001-40",
       "laboral": "97.202.535/0001-87",
       "status": "FONTE INDISPONÍVEL",
-      "error": "locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"88368592000140\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n; locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"97202535000187\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n",
+      "error": "locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"88368592000140\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n; locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"97202535000187\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-01T16:45:52.154Z"
+      "consultedAt": "2026-09-01T17:18:16.954Z"
     },
     {
       "id": "06",
       "patronal": "88.368.592/0001-40",
       "laboral": "96.757.737/0001-22",
       "status": "FONTE INDISPONÍVEL",
-      "error": "locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"88368592000140\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n; locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"96757737000122\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n",
+      "error": "locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"88368592000140\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n; locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"96757737000122\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-01T16:45:56.567Z"
+      "consultedAt": "2026-09-01T17:19:21.368Z"
     },
     {
       "id": "07",
       "patronal": "89.138.168/0001-71",
       "laboral": "91.343.194/0001-83",
       "status": "FONTE INDISPONÍVEL",
-      "error": "locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"89138168000171\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n; locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"91343194000183\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n",
+      "error": "locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"89138168000171\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n; locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"91343194000183\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-01T16:46:01.984Z"
+      "consultedAt": "2026-09-01T17:20:26.638Z"
     },
     {
       "id": "08",
       "patronal": "92.962.919/0001-84",
       "laboral": "92.931.492/0001-57",
       "status": "FONTE INDISPONÍVEL",
-      "error": "locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"92962919000184\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n; locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"92931492000157\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n",
+      "error": "locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"92962919000184\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n; locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"92931492000157\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-01T16:46:06.342Z"
+      "consultedAt": "2026-09-01T17:21:31.529Z"
     },
     {
       "id": "09",
       "patronal": "89.137.574/0001-10",
       "laboral": "93.074.185/0001-60",
       "status": "FONTE INDISPONÍVEL",
-      "error": "locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"89137574000110\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n; locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"93074185000160\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n",
+      "error": "locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"89137574000110\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n; locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"93074185000160\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-01T16:46:11.236Z"
+      "consultedAt": "2026-09-01T17:22:35.898Z"
     },
     {
       "id": "10",
       "patronal": "96.755.145/0001-71",
       "laboral": "96.758.008/0001-90",
       "status": "FONTE INDISPONÍVEL",
-      "error": "locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"96755145000171\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n; locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"96758008000190\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n",
+      "error": "locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"96755145000171\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n; locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"96758008000190\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-01T16:46:15.601Z"
+      "consultedAt": "2026-09-01T17:23:40.294Z"
     },
     {
       "id": "11",
       "patronal": "93.712.909/0001-53",
       "laboral": "93.074.383/0001-23",
       "status": "FONTE INDISPONÍVEL",
-      "error": "locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"93712909000153\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n; locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"93074383000123\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n",
+      "error": "locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"93712909000153\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n; locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"93074383000123\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-01T16:46:20.333Z"
+      "consultedAt": "2026-09-01T17:24:45.711Z"
     },
     {
       "id": "12",
       "patronal": "93.712.909/0001-53",
       "laboral": "96.758.040/0001-76",
       "status": "FONTE INDISPONÍVEL",
-      "error": "locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"93712909000153\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n; locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"96758040000176\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n",
+      "error": "locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"93712909000153\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n; locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"96758040000176\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-01T16:46:24.846Z"
+      "consultedAt": "2026-09-01T17:25:50.150Z"
     }
   ],
   "history": [
+    {
+      "at": "2026-09-01T17:25:50.181Z",
+      "pairs": [
+        {
+          "id": "01",
+          "patronal": "93.246.940/0001-46",
+          "laboral": "89.069.835/0001-01",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"93246940000146\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n; locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"89069835000101\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-01T17:13:56.689Z"
+        },
+        {
+          "id": "02",
+          "patronal": "18.006.733/0001-07",
+          "laboral": "15.635.336/0001-06",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"18006733000107\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n; locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"15635336000106\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-01T17:15:01.142Z"
+        },
+        {
+          "id": "03",
+          "patronal": "91.100.339/0001-15",
+          "laboral": "96.757.612/0001-00",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"91100339000115\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n; locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"96757612000100\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-01T17:16:07.127Z"
+        },
+        {
+          "id": "04",
+          "patronal": "89.138.168/0001-71",
+          "laboral": "91.345.231/0001-92",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"89138168000171\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n; locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"91345231000192\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-01T17:17:12.544Z"
+        },
+        {
+          "id": "05",
+          "patronal": "88.368.592/0001-40",
+          "laboral": "97.202.535/0001-87",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"88368592000140\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n; locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"97202535000187\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-01T17:18:16.954Z"
+        },
+        {
+          "id": "06",
+          "patronal": "88.368.592/0001-40",
+          "laboral": "96.757.737/0001-22",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"88368592000140\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n; locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"96757737000122\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-01T17:19:21.368Z"
+        },
+        {
+          "id": "07",
+          "patronal": "89.138.168/0001-71",
+          "laboral": "91.343.194/0001-83",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"89138168000171\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n; locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"91343194000183\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-01T17:20:26.638Z"
+        },
+        {
+          "id": "08",
+          "patronal": "92.962.919/0001-84",
+          "laboral": "92.931.492/0001-57",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"92962919000184\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n; locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"92931492000157\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-01T17:21:31.529Z"
+        },
+        {
+          "id": "09",
+          "patronal": "89.137.574/0001-10",
+          "laboral": "93.074.185/0001-60",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"89137574000110\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n; locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"93074185000160\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-01T17:22:35.898Z"
+        },
+        {
+          "id": "10",
+          "patronal": "96.755.145/0001-71",
+          "laboral": "96.758.008/0001-90",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"96755145000171\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n; locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"96758008000190\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-01T17:23:40.294Z"
+        },
+        {
+          "id": "11",
+          "patronal": "93.712.909/0001-53",
+          "laboral": "93.074.383/0001-23",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"93712909000153\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n; locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"93074383000123\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-01T17:24:45.711Z"
+        },
+        {
+          "id": "12",
+          "patronal": "93.712.909/0001-53",
+          "laboral": "96.758.040/0001-76",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"93712909000153\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n; locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"96758040000176\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-01T17:25:50.150Z"
+        }
+      ]
+    },
     {
       "at": "2026-09-01T16:46:24.890Z",
       "pairs": [
