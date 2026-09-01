@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-01T16:02:49.989Z",
+  "generatedAt": "2026-09-01T16:46:24.890Z",
   "source": "Mediador/MTE",
   "overallStatus": "FONTE INDISPONÍVEL",
   "pairs": [
@@ -8,123 +8,248 @@
       "patronal": "93.246.940/0001-46",
       "laboral": "89.069.835/0001-01",
       "status": "FONTE INDISPONÍVEL",
-      "error": "Mediador HTTP 403; Mediador HTTP 403",
+      "error": "locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"93246940000146\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n; locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"89069835000101\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-01T16:02:23.935Z"
+      "consultedAt": "2026-09-01T16:45:26.850Z"
     },
     {
       "id": "02",
       "patronal": "18.006.733/0001-07",
       "laboral": "15.635.336/0001-06",
       "status": "FONTE INDISPONÍVEL",
-      "error": "Mediador HTTP 403; Mediador HTTP 403",
+      "error": "locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"18006733000107\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n; locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"15635336000106\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-01T16:02:26.383Z"
+      "consultedAt": "2026-09-01T16:45:31.352Z"
     },
     {
       "id": "03",
       "patronal": "91.100.339/0001-15",
       "laboral": "96.757.612/0001-00",
       "status": "FONTE INDISPONÍVEL",
-      "error": "Mediador HTTP 403; Mediador HTTP 403",
+      "error": "locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"91100339000115\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n; locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"96757612000100\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-01T16:02:28.800Z"
+      "consultedAt": "2026-09-01T16:45:41.914Z"
     },
     {
       "id": "04",
       "patronal": "89.138.168/0001-71",
       "laboral": "91.345.231/0001-92",
       "status": "FONTE INDISPONÍVEL",
-      "error": "Mediador HTTP 403; Mediador HTTP 403",
+      "error": "locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"89138168000171\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n; locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"91345231000192\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-01T16:02:31.770Z"
+      "consultedAt": "2026-09-01T16:45:47.265Z"
     },
     {
       "id": "05",
       "patronal": "88.368.592/0001-40",
       "laboral": "97.202.535/0001-87",
       "status": "FONTE INDISPONÍVEL",
-      "error": "Mediador HTTP 403; Mediador HTTP 403",
+      "error": "locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"88368592000140\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n; locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"97202535000187\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-01T16:02:34.221Z"
+      "consultedAt": "2026-09-01T16:45:52.154Z"
     },
     {
       "id": "06",
       "patronal": "88.368.592/0001-40",
       "laboral": "96.757.737/0001-22",
       "status": "FONTE INDISPONÍVEL",
-      "error": "Mediador HTTP 403; Mediador HTTP 403",
+      "error": "locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"88368592000140\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n; locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"96757737000122\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-01T16:02:36.487Z"
+      "consultedAt": "2026-09-01T16:45:56.567Z"
     },
     {
       "id": "07",
       "patronal": "89.138.168/0001-71",
       "laboral": "91.343.194/0001-83",
       "status": "FONTE INDISPONÍVEL",
-      "error": "Mediador HTTP 403; Mediador HTTP 403",
+      "error": "locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"89138168000171\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n; locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"91343194000183\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-01T16:02:38.646Z"
+      "consultedAt": "2026-09-01T16:46:01.984Z"
     },
     {
       "id": "08",
       "patronal": "92.962.919/0001-84",
       "laboral": "92.931.492/0001-57",
       "status": "FONTE INDISPONÍVEL",
-      "error": "Mediador HTTP 403; Mediador HTTP 403",
+      "error": "locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"92962919000184\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n; locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"92931492000157\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-01T16:02:41.070Z"
+      "consultedAt": "2026-09-01T16:46:06.342Z"
     },
     {
       "id": "09",
       "patronal": "89.137.574/0001-10",
       "laboral": "93.074.185/0001-60",
       "status": "FONTE INDISPONÍVEL",
-      "error": "Mediador HTTP 403; Mediador HTTP 403",
+      "error": "locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"89137574000110\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n; locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"93074185000160\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-01T16:02:43.317Z"
+      "consultedAt": "2026-09-01T16:46:11.236Z"
     },
     {
       "id": "10",
       "patronal": "96.755.145/0001-71",
       "laboral": "96.758.008/0001-90",
       "status": "FONTE INDISPONÍVEL",
-      "error": "Mediador HTTP 403; Mediador HTTP 403",
+      "error": "locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"96755145000171\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n; locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"96758008000190\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-01T16:02:45.585Z"
+      "consultedAt": "2026-09-01T16:46:15.601Z"
     },
     {
       "id": "11",
       "patronal": "93.712.909/0001-53",
       "laboral": "93.074.383/0001-23",
       "status": "FONTE INDISPONÍVEL",
-      "error": "Mediador HTTP 403; Mediador HTTP 403",
+      "error": "locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"93712909000153\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n; locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"93074383000123\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-01T16:02:47.663Z"
+      "consultedAt": "2026-09-01T16:46:20.333Z"
     },
     {
       "id": "12",
       "patronal": "93.712.909/0001-53",
       "laboral": "96.758.040/0001-76",
       "status": "FONTE INDISPONÍVEL",
-      "error": "Mediador HTTP 403; Mediador HTTP 403",
+      "error": "locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"93712909000153\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n; locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"96758040000176\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-01T16:02:49.954Z"
+      "consultedAt": "2026-09-01T16:46:24.846Z"
     }
   ],
   "history": [
+    {
+      "at": "2026-09-01T16:46:24.890Z",
+      "pairs": [
+        {
+          "id": "01",
+          "patronal": "93.246.940/0001-46",
+          "laboral": "89.069.835/0001-01",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"93246940000146\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n; locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"89069835000101\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-01T16:45:26.850Z"
+        },
+        {
+          "id": "02",
+          "patronal": "18.006.733/0001-07",
+          "laboral": "15.635.336/0001-06",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"18006733000107\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n; locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"15635336000106\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-01T16:45:31.352Z"
+        },
+        {
+          "id": "03",
+          "patronal": "91.100.339/0001-15",
+          "laboral": "96.757.612/0001-00",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"91100339000115\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n; locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"96757612000100\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-01T16:45:41.914Z"
+        },
+        {
+          "id": "04",
+          "patronal": "89.138.168/0001-71",
+          "laboral": "91.345.231/0001-92",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"89138168000171\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n; locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"91345231000192\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-01T16:45:47.265Z"
+        },
+        {
+          "id": "05",
+          "patronal": "88.368.592/0001-40",
+          "laboral": "97.202.535/0001-87",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"88368592000140\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n; locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"97202535000187\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-01T16:45:52.154Z"
+        },
+        {
+          "id": "06",
+          "patronal": "88.368.592/0001-40",
+          "laboral": "96.757.737/0001-22",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"88368592000140\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n; locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"96757737000122\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-01T16:45:56.567Z"
+        },
+        {
+          "id": "07",
+          "patronal": "89.138.168/0001-71",
+          "laboral": "91.343.194/0001-83",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"89138168000171\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n; locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"91343194000183\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-01T16:46:01.984Z"
+        },
+        {
+          "id": "08",
+          "patronal": "92.962.919/0001-84",
+          "laboral": "92.931.492/0001-57",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"92962919000184\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n; locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"92931492000157\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-01T16:46:06.342Z"
+        },
+        {
+          "id": "09",
+          "patronal": "89.137.574/0001-10",
+          "laboral": "93.074.185/0001-60",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"89137574000110\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n; locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"93074185000160\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-01T16:46:11.236Z"
+        },
+        {
+          "id": "10",
+          "patronal": "96.755.145/0001-71",
+          "laboral": "96.758.008/0001-90",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"96755145000171\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n; locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"96758008000190\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-01T16:46:15.601Z"
+        },
+        {
+          "id": "11",
+          "patronal": "93.712.909/0001-53",
+          "laboral": "93.074.383/0001-23",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"93712909000153\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n; locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"93074383000123\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-01T16:46:20.333Z"
+        },
+        {
+          "id": "12",
+          "patronal": "93.712.909/0001-53",
+          "laboral": "96.758.040/0001-76",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"93712909000153\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n; locator.fill: Error: Input of type \"checkbox\" cannot be filled\nCall log:\n  - waiting for locator('input').nth(1)\n    - locator resolved to <input id=\"chkNRCNPJ\" type=\"checkbox\" class=\"SemBorda\" onclick=\"HabilitarCampo(0);\"/>\n    - fill(\"96758040000176\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-01T16:46:24.846Z"
+        }
+      ]
+    },
     {
       "at": "2026-09-01T16:02:49.989Z",
       "pairs": [
