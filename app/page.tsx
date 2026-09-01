@@ -17,8 +17,13 @@ const pairs = [
 ['12','93.712.909/0001-53','96.758.040/0001-76','SIND. DAS EMPRESAS DE LOCACAO DE BENS MOVEIS DO ESTADO DO RIO GRANDE DO SUL','SIND. DOS TRABALHADORES EM TRANSPORTES RODOVIARIOS DE SAO LEOPOLDO'],
 ]
 
-type PairResult={id:string;status:string;instrumentos?:unknown[];error?:string;consultedAt?:string}
+type Instrument={url?:string;documentUrl?:string;link?:string;registro?:string;numeroRegistro?:string;tipo?:string;vigencia?:string;ano?:string;[key:string]:unknown}
+type PairResult={id:string;status:string;instrumentos?:Instrument[];error?:string;consultedAt?:string}
 type Store={generatedAt:string|null;overallStatus:string;pairs:PairResult[]}
+
+const mediadorConsulta='https://mediador.trabalho.gov.br/sistemas/mediador/ConsultarInstColetivo'
+const cnpjDigits=(value:string)=>value.replace(/\\D/g,'')
+const documentUrl=(item:Instrument)=>item.documentUrl||item.url||item.link||''
 
 export default function Home(){
  const [checking,setChecking]=useState(false)
@@ -47,8 +52,8 @@ export default function Home(){
    <div className={unavailable?'notice danger':'notice'}><strong>Regra de segurança:</strong> FONTE INDISPONÍVEL nunca é tratada como SEM NOVIDADE. Instrumentos só são contabilizados quando o documento oficial do Mediador contém e valida os dois CNPJs do par.</div>
    {source?.message&&<div className="notice"><strong>Status do último monitoramento:</strong> {source.message} {source.checkedAt&&<span className="muted"> — {new Date(source.checkedAt).toLocaleString('pt-BR')}</span>}</div>}
    <section className="section"><div className="sectionTitle"><h2>Sindicatos monitorados</h2><span className="muted">Histórico oficial armazenado no repositório</span></div>
-    <div className="table"><div className="row head"><div>#</div><div>Entidade patronal</div><div>Entidade laboral</div><div>Fonte</div><div>Situação</div></div>
-    {pairs.map(p=>{const r=store?.pairs?.find(x=>x.id===p[0]);const off=r?.status==='FONTE INDISPONÍVEL';const count=r?.instrumentos?.length||0;return <div className="row" key={p[0]}><div className="pair">{p[0]}</div><div><strong>{p[3]}</strong><div className="cnpj">CNPJ {p[1]}</div></div><div><strong>{p[4]}</strong><div className="cnpj">CNPJ {p[2]}</div></div><div><span className="tag">Mediador/MTE</span></div><div><span className={`tag ${off?'offline':r?'':'pending'}`}>{off?'FONTE INDISPONÍVEL':r?`${count} instrumento(s) validado(s)`:'Aguardando execução automática'}</span></div></div>})}
+    <div className="table"><div className="row head"><div>#</div><div>Entidade patronal</div><div>Entidade laboral</div><div>Fonte</div><div>Situação / documento</div></div>
+    {pairs.map(p=>{const r=store?.pairs?.find(x=>x.id===p[0]);const off=r?.status==='FONTE INDISPONÍVEL';const count=r?.instrumentos?.length||0;const first=r?.instrumentos?.[0];const url=first?documentUrl(first):'';const searchUrl=`${mediadorConsulta}?cnpj=${cnpjDigits(p[1])}`;return <div className="row" key={p[0]}><div className="pair">{p[0]}</div><div><strong>{p[3]}</strong><div className="cnpj">CNPJ {p[1]}</div></div><div><strong>{p[4]}</strong><div className="cnpj">CNPJ {p[2]}</div></div><div><span className="tag">Mediador/MTE</span></div><div><span className={`tag ${off?'offline':r?'':'pending'}`}>{off?'FONTE INDISPONÍVEL':r?`${count} instrumento(s) validado(s)`:'Aguardando execução automática'}</span>{r&&!off&&<div style={{marginTop:8,display:'flex',gap:6,flexWrap:'wrap'}}>{url?<a href={url} target="_blank" rel="noopener noreferrer" className="tag" style={{textDecoration:'none',cursor:'pointer'}}>📄 Abrir documento oficial</a>:<a href={searchUrl} target="_blank" rel="noopener noreferrer" className="tag" style={{textDecoration:'none',cursor:'pointer'}}>🔎 Pesquisar no Mediador</a>}</div>}</div></div>})}
     </div>
    </section>
    <div className="footer">V2 • Monitoramento automático diário. Descoberta pública de documentos e validação no documento oficial do MTE. Sem dados fictícios.</div>
