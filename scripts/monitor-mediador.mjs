@@ -20,11 +20,6 @@ const pairs = [
 const clean = s => (s || '').replace(/\D/g, '')
 const sleep = ms => new Promise(r => setTimeout(r, ms))
 const solicitudUrl = s => `https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=${encodeURIComponent(s)}`
-const TYPES = ['acordo','acordoColetivoEspecificoPPE','acordoColetivoEspecificoDomingosFeriados','convencao','termoAditivoAcordo','termoAditivoConvecao','termoAditivoAcordoEspecificoPPE','termoAditivoAcordoEspecificoDomingoFeriado']
-
-function makeForm(cnpj, page = '1', total = '-1') {
-  return { nrCnpj: clean(cnpj), nrCei: '', noRazaoSocial: '', dsCategoria: '', tpRequerimento: TYPES, tpVigencia: '2', sgUfDeRegistro: '', dtInicioRegistro: '', dtFimRegistro: '', dtInicioVigenciaInstrumentoColetivo: '', dtFimVigenciaInstrumentoColetivo: '', tpAbrangencia: 'Todos os tipos', ufsAbrangidasTotalmente: '', cdMunicipiosAbrangidos: '', cdGrupo: '', cdSubGrupo: '', noTituloClausula: '', utilizarSiracc: '', pagina: String(page), qtdTotalRegistro: String(total) }
-}
 
 function extractSolicitations(html) {
   const text = String(html || '').replace(/&amp;/g, '&')
@@ -38,62 +33,76 @@ function extractSolicitations(html) {
   return [...found]
 }
 
-function resultCount(html) {
-  const text = String(html || '').replace(/&nbsp;/g, ' ')
-  for (const re of [/Resultado\s*:\s*(\d+)/i,/Resultados?\s*:\s*(\d+)/i,/qtdTotalRegistro[^>]*value=["'](\d+)["']/i]) {
-    const m = text.match(re); if (m) return Number(m[1])
-  }
-  return null
-}
-
 async function openOfficialSession(page) {
-  for (const url of ['https://mediador.trabalho.gov.br/sistemas/mediador/ConsultarInstColetivo','https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo']) {
-    try {
-      const response = await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 30000 })
-      const status = response?.status() || 0
-      if (status >= 200 && status < 400) return { url, status }
-    } catch {}
+  const url = 'https://mediador.trabalho.gov.br/sistemas/mediador/ConsultarInstColetivo'
+  const response = await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 30000 })
+  const status = response?.status() || 0
+  if (status < 200 || status >= 400) throw new Error(`Mediador HTTP ${status}`)
+  await page.waitForLoadState('networkidle', { timeout: 10000 }).catch(() => {})
+  if (!/Consultar Instrumentos Coletivos Registrados/i.test(await page.locator('body').innerText())) {
+    throw new Error('A página oficial de consulta não carregou o formulário esperado.')
   }
-  throw new Error('Não foi possível abrir a consulta oficial do Mediador.')
+  return { url, status }
 }
 
-async function postSearch(page, cnpj, pageNo, total) {
-  const endpoints = [
-    'https://mediador.trabalho.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada',
-    'https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada'
-  ]
-  let lastError = null
-  for (const endpoint of endpoints) {
-    try {
-      const response = await page.request.post(endpoint, {
-        form: makeForm(cnpj, pageNo, total), timeout: 30000, failOnStatusCode: false,
-        headers: { Referer: 'https://mediador.trabalho.gov.br/sistemas/mediador/ConsultarInstColetivo', Origin: new URL(endpoint).origin, 'X-Requested-With': 'XMLHttpRequest', Accept: 'text/html, */*; q=0.01' }
-      })
-      const status = response.status(); const body = await response.text()
-      if (status >= 200 && status < 300 && body && !/403 Forbidden/i.test(body)) return { status, body }
-      lastError = new Error(`Mediador HTTP ${status}`)
-    } catch (e) { lastError = e }
+async function findCnpjInput(page) {
+  const inputs = page.locator('input')
+  const count = await inputs.count()
+  const candidates = []
+  for (let i = 0; i < count; i++) {
+    const el = inputs.nth(i)
+    const attrs = await el.evaluate(node => ({ id: node.id || '', name: node.getAttribute('name') || '', placeholder: node.getAttribute('placeholder') || '', value: node.value || '', type: node.type || '' }))
+    const hay = `${attrs.id} ${attrs.name} ${attrs.placeholder}`.toLowerCase()
+    if (/cnpj|caepf/.test(hay)) candidates.push({ i, attrs })
   }
-  throw lastError || new Error('Mediador indisponível')
+  if (candidates.length) return inputs.nth(candidates[0].i)
+
+  const visible = []
+  for (let i = 0; i < count; i++) {
+    if (await inputs.nth(i).isVisible().catch(() => false)) visible.push(i)
+  }
+  if (visible.length) return inputs.nth(visible[0])
+  throw new Error('Campo CNPJ/CAEPF não encontrado na consulta oficial.')
 }
 
 async function searchByCnpj(page, cnpj) {
-  const first = await postSearch(page, cnpj, 1, -1)
-  const total = resultCount(first.body)
-  const solicitations = new Set(extractSolicitations(first.body))
-  if (total && total > 10) {
-    for (let p = 2; p <= Math.min(Math.ceil(total / 10), 20); p++) {
-      const result = await postSearch(page, cnpj, p, total)
-      for (const s of extractSolicitations(result.body)) solicitations.add(s)
-    }
+  await page.goto('https://mediador.trabalho.gov.br/sistemas/mediador/ConsultarInstColetivo', { waitUntil: 'domcontentloaded', timeout: 30000 })
+  await page.waitForLoadState('networkidle', { timeout: 10000 }).catch(() => {})
+  const input = await findCnpjInput(page)
+  await input.fill(clean(cnpj))
+
+  const searchButton = page.getByRole('button', { name: /^Pesquisar$/i }).first()
+  if (!(await searchButton.count())) throw new Error('Botão Pesquisar não encontrado na consulta oficial.')
+
+  await Promise.all([
+    page.waitForLoadState('networkidle', { timeout: 15000 }).catch(() => {}),
+    searchButton.click()
+  ])
+  await sleep(1000)
+
+  const responseText = await page.locator('body').innerText()
+  const url = page.url()
+  const statusText = responseText.match(/HTTP\s*([45]\d\d)/i)?.[1]
+  if (statusText) throw new Error(`Mediador HTTP ${statusText}`)
+  if (/403 Forbidden|Access Denied|Forbidden/i.test(responseText)) throw new Error('Mediador HTTP 403')
+
+  const solicitations = new Set(extractSolicitations(await page.content()))
+  const links = await page.locator('a').evaluateAll(els => els.map(a => ({ text: (a.textContent || '').trim(), href: a.href || '' })))
+  for (const link of links) {
+    const m = link.href.match(/MR\d+%2F\d{4}|MR\d+\/\d{4}/i)
+    if (m) solicitations.add(decodeURIComponent(m[0]).toUpperCase())
+    const t = link.text.match(/MR\d+\/\d{4}/i)
+    if (t) solicitations.add(t[0].toUpperCase())
   }
-  return { total: total ?? solicitations.size, solicitations: [...solicitations] }
+
+  const noResults = /nenhum|não foram encontrados|nao foram encontrados|0\s+registro/i.test(responseText)
+  return { total: noResults ? 0 : solicitations.size, solicitations: [...solicitations], url, body: responseText }
 }
 
 function extractTextValue(text, regex) { return text.match(regex)?.[1]?.trim() || '' }
 
 async function validate(page, solicitation, patronal, laboral) {
-  const response = await page.goto(solicitudUrl(solicitation), { waitUntil: 'domcontentloaded', timeout: 30000 })
+  const response = await page.goto(solicitacaoUrl(solicitation), { waitUntil: 'domcontentloaded', timeout: 30000 })
   if (!response || !response.ok()) return null
   await sleep(300)
   const text = await page.locator('body').innerText(); const normalized = clean(text)
@@ -112,8 +121,11 @@ async function validate(page, solicitation, patronal, laboral) {
 async function discoverPair(page, patronal, laboral) {
   const all = new Set(); let totalFound = 0; const errors = []
   for (const cnpj of [patronal, laboral]) {
-    try { const result = await searchByCnpj(page, cnpj); totalFound += result.total || 0; for (const s of result.solicitations) all.add(s) }
-    catch (e) { errors.push(e instanceof Error ? e.message : String(e)) }
+    try {
+      const result = await searchByCnpj(page, cnpj)
+      totalFound += result.total || 0
+      for (const s of result.solicitations) all.add(s)
+    } catch (e) { errors.push(e instanceof Error ? e.message : String(e)) }
   }
   return { available: all.size > 0 || totalFound > 0, solicitations: [...all], totalFound, error: errors.join('; ') || null }
 }
@@ -131,7 +143,7 @@ async function main() {
         await openOfficialSession(page)
         const discovery = await discoverPair(page, patronal, laboral)
         if (!discovery.available) {
-          results.push({ id, patronal, laboral, status: 'FONTE INDISPONÍVEL', error: discovery.error || 'O endpoint oficial de consulta não retornou resultados.', instrumentos: [], candidatosVerificados: 0, consultedAt: new Date().toISOString() })
+          results.push({ id, patronal, laboral, status: 'FONTE INDISPONÍVEL', error: discovery.error || 'A consulta oficial não retornou instrumentos.', instrumentos: [], candidatosVerificados: 0, consultedAt: new Date().toISOString() })
           continue
         }
         const instrumentos = []
@@ -139,7 +151,7 @@ async function main() {
           try { const doc = await validate(page, solicitation, patronal, laboral); if (doc) instrumentos.push(doc) } catch {}
         }
         const unique = [...new Map(instrumentos.map(x => [x.registro || x.solicitacao || x.url, x])).values()]
-        results.push({ id, patronal, laboral, status: 'CONSULTADO', metodo: 'consulta oficial do Mediador por CNPJ + validação dos dois CNPJs no documento oficial', instrumentos: unique, candidatosVerificados: discovery.solicitations.length, totalEncontradoNaConsulta: discovery.totalFound, consultedAt: new Date().toISOString() })
+        results.push({ id, patronal, laboral, status: 'CONSULTADO', metodo: 'consulta pela interface oficial do Mediador por CNPJ + validação dos dois CNPJs', instrumentos: unique, candidatosVerificados: discovery.solicitations.length, totalEncontradoNaConsulta: discovery.totalFound, consultedAt: new Date().toISOString() })
       } catch (e) {
         results.push({ id, patronal, laboral, status: 'FONTE INDISPONÍVEL', error: e instanceof Error ? e.message : String(e), instrumentos: [], candidatosVerificados: 0, consultedAt: new Date().toISOString() })
       } finally { await page.close() }
