@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-01T11:10:30.089Z",
+  "generatedAt": "2026-09-01T15:01:51.711Z",
   "source": "Mediador/MTE",
   "overallStatus": "FONTE INDISPONÍVEL",
   "pairs": [
@@ -8,123 +8,248 @@
       "patronal": "93.246.940/0001-46",
       "laboral": "89.069.835/0001-01",
       "status": "FONTE INDISPONÍVEL",
-      "error": "https://mediador.trabalho.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada HTTP 403; https://mediador.trabalho.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada HTTP 403",
+      "error": "apiRequestContext.post: unable to verify the first certificate\nCall log:\n  - → POST https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada\n    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36\n    - accept: text/html, */*; q=0.01\n    - accept-encoding: gzip,deflate,br\n    - Referer: https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo\n    - Origin: https://www3.mte.gov.br\n    - X-Requested-With: XMLHttpRequest\n    - content-type: application/x-www-form-urlencoded\n    - content-length: 587\n; apiRequestContext.post: unable to verify the first certificate\nCall log:\n  - → POST https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada\n    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36\n    - accept: text/html, */*; q=0.01\n    - accept-encoding: gzip,deflate,br\n    - Referer: https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo\n    - Origin: https://www3.mte.gov.br\n    - X-Requested-With: XMLHttpRequest\n    - content-type: application/x-www-form-urlencoded\n    - content-length: 587\n",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-01T10:59:06.396Z"
+      "consultedAt": "2026-09-01T15:01:33.574Z"
     },
     {
       "id": "02",
       "patronal": "18.006.733/0001-07",
       "laboral": "15.635.336/0001-06",
       "status": "FONTE INDISPONÍVEL",
-      "error": "https://mediador.trabalho.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada HTTP 403; https://mediador.trabalho.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada HTTP 403",
+      "error": "apiRequestContext.post: unable to verify the first certificate\nCall log:\n  - → POST https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada\n    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36\n    - accept: text/html, */*; q=0.01\n    - accept-encoding: gzip,deflate,br\n    - Referer: https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo\n    - Origin: https://www3.mte.gov.br\n    - X-Requested-With: XMLHttpRequest\n    - content-type: application/x-www-form-urlencoded\n    - content-length: 587\n; apiRequestContext.post: unable to verify the first certificate\nCall log:\n  - → POST https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada\n    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36\n    - accept: text/html, */*; q=0.01\n    - accept-encoding: gzip,deflate,br\n    - Referer: https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo\n    - Origin: https://www3.mte.gov.br\n    - X-Requested-With: XMLHttpRequest\n    - content-type: application/x-www-form-urlencoded\n    - content-length: 587\n",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-01T11:00:08.684Z"
+      "consultedAt": "2026-09-01T15:01:35.275Z"
     },
     {
       "id": "03",
       "patronal": "91.100.339/0001-15",
       "laboral": "96.757.612/0001-00",
       "status": "FONTE INDISPONÍVEL",
-      "error": "https://mediador.trabalho.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada HTTP 403; https://mediador.trabalho.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada HTTP 403",
+      "error": "apiRequestContext.post: unable to verify the first certificate\nCall log:\n  - → POST https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada\n    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36\n    - accept: text/html, */*; q=0.01\n    - accept-encoding: gzip,deflate,br\n    - Referer: https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo\n    - Origin: https://www3.mte.gov.br\n    - X-Requested-With: XMLHttpRequest\n    - content-type: application/x-www-form-urlencoded\n    - content-length: 587\n; apiRequestContext.post: unable to verify the first certificate\nCall log:\n  - → POST https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada\n    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36\n    - accept: text/html, */*; q=0.01\n    - accept-encoding: gzip,deflate,br\n    - Referer: https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo\n    - Origin: https://www3.mte.gov.br\n    - X-Requested-With: XMLHttpRequest\n    - content-type: application/x-www-form-urlencoded\n    - content-length: 587\n",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-01T11:01:10.610Z"
+      "consultedAt": "2026-09-01T15:01:36.891Z"
     },
     {
       "id": "04",
       "patronal": "89.138.168/0001-71",
       "laboral": "91.345.231/0001-92",
       "status": "FONTE INDISPONÍVEL",
-      "error": "https://mediador.trabalho.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada HTTP 403; https://mediador.trabalho.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada HTTP 403",
+      "error": "apiRequestContext.post: unable to verify the first certificate\nCall log:\n  - → POST https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada\n    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36\n    - accept: text/html, */*; q=0.01\n    - accept-encoding: gzip,deflate,br\n    - Referer: https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo\n    - Origin: https://www3.mte.gov.br\n    - X-Requested-With: XMLHttpRequest\n    - content-type: application/x-www-form-urlencoded\n    - content-length: 587\n; apiRequestContext.post: unable to verify the first certificate\nCall log:\n  - → POST https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada\n    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36\n    - accept: text/html, */*; q=0.01\n    - accept-encoding: gzip,deflate,br\n    - Referer: https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo\n    - Origin: https://www3.mte.gov.br\n    - X-Requested-With: XMLHttpRequest\n    - content-type: application/x-www-form-urlencoded\n    - content-length: 587\n",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-01T11:02:12.693Z"
+      "consultedAt": "2026-09-01T15:01:38.739Z"
     },
     {
       "id": "05",
       "patronal": "88.368.592/0001-40",
       "laboral": "97.202.535/0001-87",
       "status": "FONTE INDISPONÍVEL",
-      "error": "https://mediador.trabalho.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada HTTP 403; https://mediador.trabalho.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada HTTP 403",
+      "error": "apiRequestContext.post: unable to verify the first certificate\nCall log:\n  - → POST https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada\n    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36\n    - accept: text/html, */*; q=0.01\n    - accept-encoding: gzip,deflate,br\n    - Referer: https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo\n    - Origin: https://www3.mte.gov.br\n    - X-Requested-With: XMLHttpRequest\n    - content-type: application/x-www-form-urlencoded\n    - content-length: 587\n; apiRequestContext.post: unable to verify the first certificate\nCall log:\n  - → POST https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada\n    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36\n    - accept: text/html, */*; q=0.01\n    - accept-encoding: gzip,deflate,br\n    - Referer: https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo\n    - Origin: https://www3.mte.gov.br\n    - X-Requested-With: XMLHttpRequest\n    - content-type: application/x-www-form-urlencoded\n    - content-length: 587\n",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-01T11:03:14.974Z"
+      "consultedAt": "2026-09-01T15:01:40.408Z"
     },
     {
       "id": "06",
       "patronal": "88.368.592/0001-40",
       "laboral": "96.757.737/0001-22",
       "status": "FONTE INDISPONÍVEL",
-      "error": "https://mediador.trabalho.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada HTTP 403; https://mediador.trabalho.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada HTTP 403",
+      "error": "apiRequestContext.post: unable to verify the first certificate\nCall log:\n  - → POST https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada\n    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36\n    - accept: text/html, */*; q=0.01\n    - accept-encoding: gzip,deflate,br\n    - Referer: https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo\n    - Origin: https://www3.mte.gov.br\n    - X-Requested-With: XMLHttpRequest\n    - content-type: application/x-www-form-urlencoded\n    - content-length: 587\n; apiRequestContext.post: unable to verify the first certificate\nCall log:\n  - → POST https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada\n    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36\n    - accept: text/html, */*; q=0.01\n    - accept-encoding: gzip,deflate,br\n    - Referer: https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo\n    - Origin: https://www3.mte.gov.br\n    - X-Requested-With: XMLHttpRequest\n    - content-type: application/x-www-form-urlencoded\n    - content-length: 587\n",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-01T11:04:16.919Z"
+      "consultedAt": "2026-09-01T15:01:42.046Z"
     },
     {
       "id": "07",
       "patronal": "89.138.168/0001-71",
       "laboral": "91.343.194/0001-83",
       "status": "FONTE INDISPONÍVEL",
-      "error": "https://mediador.trabalho.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada HTTP 403; https://mediador.trabalho.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada HTTP 403",
+      "error": "apiRequestContext.post: unable to verify the first certificate\nCall log:\n  - → POST https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada\n    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36\n    - accept: text/html, */*; q=0.01\n    - accept-encoding: gzip,deflate,br\n    - Referer: https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo\n    - Origin: https://www3.mte.gov.br\n    - X-Requested-With: XMLHttpRequest\n    - content-type: application/x-www-form-urlencoded\n    - content-length: 587\n; apiRequestContext.post: unable to verify the first certificate\nCall log:\n  - → POST https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada\n    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36\n    - accept: text/html, */*; q=0.01\n    - accept-encoding: gzip,deflate,br\n    - Referer: https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo\n    - Origin: https://www3.mte.gov.br\n    - X-Requested-With: XMLHttpRequest\n    - content-type: application/x-www-form-urlencoded\n    - content-length: 587\n",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-01T11:05:19.116Z"
+      "consultedAt": "2026-09-01T15:01:43.699Z"
     },
     {
       "id": "08",
       "patronal": "92.962.919/0001-84",
       "laboral": "92.931.492/0001-57",
       "status": "FONTE INDISPONÍVEL",
-      "error": "https://mediador.trabalho.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada HTTP 403; https://mediador.trabalho.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada HTTP 403",
+      "error": "apiRequestContext.post: unable to verify the first certificate\nCall log:\n  - → POST https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada\n    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36\n    - accept: text/html, */*; q=0.01\n    - accept-encoding: gzip,deflate,br\n    - Referer: https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo\n    - Origin: https://www3.mte.gov.br\n    - X-Requested-With: XMLHttpRequest\n    - content-type: application/x-www-form-urlencoded\n    - content-length: 587\n; apiRequestContext.post: unable to verify the first certificate\nCall log:\n  - → POST https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada\n    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36\n    - accept: text/html, */*; q=0.01\n    - accept-encoding: gzip,deflate,br\n    - Referer: https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo\n    - Origin: https://www3.mte.gov.br\n    - X-Requested-With: XMLHttpRequest\n    - content-type: application/x-www-form-urlencoded\n    - content-length: 587\n",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-01T11:06:21.223Z"
+      "consultedAt": "2026-09-01T15:01:45.586Z"
     },
     {
       "id": "09",
       "patronal": "89.137.574/0001-10",
       "laboral": "93.074.185/0001-60",
       "status": "FONTE INDISPONÍVEL",
-      "error": "https://mediador.trabalho.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada HTTP 403; https://mediador.trabalho.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada HTTP 403",
+      "error": "apiRequestContext.post: unable to verify the first certificate\nCall log:\n  - → POST https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada\n    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36\n    - accept: text/html, */*; q=0.01\n    - accept-encoding: gzip,deflate,br\n    - Referer: https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo\n    - Origin: https://www3.mte.gov.br\n    - X-Requested-With: XMLHttpRequest\n    - content-type: application/x-www-form-urlencoded\n    - content-length: 587\n; apiRequestContext.post: unable to verify the first certificate\nCall log:\n  - → POST https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada\n    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36\n    - accept: text/html, */*; q=0.01\n    - accept-encoding: gzip,deflate,br\n    - Referer: https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo\n    - Origin: https://www3.mte.gov.br\n    - X-Requested-With: XMLHttpRequest\n    - content-type: application/x-www-form-urlencoded\n    - content-length: 587\n",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-01T11:07:23.489Z"
+      "consultedAt": "2026-09-01T15:01:47.262Z"
     },
     {
       "id": "10",
       "patronal": "96.755.145/0001-71",
       "laboral": "96.758.008/0001-90",
       "status": "FONTE INDISPONÍVEL",
-      "error": "https://mediador.trabalho.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada HTTP 403; https://mediador.trabalho.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada HTTP 403",
+      "error": "apiRequestContext.post: unable to verify the first certificate\nCall log:\n  - → POST https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada\n    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36\n    - accept: text/html, */*; q=0.01\n    - accept-encoding: gzip,deflate,br\n    - Referer: https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo\n    - Origin: https://www3.mte.gov.br\n    - X-Requested-With: XMLHttpRequest\n    - content-type: application/x-www-form-urlencoded\n    - content-length: 587\n; apiRequestContext.post: unable to verify the first certificate\nCall log:\n  - → POST https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada\n    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36\n    - accept: text/html, */*; q=0.01\n    - accept-encoding: gzip,deflate,br\n    - Referer: https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo\n    - Origin: https://www3.mte.gov.br\n    - X-Requested-With: XMLHttpRequest\n    - content-type: application/x-www-form-urlencoded\n    - content-length: 587\n",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-01T11:08:25.559Z"
+      "consultedAt": "2026-09-01T15:01:48.893Z"
     },
     {
       "id": "11",
       "patronal": "93.712.909/0001-53",
       "laboral": "93.074.383/0001-23",
       "status": "FONTE INDISPONÍVEL",
-      "error": "https://mediador.trabalho.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada HTTP 403; https://mediador.trabalho.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada HTTP 403",
+      "error": "apiRequestContext.post: unable to verify the first certificate\nCall log:\n  - → POST https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada\n    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36\n    - accept: text/html, */*; q=0.01\n    - accept-encoding: gzip,deflate,br\n    - Referer: https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo\n    - Origin: https://www3.mte.gov.br\n    - X-Requested-With: XMLHttpRequest\n    - content-type: application/x-www-form-urlencoded\n    - content-length: 587\n; apiRequestContext.post: unable to verify the first certificate\nCall log:\n  - → POST https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada\n    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36\n    - accept: text/html, */*; q=0.01\n    - accept-encoding: gzip,deflate,br\n    - Referer: https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo\n    - Origin: https://www3.mte.gov.br\n    - X-Requested-With: XMLHttpRequest\n    - content-type: application/x-www-form-urlencoded\n    - content-length: 587\n",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-01T11:09:27.814Z"
+      "consultedAt": "2026-09-01T15:01:50.277Z"
     },
     {
       "id": "12",
       "patronal": "93.712.909/0001-53",
       "laboral": "96.758.040/0001-76",
       "status": "FONTE INDISPONÍVEL",
-      "error": "https://mediador.trabalho.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada HTTP 403; https://mediador.trabalho.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada HTTP 403",
+      "error": "apiRequestContext.post: unable to verify the first certificate\nCall log:\n  - → POST https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada\n    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36\n    - accept: text/html, */*; q=0.01\n    - accept-encoding: gzip,deflate,br\n    - Referer: https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo\n    - Origin: https://www3.mte.gov.br\n    - X-Requested-With: XMLHttpRequest\n    - content-type: application/x-www-form-urlencoded\n    - content-length: 587\n; apiRequestContext.post: unable to verify the first certificate\nCall log:\n  - → POST https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada\n    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36\n    - accept: text/html, */*; q=0.01\n    - accept-encoding: gzip,deflate,br\n    - Referer: https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo\n    - Origin: https://www3.mte.gov.br\n    - X-Requested-With: XMLHttpRequest\n    - content-type: application/x-www-form-urlencoded\n    - content-length: 587\n",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-01T11:10:30.070Z"
+      "consultedAt": "2026-09-01T15:01:51.679Z"
     }
   ],
   "history": [
+    {
+      "at": "2026-09-01T15:01:51.711Z",
+      "pairs": [
+        {
+          "id": "01",
+          "patronal": "93.246.940/0001-46",
+          "laboral": "89.069.835/0001-01",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "apiRequestContext.post: unable to verify the first certificate\nCall log:\n  - → POST https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada\n    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36\n    - accept: text/html, */*; q=0.01\n    - accept-encoding: gzip,deflate,br\n    - Referer: https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo\n    - Origin: https://www3.mte.gov.br\n    - X-Requested-With: XMLHttpRequest\n    - content-type: application/x-www-form-urlencoded\n    - content-length: 587\n; apiRequestContext.post: unable to verify the first certificate\nCall log:\n  - → POST https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada\n    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36\n    - accept: text/html, */*; q=0.01\n    - accept-encoding: gzip,deflate,br\n    - Referer: https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo\n    - Origin: https://www3.mte.gov.br\n    - X-Requested-With: XMLHttpRequest\n    - content-type: application/x-www-form-urlencoded\n    - content-length: 587\n",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-01T15:01:33.574Z"
+        },
+        {
+          "id": "02",
+          "patronal": "18.006.733/0001-07",
+          "laboral": "15.635.336/0001-06",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "apiRequestContext.post: unable to verify the first certificate\nCall log:\n  - → POST https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada\n    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36\n    - accept: text/html, */*; q=0.01\n    - accept-encoding: gzip,deflate,br\n    - Referer: https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo\n    - Origin: https://www3.mte.gov.br\n    - X-Requested-With: XMLHttpRequest\n    - content-type: application/x-www-form-urlencoded\n    - content-length: 587\n; apiRequestContext.post: unable to verify the first certificate\nCall log:\n  - → POST https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada\n    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36\n    - accept: text/html, */*; q=0.01\n    - accept-encoding: gzip,deflate,br\n    - Referer: https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo\n    - Origin: https://www3.mte.gov.br\n    - X-Requested-With: XMLHttpRequest\n    - content-type: application/x-www-form-urlencoded\n    - content-length: 587\n",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-01T15:01:35.275Z"
+        },
+        {
+          "id": "03",
+          "patronal": "91.100.339/0001-15",
+          "laboral": "96.757.612/0001-00",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "apiRequestContext.post: unable to verify the first certificate\nCall log:\n  - → POST https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada\n    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36\n    - accept: text/html, */*; q=0.01\n    - accept-encoding: gzip,deflate,br\n    - Referer: https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo\n    - Origin: https://www3.mte.gov.br\n    - X-Requested-With: XMLHttpRequest\n    - content-type: application/x-www-form-urlencoded\n    - content-length: 587\n; apiRequestContext.post: unable to verify the first certificate\nCall log:\n  - → POST https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada\n    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36\n    - accept: text/html, */*; q=0.01\n    - accept-encoding: gzip,deflate,br\n    - Referer: https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo\n    - Origin: https://www3.mte.gov.br\n    - X-Requested-With: XMLHttpRequest\n    - content-type: application/x-www-form-urlencoded\n    - content-length: 587\n",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-01T15:01:36.891Z"
+        },
+        {
+          "id": "04",
+          "patronal": "89.138.168/0001-71",
+          "laboral": "91.345.231/0001-92",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "apiRequestContext.post: unable to verify the first certificate\nCall log:\n  - → POST https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada\n    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36\n    - accept: text/html, */*; q=0.01\n    - accept-encoding: gzip,deflate,br\n    - Referer: https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo\n    - Origin: https://www3.mte.gov.br\n    - X-Requested-With: XMLHttpRequest\n    - content-type: application/x-www-form-urlencoded\n    - content-length: 587\n; apiRequestContext.post: unable to verify the first certificate\nCall log:\n  - → POST https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada\n    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36\n    - accept: text/html, */*; q=0.01\n    - accept-encoding: gzip,deflate,br\n    - Referer: https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo\n    - Origin: https://www3.mte.gov.br\n    - X-Requested-With: XMLHttpRequest\n    - content-type: application/x-www-form-urlencoded\n    - content-length: 587\n",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-01T15:01:38.739Z"
+        },
+        {
+          "id": "05",
+          "patronal": "88.368.592/0001-40",
+          "laboral": "97.202.535/0001-87",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "apiRequestContext.post: unable to verify the first certificate\nCall log:\n  - → POST https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada\n    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36\n    - accept: text/html, */*; q=0.01\n    - accept-encoding: gzip,deflate,br\n    - Referer: https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo\n    - Origin: https://www3.mte.gov.br\n    - X-Requested-With: XMLHttpRequest\n    - content-type: application/x-www-form-urlencoded\n    - content-length: 587\n; apiRequestContext.post: unable to verify the first certificate\nCall log:\n  - → POST https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada\n    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36\n    - accept: text/html, */*; q=0.01\n    - accept-encoding: gzip,deflate,br\n    - Referer: https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo\n    - Origin: https://www3.mte.gov.br\n    - X-Requested-With: XMLHttpRequest\n    - content-type: application/x-www-form-urlencoded\n    - content-length: 587\n",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-01T15:01:40.408Z"
+        },
+        {
+          "id": "06",
+          "patronal": "88.368.592/0001-40",
+          "laboral": "96.757.737/0001-22",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "apiRequestContext.post: unable to verify the first certificate\nCall log:\n  - → POST https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada\n    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36\n    - accept: text/html, */*; q=0.01\n    - accept-encoding: gzip,deflate,br\n    - Referer: https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo\n    - Origin: https://www3.mte.gov.br\n    - X-Requested-With: XMLHttpRequest\n    - content-type: application/x-www-form-urlencoded\n    - content-length: 587\n; apiRequestContext.post: unable to verify the first certificate\nCall log:\n  - → POST https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada\n    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36\n    - accept: text/html, */*; q=0.01\n    - accept-encoding: gzip,deflate,br\n    - Referer: https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo\n    - Origin: https://www3.mte.gov.br\n    - X-Requested-With: XMLHttpRequest\n    - content-type: application/x-www-form-urlencoded\n    - content-length: 587\n",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-01T15:01:42.046Z"
+        },
+        {
+          "id": "07",
+          "patronal": "89.138.168/0001-71",
+          "laboral": "91.343.194/0001-83",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "apiRequestContext.post: unable to verify the first certificate\nCall log:\n  - → POST https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada\n    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36\n    - accept: text/html, */*; q=0.01\n    - accept-encoding: gzip,deflate,br\n    - Referer: https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo\n    - Origin: https://www3.mte.gov.br\n    - X-Requested-With: XMLHttpRequest\n    - content-type: application/x-www-form-urlencoded\n    - content-length: 587\n; apiRequestContext.post: unable to verify the first certificate\nCall log:\n  - → POST https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada\n    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36\n    - accept: text/html, */*; q=0.01\n    - accept-encoding: gzip,deflate,br\n    - Referer: https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo\n    - Origin: https://www3.mte.gov.br\n    - X-Requested-With: XMLHttpRequest\n    - content-type: application/x-www-form-urlencoded\n    - content-length: 587\n",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-01T15:01:43.699Z"
+        },
+        {
+          "id": "08",
+          "patronal": "92.962.919/0001-84",
+          "laboral": "92.931.492/0001-57",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "apiRequestContext.post: unable to verify the first certificate\nCall log:\n  - → POST https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada\n    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36\n    - accept: text/html, */*; q=0.01\n    - accept-encoding: gzip,deflate,br\n    - Referer: https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo\n    - Origin: https://www3.mte.gov.br\n    - X-Requested-With: XMLHttpRequest\n    - content-type: application/x-www-form-urlencoded\n    - content-length: 587\n; apiRequestContext.post: unable to verify the first certificate\nCall log:\n  - → POST https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada\n    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36\n    - accept: text/html, */*; q=0.01\n    - accept-encoding: gzip,deflate,br\n    - Referer: https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo\n    - Origin: https://www3.mte.gov.br\n    - X-Requested-With: XMLHttpRequest\n    - content-type: application/x-www-form-urlencoded\n    - content-length: 587\n",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-01T15:01:45.586Z"
+        },
+        {
+          "id": "09",
+          "patronal": "89.137.574/0001-10",
+          "laboral": "93.074.185/0001-60",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "apiRequestContext.post: unable to verify the first certificate\nCall log:\n  - → POST https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada\n    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36\n    - accept: text/html, */*; q=0.01\n    - accept-encoding: gzip,deflate,br\n    - Referer: https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo\n    - Origin: https://www3.mte.gov.br\n    - X-Requested-With: XMLHttpRequest\n    - content-type: application/x-www-form-urlencoded\n    - content-length: 587\n; apiRequestContext.post: unable to verify the first certificate\nCall log:\n  - → POST https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada\n    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36\n    - accept: text/html, */*; q=0.01\n    - accept-encoding: gzip,deflate,br\n    - Referer: https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo\n    - Origin: https://www3.mte.gov.br\n    - X-Requested-With: XMLHttpRequest\n    - content-type: application/x-www-form-urlencoded\n    - content-length: 587\n",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-01T15:01:47.262Z"
+        },
+        {
+          "id": "10",
+          "patronal": "96.755.145/0001-71",
+          "laboral": "96.758.008/0001-90",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "apiRequestContext.post: unable to verify the first certificate\nCall log:\n  - → POST https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada\n    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36\n    - accept: text/html, */*; q=0.01\n    - accept-encoding: gzip,deflate,br\n    - Referer: https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo\n    - Origin: https://www3.mte.gov.br\n    - X-Requested-With: XMLHttpRequest\n    - content-type: application/x-www-form-urlencoded\n    - content-length: 587\n; apiRequestContext.post: unable to verify the first certificate\nCall log:\n  - → POST https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada\n    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36\n    - accept: text/html, */*; q=0.01\n    - accept-encoding: gzip,deflate,br\n    - Referer: https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo\n    - Origin: https://www3.mte.gov.br\n    - X-Requested-With: XMLHttpRequest\n    - content-type: application/x-www-form-urlencoded\n    - content-length: 587\n",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-01T15:01:48.893Z"
+        },
+        {
+          "id": "11",
+          "patronal": "93.712.909/0001-53",
+          "laboral": "93.074.383/0001-23",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "apiRequestContext.post: unable to verify the first certificate\nCall log:\n  - → POST https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada\n    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36\n    - accept: text/html, */*; q=0.01\n    - accept-encoding: gzip,deflate,br\n    - Referer: https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo\n    - Origin: https://www3.mte.gov.br\n    - X-Requested-With: XMLHttpRequest\n    - content-type: application/x-www-form-urlencoded\n    - content-length: 587\n; apiRequestContext.post: unable to verify the first certificate\nCall log:\n  - → POST https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada\n    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36\n    - accept: text/html, */*; q=0.01\n    - accept-encoding: gzip,deflate,br\n    - Referer: https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo\n    - Origin: https://www3.mte.gov.br\n    - X-Requested-With: XMLHttpRequest\n    - content-type: application/x-www-form-urlencoded\n    - content-length: 587\n",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-01T15:01:50.277Z"
+        },
+        {
+          "id": "12",
+          "patronal": "93.712.909/0001-53",
+          "laboral": "96.758.040/0001-76",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "apiRequestContext.post: unable to verify the first certificate\nCall log:\n  - → POST https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada\n    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36\n    - accept: text/html, */*; q=0.01\n    - accept-encoding: gzip,deflate,br\n    - Referer: https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo\n    - Origin: https://www3.mte.gov.br\n    - X-Requested-With: XMLHttpRequest\n    - content-type: application/x-www-form-urlencoded\n    - content-length: 587\n; apiRequestContext.post: unable to verify the first certificate\nCall log:\n  - → POST https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada\n    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36\n    - accept: text/html, */*; q=0.01\n    - accept-encoding: gzip,deflate,br\n    - Referer: https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo\n    - Origin: https://www3.mte.gov.br\n    - X-Requested-With: XMLHttpRequest\n    - content-type: application/x-www-form-urlencoded\n    - content-length: 587\n",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-01T15:01:51.679Z"
+        }
+      ]
+    },
     {
       "at": "2026-09-01T11:10:30.089Z",
       "pairs": [
