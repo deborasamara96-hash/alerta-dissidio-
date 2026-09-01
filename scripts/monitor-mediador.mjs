@@ -19,7 +19,6 @@ const pairs = [
 
 const clean = s => (s || '').replace(/\D/g, '')
 const sleep = ms => new Promise(r => setTimeout(r, ms))
-const official = u => /^https?:\/\/mediador\.trabalho\.gov\.br\/sistemas\/mediador\/Resumo\/ResumoVisualizar\?/i.test(u || '')
 const solicitudUrl = s => `https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=${encodeURIComponent(s)}`
 
 const TYPES = [
@@ -34,11 +33,12 @@ const TYPES = [
 ]
 
 function makeForm(cnpj, page = '1', total = '-1') {
-  const form = {
+  return {
     nrCnpj: cnpj,
     nrCei: '',
     noRazaoSocial: '',
     dsCategoria: '',
+    tpRequerimento: TYPES,
     tpVigencia: '2',
     sgUfDeRegistro: '',
     dtInicioRegistro: '',
@@ -52,21 +52,18 @@ function makeForm(cnpj, page = '1', total = '-1') {
     cdSubGrupo: '',
     noTituloClausula: '',
     utilizarSiracc: '',
-    pagina: page,
-    qtdTotalRegistro: total
+    pagina: String(page),
+    qtdTotalRegistro: String(total)
   }
-  for (const type of TYPES) form[`tpRequerimento`] = TYPES
-  return form
 }
 
 function extractSolicitations(html) {
   const text = String(html || '').replace(/&amp;/g, '&')
   const found = new Set()
-  const patterns = [
-    /(?:NrSolicitacao|nrSolicitacao|N[úu]mero da solicita[cç][aã]o)[^A-Z0-9]{0,40}(MR\d+\/\d{4})/gi,
+  for (const re of [
+    /(?:NrSolicitacao|nrSolicitacao|N[úu]mero da solicita[cç][aã]o)[^A-Z0-9]{0,80}(MR\d+\/\d{4})/gi,
     /MR\d+\/\d{4}/gi
-  ]
-  for (const re of patterns) {
+  ]) {
     for (const m of text.matchAll(re)) {
       const v = (m[1] || m[0] || '').toUpperCase().replace(/%2F/gi, '/')
       if (/^MR\d+\/\d{4}$/.test(v)) found.add(v)
@@ -77,54 +74,75 @@ function extractSolicitations(html) {
 
 function resultCount(html) {
   const text = String(html || '').replace(/&nbsp;/g, ' ')
-  const m = text.match(/Resultado\s*:\s*(\d+)/i)
-  return m ? Number(m[1]) : null
+  const patterns = [
+    /Resultado\s*:\s*(\d+)/i,
+    /Resultados?\s*:\s*(\d+)/i,
+    /qtdTotalRegistro[^>]*value=["'](\d+)["']/i
+  ]
+  for (const re of patterns) {
+    const m = text.match(re)
+    if (m) return Number(m[1])
+  }
+  return null
+}
+
+async function openOfficialSession(page) {
+  const urls = [
+    'https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo',
+    'http://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo',
+    'https://mediador.trabalho.gov.br/sistemas/mediador/ConsultarInstColetivo'
+  ]
+  let lastError = null
+  for (const url of urls) {
+    try {
+      const response = await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 30000 })
+      const status = response?.status() || 0
+      const body = await page.locator('body').innerText().catch(() => '')
+      if (status >= 200 && status < 400 && !/403 Forbidden/i.test(body)) return { url, status }
+      lastError = new Error(`${url} HTTP ${status}`)
+    } catch (e) { lastError = e }
+  }
+  throw lastError || new Error('Não foi possível abrir a consulta oficial do Mediador.')
 }
 
 async function postSearch(page, cnpj, pageNo, total) {
-  const endpoints = [
-    'http://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada',
-    'https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada',
-    'https://mediador.trabalho.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada'
-  ]
-  const form = makeForm(cnpj, String(pageNo), String(total))
-  let lastError = null
-  for (const endpoint of endpoints) {
-    try {
-      const response = await page.request.post(endpoint, {
-        form,
-        timeout: 30000,
-        headers: {
-          Referer: 'https://mediador.trabalho.gov.br/sistemas/mediador/ConsultarInstColetivo',
-          'X-Requested-With': 'XMLHttpRequest',
-          Accept: 'text/html, */*; q=0.01'
-        }
-      })
-      const status = response.status()
-      const body = await response.text()
-      if (status >= 200 && status < 300 && body && !/403 Forbidden/i.test(body)) {
-        return { endpoint, status, body }
-      }
-      lastError = new Error(`${endpoint} HTTP ${status}`)
-    } catch (e) {
-      lastError = e
+  const endpoint = 'https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo/getConsultaAvancada'
+  const form = makeForm(cnpj, pageNo, total)
+  const response = await page.request.post(endpoint, {
+    form,
+    timeout: 30000,
+    headers: {
+      Referer: 'https://www3.mte.gov.br/sistemas/mediador/ConsultarInstColetivo',
+      Origin: 'https://www3.mte.gov.br',
+      'X-Requested-With': 'XMLHttpRequest',
+      Accept: 'text/html, */*; q=0.01'
     }
+  })
+  const status = response.status()
+  const body = await response.text()
+  if (status < 200 || status >= 300 || /403 Forbidden/i.test(body)) {
+    throw new Error(`Mediador HTTP ${status}`)
   }
-  throw lastError || new Error('Mediador indisponível')
+  return { status, body }
 }
 
 async function searchByCnpj(page, cnpj) {
   const first = await postSearch(page, cnpj, 1, -1)
   const total = resultCount(first.body)
   const solicitations = new Set(extractSolicitations(first.body))
-  if (!total || total <= 0) return { total: 0, solicitations: [...solicitations] }
 
-  const maxPages = Math.min(Math.ceil(total / 10), 20)
-  for (let p = 2; p <= maxPages; p++) {
-    const result = await postSearch(page, cnpj, p, total)
-    for (const s of extractSolicitations(result.body)) solicitations.add(s)
+  if (total && total > 10) {
+    const maxPages = Math.min(Math.ceil(total / 10), 20)
+    for (let p = 2; p <= maxPages; p++) {
+      const result = await postSearch(page, cnpj, p, total)
+      for (const s of extractSolicitations(result.body)) solicitations.add(s)
+    }
   }
-  return { total, solicitations: [...solicitations] }
+
+  return {
+    total: total ?? solicitations.size,
+    solicitations: [...solicitations]
+  }
 }
 
 function extractTextValue(text, regex) {
@@ -135,7 +153,7 @@ async function validate(page, solicitation, patronal, laboral) {
   const url = solicitudUrl(solicitation)
   const response = await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 30000 })
   if (!response || !response.ok()) return null
-  await sleep(250)
+  await sleep(300)
   const text = await page.locator('body').innerText()
   const normalized = clean(text)
   if (!normalized.includes(clean(patronal)) || !normalized.includes(clean(laboral))) return null
@@ -146,39 +164,23 @@ async function validate(page, solicitation, patronal, laboral) {
   const vigencia = extractTextValue(text, /per[íi]odo de\s*([^\n]+)/i)
   const titulo = text.match(/^(Acordo Coletivo[^\n]*|Conven[cç][aã]o Coletiva[^\n]*|Termo Aditivo[^\n]*)/im)?.[1]?.trim() || 'Instrumento coletivo'
 
-  return {
-    url,
-    registro,
-    solicitacao,
-    dataRegistro,
-    vigencia,
-    titulo,
-    validatedAt: new Date().toISOString()
-  }
+  return { url, registro, solicitacao, dataRegistro, vigencia, titulo, validatedAt: new Date().toISOString() }
 }
 
 async function discoverPair(page, patronal, laboral) {
-  const queries = [patronal, laboral]
   const all = new Set()
   let totalFound = 0
   const errors = []
-
-  for (const cnpj of queries) {
+  for (const cnpj of [patronal, laboral]) {
     try {
       const result = await searchByCnpj(page, cnpj)
-      totalFound += result.total
+      totalFound += result.total || 0
       for (const s of result.solicitations) all.add(s)
     } catch (e) {
       errors.push(e instanceof Error ? e.message : String(e))
     }
   }
-
-  return {
-    available: totalFound > 0 || all.size > 0,
-    solicitations: [...all],
-    totalFound,
-    error: totalFound || all.size ? null : errors.join('; ')
-  }
+  return { available: all.size > 0 || totalFound > 0, solicitations: [...all], totalFound, error: errors.join('; ') || null }
 }
 
 async function main() {
@@ -187,31 +189,24 @@ async function main() {
 
   const browser = await chromium.launch({ headless: true })
   const context = await browser.newContext({
-    userAgent: 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/126 Safari/537.36',
-    locale: 'pt-BR'
+    userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36',
+    locale: 'pt-BR',
+    timezoneId: 'America/Sao_Paulo'
   })
   const results = []
 
   try {
     const landing = await context.newPage()
-    try {
-      await landing.goto('https://mediador.trabalho.gov.br/sistemas/mediador/ConsultarInstColetivo', { waitUntil: 'domcontentloaded', timeout: 30000 })
-    } catch {}
+    await openOfficialSession(landing)
     await landing.close()
 
     for (const [id, patronal, laboral] of pairs) {
       const page = await context.newPage()
       try {
+        await openOfficialSession(page)
         const discovery = await discoverPair(page, patronal, laboral)
         if (!discovery.available) {
-          results.push({
-            id, patronal, laboral,
-            status: 'FONTE INDISPONÍVEL',
-            error: discovery.error || 'O endpoint oficial de consulta não retornou resultados.',
-            instrumentos: [],
-            candidatosVerificados: 0,
-            consultedAt: new Date().toISOString()
-          })
+          results.push({ id, patronal, laboral, status: 'FONTE INDISPONÍVEL', error: discovery.error || 'O endpoint oficial de consulta não retornou resultados.', instrumentos: [], candidatosVerificados: 0, consultedAt: new Date().toISOString() })
           continue
         }
 
@@ -222,7 +217,6 @@ async function main() {
             if (doc) instrumentos.push(doc)
           } catch {}
         }
-
         const unique = [...new Map(instrumentos.map(x => [x.registro || x.solicitacao || x.url, x])).values()]
         results.push({
           id, patronal, laboral,
@@ -234,17 +228,8 @@ async function main() {
           consultedAt: new Date().toISOString()
         })
       } catch (e) {
-        results.push({
-          id, patronal, laboral,
-          status: 'FONTE INDISPONÍVEL',
-          error: e instanceof Error ? e.message : String(e),
-          instrumentos: [],
-          candidatosVerificados: 0,
-          consultedAt: new Date().toISOString()
-        })
-      } finally {
-        await page.close()
-      }
+        results.push({ id, patronal, laboral, status: 'FONTE INDISPONÍVEL', error: e instanceof Error ? e.message : String(e), instrumentos: [], candidatosVerificados: 0, consultedAt: new Date().toISOString() })
+      } finally { await page.close() }
     }
   } finally {
     await context.close()
