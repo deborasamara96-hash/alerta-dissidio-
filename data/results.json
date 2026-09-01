@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-31T17:28:34.932Z",
+  "generatedAt": "2026-09-01T10:37:08.724Z",
   "source": "Mediador/MTE",
   "overallStatus": "CONSULTADO",
   "pairs": [
@@ -8,123 +8,248 @@
       "patronal": "93.246.940/0001-46",
       "laboral": "89.069.835/0001-01",
       "status": "CONSULTADO",
-      "metodo": "busca por ambos os CNPJs + validação no documento oficial do Mediador",
+      "metodo": "descoberta pública + validação dos dois CNPJs no documento oficial do Mediador",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-08-31T17:28:08.950Z"
+      "consultedAt": "2026-09-01T10:35:05.339Z"
     },
     {
       "id": "02",
       "patronal": "18.006.733/0001-07",
       "laboral": "15.635.336/0001-06",
       "status": "CONSULTADO",
-      "metodo": "busca por ambos os CNPJs + validação no documento oficial do Mediador",
+      "metodo": "descoberta pública + validação dos dois CNPJs no documento oficial do Mediador",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-08-31T17:28:11.233Z"
+      "consultedAt": "2026-09-01T10:35:18.091Z"
     },
     {
       "id": "03",
       "patronal": "91.100.339/0001-15",
       "laboral": "96.757.612/0001-00",
       "status": "CONSULTADO",
-      "metodo": "busca por ambos os CNPJs + validação no documento oficial do Mediador",
+      "metodo": "descoberta pública + validação dos dois CNPJs no documento oficial do Mediador",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-08-31T17:28:13.507Z"
+      "consultedAt": "2026-09-01T10:35:31.358Z"
     },
     {
       "id": "04",
       "patronal": "89.138.168/0001-71",
       "laboral": "91.345.231/0001-92",
       "status": "CONSULTADO",
-      "metodo": "busca por ambos os CNPJs + validação no documento oficial do Mediador",
+      "metodo": "descoberta pública + validação dos dois CNPJs no documento oficial do Mediador",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-08-31T17:28:15.925Z"
+      "consultedAt": "2026-09-01T10:35:44.071Z"
     },
     {
       "id": "05",
       "patronal": "88.368.592/0001-40",
       "laboral": "97.202.535/0001-87",
       "status": "CONSULTADO",
-      "metodo": "busca por ambos os CNPJs + validação no documento oficial do Mediador",
+      "metodo": "descoberta pública + validação dos dois CNPJs no documento oficial do Mediador",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-08-31T17:28:18.320Z"
+      "consultedAt": "2026-09-01T10:35:57.033Z"
     },
     {
       "id": "06",
       "patronal": "88.368.592/0001-40",
       "laboral": "96.757.737/0001-22",
       "status": "CONSULTADO",
-      "metodo": "busca por ambos os CNPJs + validação no documento oficial do Mediador",
+      "metodo": "descoberta pública + validação dos dois CNPJs no documento oficial do Mediador",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-08-31T17:28:20.673Z"
+      "consultedAt": "2026-09-01T10:36:09.905Z"
     },
     {
       "id": "07",
       "patronal": "89.138.168/0001-71",
       "laboral": "91.343.194/0001-83",
       "status": "CONSULTADO",
-      "metodo": "busca por ambos os CNPJs + validação no documento oficial do Mediador",
+      "metodo": "descoberta pública + validação dos dois CNPJs no documento oficial do Mediador",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-08-31T17:28:23.182Z"
+      "consultedAt": "2026-09-01T10:36:22.744Z"
     },
     {
       "id": "08",
       "patronal": "92.962.919/0001-84",
       "laboral": "92.931.492/0001-57",
       "status": "CONSULTADO",
-      "metodo": "busca por ambos os CNPJs + validação no documento oficial do Mediador",
+      "metodo": "descoberta pública + validação dos dois CNPJs no documento oficial do Mediador",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-08-31T17:28:25.662Z"
+      "consultedAt": "2026-09-01T10:36:35.364Z"
     },
     {
       "id": "09",
       "patronal": "89.137.574/0001-10",
       "laboral": "93.074.185/0001-60",
       "status": "CONSULTADO",
-      "metodo": "busca por ambos os CNPJs + validação no documento oficial do Mediador",
+      "metodo": "descoberta pública + validação dos dois CNPJs no documento oficial do Mediador",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-08-31T17:28:27.966Z"
+      "consultedAt": "2026-09-01T10:36:46.027Z"
     },
     {
       "id": "10",
       "patronal": "96.755.145/0001-71",
       "laboral": "96.758.008/0001-90",
       "status": "CONSULTADO",
-      "metodo": "busca por ambos os CNPJs + validação no documento oficial do Mediador",
+      "metodo": "descoberta pública + validação dos dois CNPJs no documento oficial do Mediador",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-08-31T17:28:30.424Z"
+      "consultedAt": "2026-09-01T10:36:51.443Z"
     },
     {
       "id": "11",
       "patronal": "93.712.909/0001-53",
       "laboral": "93.074.383/0001-23",
       "status": "CONSULTADO",
-      "metodo": "busca por ambos os CNPJs + validação no documento oficial do Mediador",
+      "metodo": "descoberta pública + validação dos dois CNPJs no documento oficial do Mediador",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-08-31T17:28:32.615Z"
+      "consultedAt": "2026-09-01T10:37:00.139Z"
     },
     {
       "id": "12",
       "patronal": "93.712.909/0001-53",
       "laboral": "96.758.040/0001-76",
       "status": "CONSULTADO",
-      "metodo": "busca por ambos os CNPJs + validação no documento oficial do Mediador",
+      "metodo": "descoberta pública + validação dos dois CNPJs no documento oficial do Mediador",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-08-31T17:28:34.889Z"
+      "consultedAt": "2026-09-01T10:37:08.678Z"
     }
   ],
   "history": [
+    {
+      "at": "2026-09-01T10:37:08.724Z",
+      "pairs": [
+        {
+          "id": "01",
+          "patronal": "93.246.940/0001-46",
+          "laboral": "89.069.835/0001-01",
+          "status": "CONSULTADO",
+          "metodo": "descoberta pública + validação dos dois CNPJs no documento oficial do Mediador",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-01T10:35:05.339Z"
+        },
+        {
+          "id": "02",
+          "patronal": "18.006.733/0001-07",
+          "laboral": "15.635.336/0001-06",
+          "status": "CONSULTADO",
+          "metodo": "descoberta pública + validação dos dois CNPJs no documento oficial do Mediador",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-01T10:35:18.091Z"
+        },
+        {
+          "id": "03",
+          "patronal": "91.100.339/0001-15",
+          "laboral": "96.757.612/0001-00",
+          "status": "CONSULTADO",
+          "metodo": "descoberta pública + validação dos dois CNPJs no documento oficial do Mediador",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-01T10:35:31.358Z"
+        },
+        {
+          "id": "04",
+          "patronal": "89.138.168/0001-71",
+          "laboral": "91.345.231/0001-92",
+          "status": "CONSULTADO",
+          "metodo": "descoberta pública + validação dos dois CNPJs no documento oficial do Mediador",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-01T10:35:44.071Z"
+        },
+        {
+          "id": "05",
+          "patronal": "88.368.592/0001-40",
+          "laboral": "97.202.535/0001-87",
+          "status": "CONSULTADO",
+          "metodo": "descoberta pública + validação dos dois CNPJs no documento oficial do Mediador",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-01T10:35:57.033Z"
+        },
+        {
+          "id": "06",
+          "patronal": "88.368.592/0001-40",
+          "laboral": "96.757.737/0001-22",
+          "status": "CONSULTADO",
+          "metodo": "descoberta pública + validação dos dois CNPJs no documento oficial do Mediador",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-01T10:36:09.905Z"
+        },
+        {
+          "id": "07",
+          "patronal": "89.138.168/0001-71",
+          "laboral": "91.343.194/0001-83",
+          "status": "CONSULTADO",
+          "metodo": "descoberta pública + validação dos dois CNPJs no documento oficial do Mediador",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-01T10:36:22.744Z"
+        },
+        {
+          "id": "08",
+          "patronal": "92.962.919/0001-84",
+          "laboral": "92.931.492/0001-57",
+          "status": "CONSULTADO",
+          "metodo": "descoberta pública + validação dos dois CNPJs no documento oficial do Mediador",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-01T10:36:35.364Z"
+        },
+        {
+          "id": "09",
+          "patronal": "89.137.574/0001-10",
+          "laboral": "93.074.185/0001-60",
+          "status": "CONSULTADO",
+          "metodo": "descoberta pública + validação dos dois CNPJs no documento oficial do Mediador",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-01T10:36:46.027Z"
+        },
+        {
+          "id": "10",
+          "patronal": "96.755.145/0001-71",
+          "laboral": "96.758.008/0001-90",
+          "status": "CONSULTADO",
+          "metodo": "descoberta pública + validação dos dois CNPJs no documento oficial do Mediador",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-01T10:36:51.443Z"
+        },
+        {
+          "id": "11",
+          "patronal": "93.712.909/0001-53",
+          "laboral": "93.074.383/0001-23",
+          "status": "CONSULTADO",
+          "metodo": "descoberta pública + validação dos dois CNPJs no documento oficial do Mediador",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-01T10:37:00.139Z"
+        },
+        {
+          "id": "12",
+          "patronal": "93.712.909/0001-53",
+          "laboral": "96.758.040/0001-76",
+          "status": "CONSULTADO",
+          "metodo": "descoberta pública + validação dos dois CNPJs no documento oficial do Mediador",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-01T10:37:08.678Z"
+        }
+      ]
+    },
     {
       "at": "2026-08-31T17:28:34.932Z",
       "pairs": [
