@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-02T11:04:17.761Z",
+  "generatedAt": "2026-09-02T20:32:01.622Z",
   "source": "Mediador/MTE",
   "overallStatus": "FONTE INDISPONÍVEL",
   "pairs": [
@@ -8,123 +8,248 @@
       "patronal": "93.246.940/0001-46",
       "laboral": "89.069.835/0001-01",
       "status": "FONTE INDISPONÍVEL",
-      "error": "A consulta oficial não retornou instrumentos.",
+      "error": "Não foi possível confirmar resposta da consulta oficial.",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-02T11:03:00.517Z"
+      "consultedAt": "2026-09-02T20:29:53.587Z"
     },
     {
       "id": "02",
       "patronal": "18.006.733/0001-07",
       "laboral": "15.635.336/0001-06",
       "status": "FONTE INDISPONÍVEL",
-      "error": "A consulta oficial não retornou instrumentos.",
+      "error": "Não foi possível confirmar resposta da consulta oficial.",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-02T11:03:07.332Z"
+      "consultedAt": "2026-09-02T20:30:05.187Z"
     },
     {
       "id": "03",
       "patronal": "91.100.339/0001-15",
       "laboral": "96.757.612/0001-00",
       "status": "FONTE INDISPONÍVEL",
-      "error": "A consulta oficial não retornou instrumentos.",
+      "error": "Não foi possível confirmar resposta da consulta oficial.",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-02T11:03:14.181Z"
+      "consultedAt": "2026-09-02T20:30:16.717Z"
     },
     {
       "id": "04",
       "patronal": "89.138.168/0001-71",
       "laboral": "91.345.231/0001-92",
       "status": "FONTE INDISPONÍVEL",
-      "error": "A consulta oficial não retornou instrumentos.",
+      "error": "Não foi possível confirmar resposta da consulta oficial.",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-02T11:03:21.136Z"
+      "consultedAt": "2026-09-02T20:30:28.270Z"
     },
     {
       "id": "05",
       "patronal": "88.368.592/0001-40",
       "laboral": "97.202.535/0001-87",
       "status": "FONTE INDISPONÍVEL",
-      "error": "A consulta oficial não retornou instrumentos.",
+      "error": "Não foi possível confirmar resposta da consulta oficial.",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-02T11:03:28.397Z"
+      "consultedAt": "2026-09-02T20:30:40.235Z"
     },
     {
       "id": "06",
       "patronal": "88.368.592/0001-40",
       "laboral": "96.757.737/0001-22",
       "status": "FONTE INDISPONÍVEL",
-      "error": "A consulta oficial não retornou instrumentos.",
+      "error": "Não foi possível confirmar resposta da consulta oficial.",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-02T11:03:35.463Z"
+      "consultedAt": "2026-09-02T20:30:51.732Z"
     },
     {
       "id": "07",
       "patronal": "89.138.168/0001-71",
       "laboral": "91.343.194/0001-83",
       "status": "FONTE INDISPONÍVEL",
-      "error": "A consulta oficial não retornou instrumentos.",
+      "error": "Não foi possível confirmar resposta da consulta oficial.",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-02T11:03:42.579Z"
+      "consultedAt": "2026-09-02T20:31:03.181Z"
     },
     {
       "id": "08",
       "patronal": "92.962.919/0001-84",
       "laboral": "92.931.492/0001-57",
       "status": "FONTE INDISPONÍVEL",
-      "error": "A consulta oficial não retornou instrumentos.",
+      "error": "Não foi possível confirmar resposta da consulta oficial.",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-02T11:03:49.413Z"
+      "consultedAt": "2026-09-02T20:31:15.181Z"
     },
     {
       "id": "09",
       "patronal": "89.137.574/0001-10",
       "laboral": "93.074.185/0001-60",
       "status": "FONTE INDISPONÍVEL",
-      "error": "A consulta oficial não retornou instrumentos.",
+      "error": "Não foi possível confirmar resposta da consulta oficial.",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-02T11:03:56.262Z"
+      "consultedAt": "2026-09-02T20:31:26.698Z"
     },
     {
       "id": "10",
       "patronal": "96.755.145/0001-71",
       "laboral": "96.758.008/0001-90",
       "status": "FONTE INDISPONÍVEL",
-      "error": "A consulta oficial não retornou instrumentos.",
+      "error": "Não foi possível confirmar resposta da consulta oficial.",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-02T11:04:03.495Z"
+      "consultedAt": "2026-09-02T20:31:38.130Z"
     },
     {
       "id": "11",
       "patronal": "93.712.909/0001-53",
       "laboral": "93.074.383/0001-23",
       "status": "FONTE INDISPONÍVEL",
-      "error": "A consulta oficial não retornou instrumentos.",
+      "error": "Não foi possível confirmar resposta da consulta oficial.",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-02T11:04:10.628Z"
+      "consultedAt": "2026-09-02T20:31:50.062Z"
     },
     {
       "id": "12",
       "patronal": "93.712.909/0001-53",
       "laboral": "96.758.040/0001-76",
       "status": "FONTE INDISPONÍVEL",
-      "error": "A consulta oficial não retornou instrumentos.",
+      "error": "Não foi possível confirmar resposta da consulta oficial.",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-02T11:04:17.729Z"
+      "consultedAt": "2026-09-02T20:32:01.594Z"
     }
   ],
   "history": [
+    {
+      "at": "2026-09-02T20:32:01.622Z",
+      "pairs": [
+        {
+          "id": "01",
+          "patronal": "93.246.940/0001-46",
+          "laboral": "89.069.835/0001-01",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "Não foi possível confirmar resposta da consulta oficial.",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-02T20:29:53.587Z"
+        },
+        {
+          "id": "02",
+          "patronal": "18.006.733/0001-07",
+          "laboral": "15.635.336/0001-06",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "Não foi possível confirmar resposta da consulta oficial.",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-02T20:30:05.187Z"
+        },
+        {
+          "id": "03",
+          "patronal": "91.100.339/0001-15",
+          "laboral": "96.757.612/0001-00",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "Não foi possível confirmar resposta da consulta oficial.",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-02T20:30:16.717Z"
+        },
+        {
+          "id": "04",
+          "patronal": "89.138.168/0001-71",
+          "laboral": "91.345.231/0001-92",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "Não foi possível confirmar resposta da consulta oficial.",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-02T20:30:28.270Z"
+        },
+        {
+          "id": "05",
+          "patronal": "88.368.592/0001-40",
+          "laboral": "97.202.535/0001-87",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "Não foi possível confirmar resposta da consulta oficial.",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-02T20:30:40.235Z"
+        },
+        {
+          "id": "06",
+          "patronal": "88.368.592/0001-40",
+          "laboral": "96.757.737/0001-22",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "Não foi possível confirmar resposta da consulta oficial.",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-02T20:30:51.732Z"
+        },
+        {
+          "id": "07",
+          "patronal": "89.138.168/0001-71",
+          "laboral": "91.343.194/0001-83",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "Não foi possível confirmar resposta da consulta oficial.",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-02T20:31:03.181Z"
+        },
+        {
+          "id": "08",
+          "patronal": "92.962.919/0001-84",
+          "laboral": "92.931.492/0001-57",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "Não foi possível confirmar resposta da consulta oficial.",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-02T20:31:15.181Z"
+        },
+        {
+          "id": "09",
+          "patronal": "89.137.574/0001-10",
+          "laboral": "93.074.185/0001-60",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "Não foi possível confirmar resposta da consulta oficial.",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-02T20:31:26.698Z"
+        },
+        {
+          "id": "10",
+          "patronal": "96.755.145/0001-71",
+          "laboral": "96.758.008/0001-90",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "Não foi possível confirmar resposta da consulta oficial.",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-02T20:31:38.130Z"
+        },
+        {
+          "id": "11",
+          "patronal": "93.712.909/0001-53",
+          "laboral": "93.074.383/0001-23",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "Não foi possível confirmar resposta da consulta oficial.",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-02T20:31:50.062Z"
+        },
+        {
+          "id": "12",
+          "patronal": "93.712.909/0001-53",
+          "laboral": "96.758.040/0001-76",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "Não foi possível confirmar resposta da consulta oficial.",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-02T20:32:01.594Z"
+        }
+      ]
+    },
     {
       "at": "2026-09-02T11:04:17.761Z",
       "pairs": [
