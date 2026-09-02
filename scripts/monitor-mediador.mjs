@@ -46,52 +46,54 @@ async function openOfficialSession(page) {
 }
 
 async function findCnpjInput(page) {
-  // O formulário do Mediador usa um checkbox para habilitar o filtro CNPJ.
-  // Não devemos tratar esse checkbox como o campo de texto.
   const inputs = page.locator('input')
   const count = await inputs.count()
-  const candidates = []
-  for (let i = 0; i < count; i++) {
-    const el = inputs.nth(i)
-    const attrs = await el.evaluate(node => ({ id: node.id || '', name: node.getAttribute('name') || '', placeholder: node.getAttribute('placeholder') || '', value: node.value || '', type: (node.type || '').toLowerCase() }))
-    if (['checkbox', 'radio', 'hidden', 'button', 'submit', 'reset'].includes(attrs.type)) continue
-    const hay = `${attrs.id} ${attrs.name} ${attrs.placeholder}`.toLowerCase()
-    if (/cnpj|caepf/.test(hay)) candidates.push({ i, attrs })
-  }
-  if (candidates.length) return inputs.nth(candidates[0].i)
 
-  // Se o campo estiver desabilitado até marcar o filtro, habilite o checkbox.
+  // Primeiro habilite o filtro CNPJ/CAEPF. O campo txtNRCNPJ pode existir no DOM
+  // como readonly até que o checkbox correspondente seja marcado.
   const checkboxes = page.locator('input[type="checkbox"]')
   const checkboxCount = await checkboxes.count()
   for (let i = 0; i < checkboxCount; i++) {
     const cb = checkboxes.nth(i)
-    const attrs = await cb.evaluate(node => ({ id: node.id || '', name: node.getAttribute('name') || '', onclick: node.getAttribute('onclick') || '' }))
-    const hay = `${attrs.id} ${attrs.name} ${attrs.onclick}`.toLowerCase()
+    const attrs = await cb.evaluate(node => ({
+      id: node.id || '',
+      name: node.getAttribute('name') || '',
+      value: node.getAttribute('value') || '',
+      aria: node.getAttribute('aria-label') || '',
+      onclick: node.getAttribute('onclick') || ''
+    }))
+    const hay = `${attrs.id} ${attrs.name} ${attrs.value} ${attrs.aria} ${attrs.onclick}`.toLowerCase()
     if (/cnpj|caepf/.test(hay)) {
       if (!(await cb.isChecked().catch(() => false))) await cb.check().catch(() => cb.click())
-      await sleep(200)
+      await sleep(300)
       break
     }
   }
 
-  const enabled = []
+  // Agora procure apenas um campo CNPJ que esteja realmente editável.
   for (let i = 0; i < count; i++) {
     const el = inputs.nth(i)
-    const attrs = await el.evaluate(node => ({ id: node.id || '', name: node.getAttribute('name') || '', placeholder: node.getAttribute('placeholder') || '', type: (node.type || '').toLowerCase(), disabled: !!node.disabled }))
-    if (['checkbox', 'radio', 'hidden', 'button', 'submit', 'reset'].includes(attrs.type) || attrs.disabled) continue
+    const attrs = await el.evaluate(node => ({
+      id: node.id || '',
+      name: node.getAttribute('name') || '',
+      placeholder: node.getAttribute('placeholder') || '',
+      type: (node.type || '').toLowerCase(),
+      disabled: !!node.disabled,
+      readOnly: !!node.readOnly
+    }))
+    if (['checkbox', 'radio', 'hidden', 'button', 'submit', 'reset'].includes(attrs.type) || attrs.disabled || attrs.readOnly) continue
     const hay = `${attrs.id} ${attrs.name} ${attrs.placeholder}`.toLowerCase()
-    if (/cnpj|caepf/.test(hay)) enabled.push(i)
+    if (/cnpj|caepf/.test(hay) && await el.isVisible().catch(() => false) && await el.isEditable().catch(() => false)) return el
   }
-  if (enabled.length) return inputs.nth(enabled[0])
 
-  // Fallback: after enabling the filter, use the first visible editable text input.
+  // Fallback: use o primeiro campo de texto visível e editável depois da ativação.
   for (let i = 0; i < count; i++) {
     const el = inputs.nth(i)
     const type = await el.getAttribute('type').catch(() => '')
     if (['checkbox', 'radio', 'hidden', 'button', 'submit', 'reset'].includes((type || '').toLowerCase())) continue
     if (await el.isVisible().catch(() => false) && await el.isEditable().catch(() => false)) return el
   }
-  throw new Error('Campo CNPJ/CAEPF não encontrado na consulta oficial.')
+  throw new Error('Campo CNPJ/CAEPF não encontrado ou não foi habilitado na consulta oficial.')
 }
 
 async function searchByCnpj(page, cnpj) {
