@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-02T10:30:46.929Z",
+  "generatedAt": "2026-09-02T11:04:17.761Z",
   "source": "Mediador/MTE",
   "overallStatus": "FONTE INDISPONÍVEL",
   "pairs": [
@@ -8,123 +8,248 @@
       "patronal": "93.246.940/0001-46",
       "laboral": "89.069.835/0001-01",
       "status": "FONTE INDISPONÍVEL",
-      "error": "locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"93246940000146\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n; locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"89069835000101\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n",
+      "error": "A consulta oficial não retornou instrumentos.",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-02T10:18:54.915Z"
+      "consultedAt": "2026-09-02T11:03:00.517Z"
     },
     {
       "id": "02",
       "patronal": "18.006.733/0001-07",
       "laboral": "15.635.336/0001-06",
       "status": "FONTE INDISPONÍVEL",
-      "error": "locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"18006733000107\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n; locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"15635336000106\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n",
+      "error": "A consulta oficial não retornou instrumentos.",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-02T10:19:59.257Z"
+      "consultedAt": "2026-09-02T11:03:07.332Z"
     },
     {
       "id": "03",
       "patronal": "91.100.339/0001-15",
       "laboral": "96.757.612/0001-00",
       "status": "FONTE INDISPONÍVEL",
-      "error": "locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"91100339000115\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n; locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"96757612000100\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n",
+      "error": "A consulta oficial não retornou instrumentos.",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-02T10:21:03.662Z"
+      "consultedAt": "2026-09-02T11:03:14.181Z"
     },
     {
       "id": "04",
       "patronal": "89.138.168/0001-71",
       "laboral": "91.345.231/0001-92",
       "status": "FONTE INDISPONÍVEL",
-      "error": "locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"89138168000171\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n; locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"91345231000192\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n",
+      "error": "A consulta oficial não retornou instrumentos.",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-02T10:22:08.022Z"
+      "consultedAt": "2026-09-02T11:03:21.136Z"
     },
     {
       "id": "05",
       "patronal": "88.368.592/0001-40",
       "laboral": "97.202.535/0001-87",
       "status": "FONTE INDISPONÍVEL",
-      "error": "locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"88368592000140\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n; locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"97202535000187\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n",
+      "error": "A consulta oficial não retornou instrumentos.",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-02T10:23:13.417Z"
+      "consultedAt": "2026-09-02T11:03:28.397Z"
     },
     {
       "id": "06",
       "patronal": "88.368.592/0001-40",
       "laboral": "96.757.737/0001-22",
       "status": "FONTE INDISPONÍVEL",
-      "error": "locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"88368592000140\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n; locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"96757737000122\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n",
+      "error": "A consulta oficial não retornou instrumentos.",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-02T10:24:17.781Z"
+      "consultedAt": "2026-09-02T11:03:35.463Z"
     },
     {
       "id": "07",
       "patronal": "89.138.168/0001-71",
       "laboral": "91.343.194/0001-83",
       "status": "FONTE INDISPONÍVEL",
-      "error": "locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"89138168000171\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n; locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"91343194000183\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n",
+      "error": "A consulta oficial não retornou instrumentos.",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-02T10:25:22.880Z"
+      "consultedAt": "2026-09-02T11:03:42.579Z"
     },
     {
       "id": "08",
       "patronal": "92.962.919/0001-84",
       "laboral": "92.931.492/0001-57",
       "status": "FONTE INDISPONÍVEL",
-      "error": "locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"92962919000184\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n; locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"92931492000157\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n",
+      "error": "A consulta oficial não retornou instrumentos.",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-02T10:26:28.135Z"
+      "consultedAt": "2026-09-02T11:03:49.413Z"
     },
     {
       "id": "09",
       "patronal": "89.137.574/0001-10",
       "laboral": "93.074.185/0001-60",
       "status": "FONTE INDISPONÍVEL",
-      "error": "locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"89137574000110\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n; locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"93074185000160\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n",
+      "error": "A consulta oficial não retornou instrumentos.",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-02T10:27:32.947Z"
+      "consultedAt": "2026-09-02T11:03:56.262Z"
     },
     {
       "id": "10",
       "patronal": "96.755.145/0001-71",
       "laboral": "96.758.008/0001-90",
       "status": "FONTE INDISPONÍVEL",
-      "error": "locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"96755145000171\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n; locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"96758008000190\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n",
+      "error": "A consulta oficial não retornou instrumentos.",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-02T10:28:38.141Z"
+      "consultedAt": "2026-09-02T11:04:03.495Z"
     },
     {
       "id": "11",
       "patronal": "93.712.909/0001-53",
       "laboral": "93.074.383/0001-23",
       "status": "FONTE INDISPONÍVEL",
-      "error": "locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"93712909000153\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n; locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"93074383000123\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n",
+      "error": "A consulta oficial não retornou instrumentos.",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-02T10:29:42.544Z"
+      "consultedAt": "2026-09-02T11:04:10.628Z"
     },
     {
       "id": "12",
       "patronal": "93.712.909/0001-53",
       "laboral": "96.758.040/0001-76",
       "status": "FONTE INDISPONÍVEL",
-      "error": "locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"93712909000153\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n; locator.fill: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('input').nth(2)\n    - locator resolved to <input value=\"\" size=\"16\" type=\"text\" id=\"txtNRCNPJ\" name=\"txtNRCNPJ\" class=\"ReadOnly\" readonly=\"readonly\"/>\n    - fill(\"96758040000176\")\n  - attempting fill action\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and editable\n      - element is not editable\n    - retrying fill action\n      - waiting 100ms\n    60 × waiting for element to be visible, enabled and editable\n       - element is not editable\n     - retrying fill action\n       - waiting 500ms\n",
+      "error": "A consulta oficial não retornou instrumentos.",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-02T10:30:46.891Z"
+      "consultedAt": "2026-09-02T11:04:17.729Z"
     }
   ],
   "history": [
+    {
+      "at": "2026-09-02T11:04:17.761Z",
+      "pairs": [
+        {
+          "id": "01",
+          "patronal": "93.246.940/0001-46",
+          "laboral": "89.069.835/0001-01",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "A consulta oficial não retornou instrumentos.",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-02T11:03:00.517Z"
+        },
+        {
+          "id": "02",
+          "patronal": "18.006.733/0001-07",
+          "laboral": "15.635.336/0001-06",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "A consulta oficial não retornou instrumentos.",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-02T11:03:07.332Z"
+        },
+        {
+          "id": "03",
+          "patronal": "91.100.339/0001-15",
+          "laboral": "96.757.612/0001-00",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "A consulta oficial não retornou instrumentos.",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-02T11:03:14.181Z"
+        },
+        {
+          "id": "04",
+          "patronal": "89.138.168/0001-71",
+          "laboral": "91.345.231/0001-92",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "A consulta oficial não retornou instrumentos.",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-02T11:03:21.136Z"
+        },
+        {
+          "id": "05",
+          "patronal": "88.368.592/0001-40",
+          "laboral": "97.202.535/0001-87",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "A consulta oficial não retornou instrumentos.",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-02T11:03:28.397Z"
+        },
+        {
+          "id": "06",
+          "patronal": "88.368.592/0001-40",
+          "laboral": "96.757.737/0001-22",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "A consulta oficial não retornou instrumentos.",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-02T11:03:35.463Z"
+        },
+        {
+          "id": "07",
+          "patronal": "89.138.168/0001-71",
+          "laboral": "91.343.194/0001-83",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "A consulta oficial não retornou instrumentos.",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-02T11:03:42.579Z"
+        },
+        {
+          "id": "08",
+          "patronal": "92.962.919/0001-84",
+          "laboral": "92.931.492/0001-57",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "A consulta oficial não retornou instrumentos.",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-02T11:03:49.413Z"
+        },
+        {
+          "id": "09",
+          "patronal": "89.137.574/0001-10",
+          "laboral": "93.074.185/0001-60",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "A consulta oficial não retornou instrumentos.",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-02T11:03:56.262Z"
+        },
+        {
+          "id": "10",
+          "patronal": "96.755.145/0001-71",
+          "laboral": "96.758.008/0001-90",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "A consulta oficial não retornou instrumentos.",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-02T11:04:03.495Z"
+        },
+        {
+          "id": "11",
+          "patronal": "93.712.909/0001-53",
+          "laboral": "93.074.383/0001-23",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "A consulta oficial não retornou instrumentos.",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-02T11:04:10.628Z"
+        },
+        {
+          "id": "12",
+          "patronal": "93.712.909/0001-53",
+          "laboral": "96.758.040/0001-76",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "A consulta oficial não retornou instrumentos.",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-02T11:04:17.729Z"
+        }
+      ]
+    },
     {
       "at": "2026-09-02T10:30:46.929Z",
       "pairs": [
