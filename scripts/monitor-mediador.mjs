@@ -22,11 +22,11 @@ const sleep = ms => new Promise(r => setTimeout(r, ms))
 const solicitudUrl = s => `https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=${encodeURIComponent(s)}`
 
 function extractSolicitations(html) {
-  const text = String(html || '').replace(/&amp;/g, '&')
+  const text = String(html || '').replace(/&amp;/g, '&').replace(/\\u002F/g, '/')
   const found = new Set()
-  for (const re of [/(?:NrSolicitacao|nrSolicitacao|N[úu]mero da solicita[cç][aã]o)[^A-Z0-9]{0,80}(MR\d+\/\d{4})/gi,/MR\d+\/\d{4}/gi]) {
+  for (const re of [/(?:NrSolicitacao|nrSolicitacao|N[úu]mero da solicita[cç][aã]o)[^A-Z0-9]{0,120}(MR\d+%2F\d{4}|MR\d+\/\d{4})/gi,/MR\d+%2F\d{4}/gi,/MR\d+\/\d{4}/gi]) {
     for (const m of text.matchAll(re)) {
-      const v = (m[1] || m[0] || '').toUpperCase().replace(/%2F/gi, '/')
+      const v = decodeURIComponent((m[1] || m[0] || '').toUpperCase())
       if (/^MR\d+\/\d{4}$/.test(v)) found.add(v)
     }
   }
@@ -48,50 +48,24 @@ async function openOfficialSession(page) {
 async function findCnpjInput(page) {
   const inputs = page.locator('input')
   const count = await inputs.count()
-
-  // Primeiro habilite o filtro CNPJ/CAEPF. O campo txtNRCNPJ pode existir no DOM
-  // como readonly até que o checkbox correspondente seja marcado.
   const checkboxes = page.locator('input[type="checkbox"]')
   const checkboxCount = await checkboxes.count()
   for (let i = 0; i < checkboxCount; i++) {
     const cb = checkboxes.nth(i)
-    const attrs = await cb.evaluate(node => ({
-      id: node.id || '',
-      name: node.getAttribute('name') || '',
-      value: node.getAttribute('value') || '',
-      aria: node.getAttribute('aria-label') || '',
-      onclick: node.getAttribute('onclick') || ''
-    }))
-    const hay = `${attrs.id} ${attrs.name} ${attrs.value} ${attrs.aria} ${attrs.onclick}`.toLowerCase()
+    const attrs = await cb.evaluate(node => ({ id: node.id || '', name: node.getAttribute('name') || '', value: node.getAttribute('value') || '', aria: node.getAttribute('aria-label') || '', onclick: node.getAttribute('onclick') || '', title: node.getAttribute('title') || '' }))
+    const hay = `${attrs.id} ${attrs.name} ${attrs.value} ${attrs.aria} ${attrs.onclick} ${attrs.title}`.toLowerCase()
     if (/cnpj|caepf/.test(hay)) {
       if (!(await cb.isChecked().catch(() => false))) await cb.check().catch(() => cb.click())
-      await sleep(300)
+      await sleep(500)
       break
     }
   }
-
-  // Agora procure apenas um campo CNPJ que esteja realmente editável.
   for (let i = 0; i < count; i++) {
     const el = inputs.nth(i)
-    const attrs = await el.evaluate(node => ({
-      id: node.id || '',
-      name: node.getAttribute('name') || '',
-      placeholder: node.getAttribute('placeholder') || '',
-      type: (node.type || '').toLowerCase(),
-      disabled: !!node.disabled,
-      readOnly: !!node.readOnly
-    }))
-    if (['checkbox', 'radio', 'hidden', 'button', 'submit', 'reset'].includes(attrs.type) || attrs.disabled || attrs.readOnly) continue
+    const attrs = await el.evaluate(node => ({ id: node.id || '', name: node.getAttribute('name') || '', placeholder: node.getAttribute('placeholder') || '', type: (node.type || '').toLowerCase(), disabled: !!node.disabled, readOnly: !!node.readOnly }))
+    if (['checkbox','radio','hidden','button','submit','reset'].includes(attrs.type) || attrs.disabled || attrs.readOnly) continue
     const hay = `${attrs.id} ${attrs.name} ${attrs.placeholder}`.toLowerCase()
     if (/cnpj|caepf/.test(hay) && await el.isVisible().catch(() => false) && await el.isEditable().catch(() => false)) return el
-  }
-
-  // Fallback: use o primeiro campo de texto visível e editável depois da ativação.
-  for (let i = 0; i < count; i++) {
-    const el = inputs.nth(i)
-    const type = await el.getAttribute('type').catch(() => '')
-    if (['checkbox', 'radio', 'hidden', 'button', 'submit', 'reset'].includes((type || '').toLowerCase())) continue
-    if (await el.isVisible().catch(() => false) && await el.isEditable().catch(() => false)) return el
   }
   throw new Error('Campo CNPJ/CAEPF não encontrado ou não foi habilitado na consulta oficial.')
 }
@@ -105,29 +79,56 @@ async function searchByCnpj(page, cnpj) {
   const searchButton = page.getByRole('button', { name: /^Pesquisar$/i }).first()
   if (!(await searchButton.count())) throw new Error('Botão Pesquisar não encontrado na consulta oficial.')
 
-  await Promise.all([
-    page.waitForLoadState('networkidle', { timeout: 15000 }).catch(() => {}),
-    searchButton.click()
-  ])
-  await sleep(1000)
-
-  const responseText = await page.locator('body').innerText()
-  const url = page.url()
-  const statusText = responseText.match(/HTTP\s*([45]\d\d)/i)?.[1]
-  if (statusText) throw new Error(`Mediador HTTP ${statusText}`)
-  if (/403 Forbidden|Access Denied|Forbidden/i.test(responseText)) throw new Error('Mediador HTTP 403')
-
-  const solicitations = new Set(extractSolicitations(await page.content()))
-  const links = await page.locator('a').evaluateAll(els => els.map(a => ({ text: (a.textContent || '').trim(), href: a.href || '' })))
-  for (const link of links) {
-    const m = link.href.match(/MR\d+%2F\d{4}|MR\d+\/\d{4}/i)
-    if (m) solicitations.add(decodeURIComponent(m[0]).toUpperCase())
-    const t = link.text.match(/MR\d+\/\d{4}/i)
-    if (t) solicitations.add(t[0].toUpperCase())
+  const captured = []
+  const capture = async response => {
+    try {
+      const u = response.url()
+      if (!/getConsultaAvancada|ConsultarInstColetivo/i.test(u)) return
+      const ct = (response.headers()['content-type'] || '').toLowerCase()
+      if (!/html|json|text|javascript/.test(ct)) return
+      const body = await response.text()
+      if (body) captured.push({ url: u, status: response.status(), body })
+    } catch {}
+  }
+  page.on('response', capture)
+  try {
+    await searchButton.click()
+    await sleep(2500)
+    await page.waitForLoadState('networkidle', { timeout: 10000 }).catch(() => {})
+    await sleep(500)
+  } finally {
+    page.off('response', capture)
   }
 
-  const noResults = /nenhum|não foram encontrados|nao foram encontrados|0\s+registro/i.test(responseText)
-  return { total: noResults ? 0 : solicitations.size, solicitations: [...solicitations], url, body: responseText }
+  const responseText = await page.locator('body').innerText()
+  const pageHtml = await page.content()
+  const url = page.url()
+  const allPayloads = [pageHtml, responseText, ...captured.map(x => x.body)]
+  const status403 = allPayloads.some(x => /403 Forbidden|Access Denied|Forbidden/i.test(x))
+  if (status403) throw new Error('Mediador HTTP 403')
+
+  const solicitations = new Set()
+  for (const payload of allPayloads) for (const s of extractSolicitations(payload)) solicitations.add(s)
+  const links = await page.locator('a').evaluateAll(els => els.map(a => ({ text: (a.textContent || '').trim(), href: a.href || '', onclick: a.getAttribute('onclick') || '' })))
+  for (const link of links) {
+    for (const source of [link.href, link.onclick, link.text]) {
+      const m = source.match(/MR\d+%2F\d{4}|MR\d+\/\d{4}/i)
+      if (m) solicitations.add(decodeURIComponent(m[0]).toUpperCase())
+    }
+  }
+
+  const hasResultMarker = /resultado da pesquisa|instrumento[s]? coletivo[s]? encontrado[s]?|n[úu]mero de registro|detalhes do instrumento|MR\d+\/\d{4}/i.test(allPayloads.join('\n'))
+  const noResults = /nenhum|não foram encontrados|nao foram encontrados|nenhum registro|0\s+registro/i.test(responseText)
+  const requestSucceeded = captured.some(x => x.status >= 200 && x.status < 400) || hasResultMarker
+  return {
+    total: solicitations.size,
+    solicitations: [...solicitations],
+    url,
+    body: responseText,
+    requestSucceeded,
+    noResults,
+    capturedResponses: captured.map(x => ({ url: x.url, status: x.status, size: x.body.length }))
+  }
 }
 
 function extractTextValue(text, regex) { return text.match(regex)?.[1]?.trim() || '' }
@@ -135,8 +136,9 @@ function extractTextValue(text, regex) { return text.match(regex)?.[1]?.trim() |
 async function validate(page, solicitation, patronal, laboral) {
   const response = await page.goto(solicitacaoUrl(solicitation), { waitUntil: 'domcontentloaded', timeout: 30000 })
   if (!response || !response.ok()) return null
-  await sleep(300)
-  const text = await page.locator('body').innerText(); const normalized = clean(text)
+  await sleep(500)
+  const text = await page.locator('body').innerText()
+  const normalized = clean(text)
   if (!normalized.includes(clean(patronal)) || !normalized.includes(clean(laboral))) return null
   return {
     url: solicitudUrl(solicitation),
@@ -150,15 +152,16 @@ async function validate(page, solicitation, patronal, laboral) {
 }
 
 async function discoverPair(page, patronal, laboral) {
-  const all = new Set(); let totalFound = 0; const errors = []
+  const all = new Set(); let totalFound = 0; let successfulQueries = 0; const errors = []
   for (const cnpj of [patronal, laboral]) {
     try {
       const result = await searchByCnpj(page, cnpj)
+      if (result.requestSucceeded) successfulQueries++
       totalFound += result.total || 0
       for (const s of result.solicitations) all.add(s)
     } catch (e) { errors.push(e instanceof Error ? e.message : String(e)) }
   }
-  return { available: all.size > 0 || totalFound > 0, solicitations: [...all], totalFound, error: errors.join('; ') || null }
+  return { available: all.size > 0 || successfulQueries > 0, solicitations: [...all], totalFound, successfulQueries, error: errors.join('; ') || null }
 }
 
 async function main() {
@@ -173,8 +176,8 @@ async function main() {
       try {
         await openOfficialSession(page)
         const discovery = await discoverPair(page, patronal, laboral)
-        if (!discovery.available) {
-          results.push({ id, patronal, laboral, status: 'FONTE INDISPONÍVEL', error: discovery.error || 'A consulta oficial não retornou instrumentos.', instrumentos: [], candidatosVerificados: 0, consultedAt: new Date().toISOString() })
+        if (discovery.successfulQueries === 0 && discovery.solicitations.length === 0) {
+          results.push({ id, patronal, laboral, status: 'FONTE INDISPONÍVEL', error: discovery.error || 'Não foi possível confirmar resposta da consulta oficial.', instrumentos: [], candidatosVerificados: 0, consultedAt: new Date().toISOString() })
           continue
         }
         const instrumentos = []
@@ -182,14 +185,18 @@ async function main() {
           try { const doc = await validate(page, solicitation, patronal, laboral); if (doc) instrumentos.push(doc) } catch {}
         }
         const unique = [...new Map(instrumentos.map(x => [x.registro || x.solicitacao || x.url, x])).values()]
-        results.push({ id, patronal, laboral, status: 'CONSULTADO', metodo: 'consulta pela interface oficial do Mediador por CNPJ + validação dos dois CNPJs', instrumentos: unique, candidatosVerificados: discovery.solicitations.length, totalEncontradoNaConsulta: discovery.totalFound, consultedAt: new Date().toISOString() })
+        results.push({ id, patronal, laboral, status: 'CONSULTADO', metodo: 'interface oficial do Mediador por CNPJ + captura da resposta + validação dos dois CNPJs', instrumentos: unique, candidatosVerificados: discovery.solicitations.length, totalEncontradoNaConsulta: discovery.totalFound, consultasConfirmadas: discovery.successfulQueries, consultedAt: new Date().toISOString() })
       } catch (e) {
         results.push({ id, patronal, laboral, status: 'FONTE INDISPONÍVEL', error: e instanceof Error ? e.message : String(e), instrumentos: [], candidatosVerificados: 0, consultedAt: new Date().toISOString() })
       } finally { await page.close() }
     }
   } finally { await context.close(); await browser.close() }
   const run = { at: new Date().toISOString(), pairs: results }
-  store.generatedAt = run.at; store.source = 'Mediador/MTE'; store.overallStatus = results.some(x => x.status === 'FONTE INDISPONÍVEL') ? 'FONTE INDISPONÍVEL' : 'CONSULTADO'; store.pairs = results; store.history = [run, ...(store.history || [])].slice(0, 90)
+  store.generatedAt = run.at
+  store.source = 'Mediador/MTE'
+  store.overallStatus = results.every(x => x.status === 'CONSULTADO') ? 'CONSULTADO' : results.some(x => x.status === 'CONSULTADO') ? 'PARCIAL' : 'FONTE INDISPONÍVEL'
+  store.pairs = results
+  store.history = [run, ...(store.history || [])].slice(0, 90)
   await fs.writeFile(OUT, JSON.stringify(store, null, 2) + '\n')
 }
 main().catch(e => { console.error(e); process.exit(1) })
