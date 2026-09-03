@@ -9,6 +9,7 @@ const pairs = [
 ]
 const clean = s => String(s || '').replace(/\D/g, '')
 const sleep = ms => new Promise(r => setTimeout(r, ms))
+const hoje = () => { const d = new Date(); return `${String(d.getDate()).padStart(2,'0')}/${String(d.getMonth()+1).padStart(2,'0')}/${d.getFullYear()}` }
 const solicitudUrl = s => `https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=${encodeURIComponent(s)}`
 
 function extractSolicitations(html) {
@@ -34,7 +35,7 @@ async function openOfficialSession(page) {
 async function searchByCnpj(page, cnpj) {
   await page.goto(CONSULTA, { waitUntil: 'domcontentloaded', timeout: 30000 })
   await page.waitForLoadState('networkidle', { timeout: 10000 }).catch(() => {})
-  const result = await page.evaluate(async ({ endpoint, cnpj }) => {
+  const result = await page.evaluate(async ({ endpoint, cnpj, dataFim }) => {
     const params = new URLSearchParams()
     params.append('nrCnpj', cnpj)
     params.append('nrCei', '')
@@ -43,8 +44,9 @@ async function searchByCnpj(page, cnpj) {
     for (const value of ['acordo','acordoColetivoEspecificoPPE','acordoColetivoEspecificoDomingosFeriados','convencao','termoAditivoAcordo','termoAditivoConvecao','termoAditivoAcordoEspecificoPPE','termoAditivoAcordoEspecificoDomingoFeriado']) params.append('tpRequerimento', value)
     params.append('tpVigencia', '2')
     params.append('sgUfDeRegistro', '')
-    params.append('dtInicioRegistro', '')
-    params.append('dtFimRegistro', '')
+    // Limita a pesquisa ao histórico recente, evitando o timeout do endpoint quando a consulta fica aberta.
+    params.append('dtInicioRegistro', '01/01/2024')
+    params.append('dtFimRegistro', dataFim)
     params.append('dtInicioVigenciaInstrumentoColetivo', '')
     params.append('dtFimVigenciaInstrumentoColetivo', '')
     params.append('tpAbrangencia', 'Todos os tipos')
@@ -58,8 +60,9 @@ async function searchByCnpj(page, cnpj) {
     params.append('qtdTotalRegistro', '-1')
     const response = await fetch(endpoint, { method: 'POST', credentials: 'same-origin', headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8', 'X-Requested-With': 'XMLHttpRequest', 'Accept': 'text/html, */*; q=0.01' }, body: params.toString() })
     return { status: response.status, url: response.url, body: await response.text() }
-  }, { endpoint: ENDPOINT, cnpj: clean(cnpj) })
+  }, { endpoint: ENDPOINT, cnpj: clean(cnpj), dataFim: hoje() })
   if (result.status === 403) throw new Error('Mediador HTTP 403')
+  if (result.status === 504) throw new Error('Mediador HTTP 504 (consulta oficial expirou)')
   if (result.status < 200 || result.status >= 400) throw new Error(`Mediador HTTP ${result.status}`)
   const solicitations = extractSolicitations(result.body)
   const lower = result.body.toLowerCase()
@@ -78,7 +81,14 @@ async function validate(page, solicitation, patronal, laboral) {
 }
 async function discoverPair(page, patronal, laboral) {
   const all = new Set(); let totalFound = 0; let successfulQueries = 0; const errors = []
-  for (const cnpj of [patronal, laboral]) { try { const result = await searchByCnpj(page, cnpj); successfulQueries++; totalFound += result.total; for (const s of result.solicitations) all.add(s) } catch (e) { errors.push(e instanceof Error ? e.message : String(e)) } }
+  for (const cnpj of [patronal, laboral]) {
+    let lastError = null
+    for (let attempt = 1; attempt <= 2; attempt++) {
+      try { const result = await searchByCnpj(page, cnpj); successfulQueries++; totalFound += result.total; for (const s of result.solicitations) all.add(s); lastError = null; break }
+      catch (e) { lastError = e instanceof Error ? e.message : String(e); if (attempt < 2) await sleep(1500) }
+    }
+    if (lastError) errors.push(lastError)
+  }
   return { solicitations: [...all], totalFound, successfulQueries, error: errors.join('; ') || null }
 }
 async function main() {
