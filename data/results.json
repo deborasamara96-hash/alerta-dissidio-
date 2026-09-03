@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-03T10:19:58.433Z",
+  "generatedAt": "2026-09-03T14:19:19.630Z",
   "source": "Mediador/MTE",
   "overallStatus": "FONTE INDISPONÍVEL",
   "pairs": [
@@ -8,123 +8,248 @@
       "patronal": "93.246.940/0001-46",
       "laboral": "89.069.835/0001-01",
       "status": "FONTE INDISPONÍVEL",
-      "error": "Não foi possível confirmar resposta da consulta oficial.",
+      "error": "Mediador HTTP 504; Mediador HTTP 504",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-03T10:17:49.493Z"
+      "consultedAt": "2026-09-03T14:11:39.940Z"
     },
     {
       "id": "02",
       "patronal": "18.006.733/0001-07",
       "laboral": "15.635.336/0001-06",
       "status": "FONTE INDISPONÍVEL",
-      "error": "Não foi possível confirmar resposta da consulta oficial.",
+      "error": "Mediador HTTP 504",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-03T10:18:01.141Z"
+      "consultedAt": "2026-09-03T14:11:55.207Z"
     },
     {
       "id": "03",
       "patronal": "91.100.339/0001-15",
       "laboral": "96.757.612/0001-00",
       "status": "FONTE INDISPONÍVEL",
-      "error": "Não foi possível confirmar resposta da consulta oficial.",
+      "error": "Mediador HTTP 504; Mediador HTTP 504",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-03T10:18:12.755Z"
+      "consultedAt": "2026-09-03T14:12:36.613Z"
     },
     {
       "id": "04",
       "patronal": "89.138.168/0001-71",
       "laboral": "91.345.231/0001-92",
       "status": "FONTE INDISPONÍVEL",
-      "error": "Não foi possível confirmar resposta da consulta oficial.",
+      "error": "Mediador HTTP 504; Mediador HTTP 504",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-03T10:18:24.407Z"
+      "consultedAt": "2026-09-03T14:13:26.667Z"
     },
     {
       "id": "05",
       "patronal": "88.368.592/0001-40",
       "laboral": "97.202.535/0001-87",
       "status": "FONTE INDISPONÍVEL",
-      "error": "Não foi possível confirmar resposta da consulta oficial.",
+      "error": "Mediador HTTP 504; Mediador HTTP 504",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-03T10:18:36.005Z"
+      "consultedAt": "2026-09-03T14:14:18.361Z"
     },
     {
       "id": "06",
       "patronal": "88.368.592/0001-40",
       "laboral": "96.757.737/0001-22",
       "status": "FONTE INDISPONÍVEL",
-      "error": "Não foi possível confirmar resposta da consulta oficial.",
+      "error": "Mediador HTTP 504; Mediador HTTP 504",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-03T10:18:47.723Z"
+      "consultedAt": "2026-09-03T14:15:17.069Z"
     },
     {
       "id": "07",
       "patronal": "89.138.168/0001-71",
       "laboral": "91.343.194/0001-83",
       "status": "FONTE INDISPONÍVEL",
-      "error": "Não foi possível confirmar resposta da consulta oficial.",
+      "error": "Mediador HTTP 504",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-03T10:18:59.355Z"
+      "consultedAt": "2026-09-03T14:15:32.344Z"
     },
     {
       "id": "08",
       "patronal": "92.962.919/0001-84",
       "laboral": "92.931.492/0001-57",
       "status": "FONTE INDISPONÍVEL",
-      "error": "Não foi possível confirmar resposta da consulta oficial.",
+      "error": "Mediador HTTP 504; Mediador HTTP 504",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-03T10:19:10.971Z"
+      "consultedAt": "2026-09-03T14:16:23.163Z"
     },
     {
       "id": "09",
       "patronal": "89.137.574/0001-10",
       "laboral": "93.074.185/0001-60",
       "status": "FONTE INDISPONÍVEL",
-      "error": "Não foi possível confirmar resposta da consulta oficial.",
+      "error": "Mediador HTTP 504",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-03T10:19:23.553Z"
+      "consultedAt": "2026-09-03T14:16:38.430Z"
     },
     {
       "id": "10",
       "patronal": "96.755.145/0001-71",
       "laboral": "96.758.008/0001-90",
       "status": "FONTE INDISPONÍVEL",
-      "error": "Não foi possível confirmar resposta da consulta oficial.",
+      "error": "Mediador HTTP 504; Mediador HTTP 504",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-03T10:19:35.203Z"
+      "consultedAt": "2026-09-03T14:17:24.051Z"
     },
     {
       "id": "11",
       "patronal": "93.712.909/0001-53",
       "laboral": "93.074.383/0001-23",
       "status": "FONTE INDISPONÍVEL",
-      "error": "Não foi possível confirmar resposta da consulta oficial.",
+      "error": "Mediador HTTP 504; Mediador HTTP 504",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-03T10:19:46.785Z"
+      "consultedAt": "2026-09-03T14:18:26.776Z"
     },
     {
       "id": "12",
       "patronal": "93.712.909/0001-53",
       "laboral": "96.758.040/0001-76",
       "status": "FONTE INDISPONÍVEL",
-      "error": "Não foi possível confirmar resposta da consulta oficial.",
+      "error": "Mediador HTTP 504; Mediador HTTP 504",
       "instrumentos": [],
       "candidatosVerificados": 0,
-      "consultedAt": "2026-09-03T10:19:58.400Z"
+      "consultedAt": "2026-09-03T14:19:19.599Z"
     }
   ],
   "history": [
+    {
+      "at": "2026-09-03T14:19:19.630Z",
+      "pairs": [
+        {
+          "id": "01",
+          "patronal": "93.246.940/0001-46",
+          "laboral": "89.069.835/0001-01",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "Mediador HTTP 504; Mediador HTTP 504",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-03T14:11:39.940Z"
+        },
+        {
+          "id": "02",
+          "patronal": "18.006.733/0001-07",
+          "laboral": "15.635.336/0001-06",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "Mediador HTTP 504",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-03T14:11:55.207Z"
+        },
+        {
+          "id": "03",
+          "patronal": "91.100.339/0001-15",
+          "laboral": "96.757.612/0001-00",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "Mediador HTTP 504; Mediador HTTP 504",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-03T14:12:36.613Z"
+        },
+        {
+          "id": "04",
+          "patronal": "89.138.168/0001-71",
+          "laboral": "91.345.231/0001-92",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "Mediador HTTP 504; Mediador HTTP 504",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-03T14:13:26.667Z"
+        },
+        {
+          "id": "05",
+          "patronal": "88.368.592/0001-40",
+          "laboral": "97.202.535/0001-87",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "Mediador HTTP 504; Mediador HTTP 504",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-03T14:14:18.361Z"
+        },
+        {
+          "id": "06",
+          "patronal": "88.368.592/0001-40",
+          "laboral": "96.757.737/0001-22",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "Mediador HTTP 504; Mediador HTTP 504",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-03T14:15:17.069Z"
+        },
+        {
+          "id": "07",
+          "patronal": "89.138.168/0001-71",
+          "laboral": "91.343.194/0001-83",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "Mediador HTTP 504",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-03T14:15:32.344Z"
+        },
+        {
+          "id": "08",
+          "patronal": "92.962.919/0001-84",
+          "laboral": "92.931.492/0001-57",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "Mediador HTTP 504; Mediador HTTP 504",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-03T14:16:23.163Z"
+        },
+        {
+          "id": "09",
+          "patronal": "89.137.574/0001-10",
+          "laboral": "93.074.185/0001-60",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "Mediador HTTP 504",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-03T14:16:38.430Z"
+        },
+        {
+          "id": "10",
+          "patronal": "96.755.145/0001-71",
+          "laboral": "96.758.008/0001-90",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "Mediador HTTP 504; Mediador HTTP 504",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-03T14:17:24.051Z"
+        },
+        {
+          "id": "11",
+          "patronal": "93.712.909/0001-53",
+          "laboral": "93.074.383/0001-23",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "Mediador HTTP 504; Mediador HTTP 504",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-03T14:18:26.776Z"
+        },
+        {
+          "id": "12",
+          "patronal": "93.712.909/0001-53",
+          "laboral": "96.758.040/0001-76",
+          "status": "FONTE INDISPONÍVEL",
+          "error": "Mediador HTTP 504; Mediador HTTP 504",
+          "instrumentos": [],
+          "candidatosVerificados": 0,
+          "consultedAt": "2026-09-03T14:19:19.599Z"
+        }
+      ]
+    },
     {
       "at": "2026-09-03T10:19:58.433Z",
       "pairs": [
