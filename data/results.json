@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-04T12:28:34.290Z",
+  "generatedAt": "2026-09-04T18:42:52.752Z",
   "source": "Mediador/MTE",
   "overallStatus": "CONSULTADO",
   "pairs": [
@@ -8,123 +8,80 @@
       "patronal": "93.246.940/0001-46",
       "laboral": "89.069.835/0001-01",
       "status": "CONSULTADO",
-      "metodo": "Consulta oficial do Mediador + extração estruturada dos resultados + validação dos dois CNPJs no documento oficial",
+      "metodo": "Consulta oficial do Mediador — registros de 01/01/2026 até 04/09/2026 + filtro de vigência até 04/09/2026 + validação dos dois CNPJs no documento oficial",
+      "filtroRegistro": {
+        "de": "01/01/2026",
+        "ate": "04/09/2026",
+        "ano": 2026
+      },
+      "filtroVigencia": {
+        "somenteVigentes": true,
+        "referencia": "04/09/2026"
+      },
       "instrumentos": [],
-      "candidatosVerificados": 6,
-      "totalEncontradoNaConsulta": 6,
-      "consultasConfirmadas": 2,
-      "observacao": "Consulta oficial retornou candidatos, mas nenhum documento foi validado para os dois CNPJs. Não interpretar como ausência de novidade.",
-      "consultedAt": "2026-09-04T12:22:44.945Z"
+      "candidatosVerificados": 1,
+      "totalEncontradoNaConsulta": 1,
+      "consultasConfirmadas": 1,
+      "observacao": "Consulta oficial retornou candidatos, mas nenhum documento foi validado para os dois CNPJs no ano corrente e com vigência ativa. Não interpretar como ausência de novidade.",
+      "consultedAt": "2026-09-04T18:39:50.145Z"
     },
     {
       "id": "02",
       "patronal": "18.006.733/0001-07",
       "laboral": "15.635.336/0001-06",
       "status": "CONSULTADO",
-      "metodo": "Consulta oficial do Mediador + extração estruturada dos resultados + validação dos dois CNPJs no documento oficial",
+      "metodo": "Consulta oficial do Mediador — registros de 01/01/2026 até 04/09/2026 + filtro de vigência até 04/09/2026 + validação dos dois CNPJs no documento oficial",
+      "filtroRegistro": {
+        "de": "01/01/2026",
+        "ate": "04/09/2026",
+        "ano": 2026
+      },
+      "filtroVigencia": {
+        "somenteVigentes": true,
+        "referencia": "04/09/2026"
+      },
       "instrumentos": [
-        {
-          "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR000603%2F2024",
-          "registro": "RS000378/2024",
-          "solicitacao": "MR000603/2024",
-          "dataRegistro": "21/02/2024",
-          "vigencia": "01º de janeiro de 2024 a 31 de dezembro de 2024 e a data-base da categoria em 01º de janeiro.",
-          "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2024/2024",
-          "validatedAt": "2026-09-04T12:22:53.862Z"
-        },
         {
           "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR016935%2F2026",
           "registro": "RS000868/2026",
           "solicitacao": "MR016935/2026",
           "dataRegistro": "16/04/2026",
           "vigencia": "01º de janeiro de 2026 a 31 de dezembro de 2026 e a data-base da categoria em 01º de janeiro.",
+          "vigencia_status": "INDETERMINADO",
           "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2026/2026",
-          "validatedAt": "2026-09-04T12:22:55.352Z"
-        },
-        {
-          "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR003349%2F2025",
-          "registro": "RS002740/2025",
-          "solicitacao": "MR003349/2025",
-          "dataRegistro": "21/07/2025",
-          "vigencia": "01º de janeiro de 2025 a 31 de dezembro de 2025 e a data-base da categoria em 01º de janeiro.",
-          "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2025/2025",
-          "validatedAt": "2026-09-04T12:22:56.794Z"
+          "validatedAt": "2026-09-04T18:39:57.396Z"
         }
       ],
-      "candidatosVerificados": 3,
-      "totalEncontradoNaConsulta": 6,
+      "candidatosVerificados": 1,
+      "totalEncontradoNaConsulta": 2,
       "consultasConfirmadas": 2,
-      "consultedAt": "2026-09-04T12:22:56.794Z"
+      "consultedAt": "2026-09-04T18:39:57.396Z"
     },
     {
       "id": "03",
       "patronal": "91.100.339/0001-15",
       "laboral": "96.757.612/0001-00",
       "status": "CONSULTADO",
-      "metodo": "Consulta oficial do Mediador + extração estruturada dos resultados + validação dos dois CNPJs no documento oficial",
+      "metodo": "Consulta oficial do Mediador — registros de 01/01/2026 até 04/09/2026 + filtro de vigência até 04/09/2026 + validação dos dois CNPJs no documento oficial",
+      "filtroRegistro": {
+        "de": "01/01/2026",
+        "ate": "04/09/2026",
+        "ano": 2026
+      },
+      "filtroVigencia": {
+        "somenteVigentes": true,
+        "referencia": "04/09/2026"
+      },
       "instrumentos": [
-        {
-          "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR012764%2F2024",
-          "registro": "RS000610/2024",
-          "solicitacao": "MR012764/2024",
-          "dataRegistro": "19/03/2024",
-          "vigencia": "01º de abril de 2023 a 31 de maio de 2024 e a data-base da categoria em 01º de abril.",
-          "titulo": "TERMO ADITIVO A CONVENÇÃO COLETIVA DE TRABALHO 2023/2024",
-          "validatedAt": "2026-09-04T12:23:07.191Z"
-        },
-        {
-          "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR012546%2F2024",
-          "registro": "RS000611/2024",
-          "solicitacao": "MR012546/2024",
-          "dataRegistro": "19/03/2024",
-          "vigencia": "01º de abril de 2023 a 31 de março de 2024 e a data-base da categoria em 01º de abril.",
-          "titulo": "TERMO ADITIVO A CONVENÇÃO COLETIVA DE TRABALHO 2023/2024",
-          "validatedAt": "2026-09-04T12:23:08.705Z"
-        },
         {
           "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR018443%2F2026",
           "registro": "RS000716/2026",
           "solicitacao": "MR018443/2026",
           "dataRegistro": "06/04/2026",
           "vigencia": "01º de abril de 2026 a 30 de abril de 2026 e a data-base da categoria em 01º de abril.",
+          "vigencia_status": "INDETERMINADO",
           "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2026/2026",
-          "validatedAt": "2026-09-04T12:23:09.963Z"
-        },
-        {
-          "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR017350%2F2024",
-          "registro": "RS000886/2024",
-          "solicitacao": "MR017350/2024",
-          "dataRegistro": "18/04/2024",
-          "vigencia": "01º de abril de 2024 a 31 de março de 2025 e a data-base da categoria em 01º de abril.",
-          "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2024/2025",
-          "validatedAt": "2026-09-04T12:23:13.381Z"
-        },
-        {
-          "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR017344%2F2024",
-          "registro": "RS000893/2024",
-          "solicitacao": "MR017344/2024",
-          "dataRegistro": "18/04/2024",
-          "vigencia": "01º de abril de 2024 a 31 de março de 2025 e a data-base da categoria em 01º de abril.",
-          "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2024/2025",
-          "validatedAt": "2026-09-04T12:23:14.797Z"
-        },
-        {
-          "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR017319%2F2024",
-          "registro": "RS000896/2024",
-          "solicitacao": "MR017319/2024",
-          "dataRegistro": "18/04/2024",
-          "vigencia": "01º de abril de 2024 a 30 de março de 2025 e a data-base da categoria em 01º de abril.",
-          "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2024/2025",
-          "validatedAt": "2026-09-04T12:23:16.058Z"
-        },
-        {
-          "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR017325%2F2024",
-          "registro": "RS000898/2024",
-          "solicitacao": "MR017325/2024",
-          "dataRegistro": "18/04/2024",
-          "vigencia": "01º de abril de 2024 a 31 de março de 2025 e a data-base da categoria em 01º de abril.",
-          "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2024/2025",
-          "validatedAt": "2026-09-04T12:23:17.592Z"
+          "validatedAt": "2026-09-04T18:40:03.790Z"
         },
         {
           "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR023853%2F2026",
@@ -132,8 +89,9 @@
           "solicitacao": "MR023853/2026",
           "dataRegistro": "04/05/2026",
           "vigencia": "01º de abril de 2026 a 31 de maio de 2026 e a data-base da categoria em 01º de abril.",
+          "vigencia_status": "INDETERMINADO",
           "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2026/2026",
-          "validatedAt": "2026-09-04T12:23:19.099Z"
+          "validatedAt": "2026-09-04T18:40:05.013Z"
         },
         {
           "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR023897%2F2026",
@@ -141,248 +99,231 @@
           "solicitacao": "MR023897/2026",
           "dataRegistro": "04/05/2026",
           "vigencia": "01º de abril de 2026 a 31 de maio de 2026 e a data-base da categoria em 01º de abril.",
+          "vigencia_status": "INDETERMINADO",
           "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2026/2026",
-          "validatedAt": "2026-09-04T12:23:20.345Z"
+          "validatedAt": "2026-09-04T18:40:06.248Z"
         },
         {
-          "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR019569%2F2025",
-          "registro": "RS001071/2025",
-          "solicitacao": "MR019569/2025",
-          "dataRegistro": "23/04/2025",
-          "vigencia": "01º de abril de 2025 a 31 de março de 2026 e a data-base da categoria em 01º de abril.",
-          "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2025/2026",
-          "validatedAt": "2026-09-04T12:23:21.597Z"
+          "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR025659%2F2026",
+          "registro": "RS001686/2026",
+          "solicitacao": "MR025659/2026",
+          "dataRegistro": "12/06/2026",
+          "vigencia": "01º de abril de 2026 a 31 de março de 2027 e a data-base da categoria em 01º de abril.",
+          "vigencia_status": "INDETERMINADO",
+          "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2026/2027",
+          "validatedAt": "2026-09-04T18:40:07.476Z"
+        },
+        {
+          "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR025640%2F2026",
+          "registro": "RS001687/2026",
+          "solicitacao": "MR025640/2026",
+          "dataRegistro": "12/06/2026",
+          "vigencia": "01º de abril de 2026 a 31 de março de 2027 e a data-base da categoria em 01º de abril.",
+          "vigencia_status": "INDETERMINADO",
+          "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2026/2027",
+          "validatedAt": "2026-09-04T18:40:08.753Z"
+        },
+        {
+          "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR034197%2F2026",
+          "registro": "RS001701/2026",
+          "solicitacao": "MR034197/2026",
+          "dataRegistro": "12/06/2026",
+          "vigencia": "01º de abril de 2026 a 31 de março de 2027 e a data-base da categoria em 01º de abril.",
+          "vigencia_status": "INDETERMINADO",
+          "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2026/2027",
+          "validatedAt": "2026-09-04T18:40:10.157Z"
+        },
+        {
+          "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR034195%2F2026",
+          "registro": "RS001702/2026",
+          "solicitacao": "MR034195/2026",
+          "dataRegistro": "12/06/2026",
+          "vigencia": "01º de abril de 2026 a 31 de março de 2027 e a data-base da categoria em 01º de abril.",
+          "vigencia_status": "INDETERMINADO",
+          "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2026/2027",
+          "validatedAt": "2026-09-04T18:40:11.588Z"
         }
       ],
-      "candidatosVerificados": 18,
-      "totalEncontradoNaConsulta": 20,
+      "candidatosVerificados": 12,
+      "totalEncontradoNaConsulta": 17,
       "consultasConfirmadas": 2,
-      "consultedAt": "2026-09-04T12:23:32.038Z"
+      "consultedAt": "2026-09-04T18:40:19.056Z"
     },
     {
       "id": "04",
       "patronal": "89.138.168/0001-71",
       "laboral": "91.345.231/0001-92",
       "status": "CONSULTADO",
-      "metodo": "Consulta oficial do Mediador + extração estruturada dos resultados + validação dos dois CNPJs no documento oficial",
+      "metodo": "Consulta oficial do Mediador — registros de 01/01/2026 até 04/09/2026 + filtro de vigência até 04/09/2026 + validação dos dois CNPJs no documento oficial",
+      "filtroRegistro": {
+        "de": "01/01/2026",
+        "ate": "04/09/2026",
+        "ano": 2026
+      },
+      "filtroVigencia": {
+        "somenteVigentes": true,
+        "referencia": "04/09/2026"
+      },
       "instrumentos": [
         {
-          "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR028700%2F2024",
-          "registro": "RS002525/2024",
-          "solicitacao": "MR028700/2024",
-          "dataRegistro": "31/07/2024",
-          "vigencia": "06 de maio de 2024 a 05 de maio de 2025 e a data-base da categoria em 01º de maio.",
-          "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2024/2025",
-          "validatedAt": "2026-09-04T12:23:53.290Z"
-        },
-        {
-          "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR042856%2F2024",
-          "registro": "RS002526/2024",
-          "solicitacao": "MR042856/2024",
-          "dataRegistro": "31/07/2024",
-          "vigencia": "01º de maio de 2024 a 30 de abril de 2025 e a data-base da categoria em 01º de maio.",
-          "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2024/2025",
-          "validatedAt": "2026-09-04T12:23:54.720Z"
+          "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR044845%2F2026",
+          "registro": "RS002860/2026",
+          "solicitacao": "MR044845/2026",
+          "dataRegistro": "17/08/2026",
+          "vigencia": "01º de maio de 2026 a 30 de abril de 2027 e a data-base da categoria em 01º de maio.",
+          "vigencia_status": "INDETERMINADO",
+          "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2026/2027",
+          "validatedAt": "2026-09-04T18:40:26.629Z"
         }
       ],
-      "candidatosVerificados": 20,
-      "totalEncontradoNaConsulta": 20,
+      "candidatosVerificados": 11,
+      "totalEncontradoNaConsulta": 12,
       "consultasConfirmadas": 2,
-      "consultedAt": "2026-09-04T12:24:11.330Z"
+      "consultedAt": "2026-09-04T18:40:38.894Z"
     },
     {
       "id": "05",
       "patronal": "88.368.592/0001-40",
       "laboral": "97.202.535/0001-87",
       "status": "CONSULTADO",
-      "metodo": "Consulta oficial do Mediador + extração estruturada dos resultados + validação dos dois CNPJs no documento oficial",
+      "metodo": "Consulta oficial do Mediador — registros de 01/01/2026 até 04/09/2026 + filtro de vigência até 04/09/2026 + validação dos dois CNPJs no documento oficial",
+      "filtroRegistro": {
+        "de": "01/01/2026",
+        "ate": "04/09/2026",
+        "ano": 2026
+      },
+      "filtroVigencia": {
+        "somenteVigentes": true,
+        "referencia": "04/09/2026"
+      },
       "instrumentos": [
-        {
-          "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR001078%2F2024",
-          "registro": "RS000238/2024",
-          "solicitacao": "MR001078/2024",
-          "dataRegistro": "06/02/2024",
-          "vigencia": "01º de janeiro de 2024 a 31 de dezembro de 2024 e a data-base da categoria em 01º de janeiro.",
-          "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2024/2024",
-          "validatedAt": "2026-09-04T12:24:23.114Z"
-        },
-        {
-          "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR001039%2F2026",
-          "registro": "",
-          "solicitacao": "MR001039/2026",
-          "dataRegistro": "",
-          "vigencia": "01º de janeiro de 2026 a 31 de dezembro de 2026 e a data-base da categoria em 01º de janeiro.",
-          "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2026/2026",
-          "validatedAt": "2026-09-04T12:24:25.947Z"
-        },
-        {
-          "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR001595%2F2025",
-          "registro": "RS000374/2025",
-          "solicitacao": "MR001595/2025",
-          "dataRegistro": "06/02/2025",
-          "vigencia": "01º de janeiro de 2025 a 31 de dezembro de 2025 e a data-base da categoria em 01º de janeiro.",
-          "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2025/2025",
-          "validatedAt": "2026-09-04T12:24:27.344Z"
-        },
         {
           "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR025132%2F2026",
           "registro": "RS001202/2026",
           "solicitacao": "MR025132/2026",
           "dataRegistro": "19/05/2026",
           "vigencia": "01º de janeiro de 2026 a 31 de dezembro de 2026 e a data-base da categoria em 01º de janeiro.",
+          "vigencia_status": "INDETERMINADO",
           "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2026/2026",
-          "validatedAt": "2026-09-04T12:24:41.172Z"
+          "validatedAt": "2026-09-04T18:40:48.248Z"
         }
       ],
-      "candidatosVerificados": 17,
-      "totalEncontradoNaConsulta": 20,
+      "candidatosVerificados": 14,
+      "totalEncontradoNaConsulta": 16,
       "consultasConfirmadas": 2,
-      "consultedAt": "2026-09-04T12:24:45.277Z"
+      "consultedAt": "2026-09-04T18:41:04.733Z"
     },
     {
       "id": "06",
       "patronal": "88.368.592/0001-40",
       "laboral": "96.757.737/0001-22",
       "status": "CONSULTADO",
-      "metodo": "Consulta oficial do Mediador + extração estruturada dos resultados + validação dos dois CNPJs no documento oficial",
+      "metodo": "Consulta oficial do Mediador — registros de 01/01/2026 até 04/09/2026 + filtro de vigência até 04/09/2026 + validação dos dois CNPJs no documento oficial",
+      "filtroRegistro": {
+        "de": "01/01/2026",
+        "ate": "04/09/2026",
+        "ano": 2026
+      },
+      "filtroVigencia": {
+        "somenteVigentes": true,
+        "referencia": "04/09/2026"
+      },
       "instrumentos": [
-        {
-          "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR001015%2F2024",
-          "registro": "RS000168/2024",
-          "solicitacao": "MR001015/2024",
-          "dataRegistro": "30/01/2024",
-          "vigencia": "01º de janeiro de 2024 a 31 de dezembro de 2024 e a data-base da categoria em 01º de janeiro.",
-          "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2024/2024",
-          "validatedAt": "2026-09-04T12:24:54.827Z"
-        },
-        {
-          "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR001591%2F2025",
-          "registro": "RS000350/2025",
-          "solicitacao": "MR001591/2025",
-          "dataRegistro": "04/02/2025",
-          "vigencia": "01º de janeiro de 2025 a 31 de dezembro de 2025 e a data-base da categoria em 01º de janeiro.",
-          "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2025/2025",
-          "validatedAt": "2026-09-04T12:24:57.758Z"
-        },
         {
           "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR001036%2F2026",
           "registro": "RS000531/2026",
           "solicitacao": "MR001036/2026",
           "dataRegistro": "19/03/2026",
           "vigencia": "01º de janeiro de 2026 a 31 de dezembro de 2026 e a data-base da categoria em 01º de janeiro.",
+          "vigencia_status": "INDETERMINADO",
           "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2026/2026",
-          "validatedAt": "2026-09-04T12:25:05.306Z"
+          "validatedAt": "2026-09-04T18:41:12.563Z"
         }
       ],
-      "candidatosVerificados": 10,
-      "totalEncontradoNaConsulta": 13,
+      "candidatosVerificados": 6,
+      "totalEncontradoNaConsulta": 7,
       "consultasConfirmadas": 2,
-      "consultedAt": "2026-09-04T12:25:08.059Z"
+      "consultedAt": "2026-09-04T18:41:18.109Z"
     },
     {
       "id": "07",
       "patronal": "89.138.168/0001-71",
       "laboral": "91.343.194/0001-83",
       "status": "CONSULTADO",
-      "metodo": "Consulta oficial do Mediador + extração estruturada dos resultados + validação dos dois CNPJs no documento oficial",
+      "metodo": "Consulta oficial do Mediador — registros de 01/01/2026 até 04/09/2026 + filtro de vigência até 04/09/2026 + validação dos dois CNPJs no documento oficial",
+      "filtroRegistro": {
+        "de": "01/01/2026",
+        "ate": "04/09/2026",
+        "ano": 2026
+      },
+      "filtroVigencia": {
+        "somenteVigentes": true,
+        "referencia": "04/09/2026"
+      },
       "instrumentos": [],
-      "candidatosVerificados": 16,
-      "totalEncontradoNaConsulta": 16,
+      "candidatosVerificados": 7,
+      "totalEncontradoNaConsulta": 7,
       "consultasConfirmadas": 2,
-      "observacao": "Consulta oficial retornou candidatos, mas nenhum documento foi validado para os dois CNPJs. Não interpretar como ausência de novidade.",
-      "consultedAt": "2026-09-04T12:25:40.163Z"
+      "observacao": "Consulta oficial retornou candidatos, mas nenhum documento foi validado para os dois CNPJs no ano corrente e com vigência ativa. Não interpretar como ausência de novidade.",
+      "consultedAt": "2026-09-04T18:41:33.047Z"
     },
     {
       "id": "08",
       "patronal": "92.962.919/0001-84",
       "laboral": "92.931.492/0001-57",
       "status": "CONSULTADO",
-      "metodo": "Consulta oficial do Mediador + extração estruturada dos resultados + validação dos dois CNPJs no documento oficial",
+      "metodo": "Consulta oficial do Mediador — registros de 01/01/2026 até 04/09/2026 + filtro de vigência até 04/09/2026 + validação dos dois CNPJs no documento oficial",
+      "filtroRegistro": {
+        "de": "01/01/2026",
+        "ate": "04/09/2026",
+        "ano": 2026
+      },
+      "filtroVigencia": {
+        "somenteVigentes": true,
+        "referencia": "04/09/2026"
+      },
       "instrumentos": [
-        {
-          "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR025757%2F2024",
-          "registro": "RS001367/2024",
-          "solicitacao": "MR025757/2024",
-          "dataRegistro": "29/05/2024",
-          "vigencia": "01º de maio de 2024 a 31 de dezembro de 2024 e a data-base da categoria em 01º de janeiro.",
-          "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2024/2024",
-          "validatedAt": "2026-09-04T12:26:11.334Z"
-        },
         {
           "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR043884%2F2026",
           "registro": "RS002477/2026",
           "solicitacao": "MR043884/2026",
           "dataRegistro": "22/07/2026",
           "vigencia": "01º de maio de 2026 a 30 de abril de 2027 e a data-base da categoria em 01º de maio.",
+          "vigencia_status": "INDETERMINADO",
           "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2026/2027",
-          "validatedAt": "2026-09-04T12:26:15.344Z"
-        },
-        {
-          "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR051130%2F2024",
-          "registro": "RS003403/2024",
-          "solicitacao": "MR051130/2024",
-          "dataRegistro": "27/09/2024",
-          "vigencia": "01º de maio de 2024 a 30 de abril de 2025 e a data-base da categoria em 01º de maio.",
-          "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2024/2025",
-          "validatedAt": "2026-09-04T12:26:19.300Z"
-        },
-        {
-          "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR054064%2F2025",
-          "registro": "RS003861/2025",
-          "solicitacao": "MR054064/2025",
-          "dataRegistro": "10/09/2025",
-          "vigencia": "01º de maio de 2025 a 30 de abril de 2026 e a data-base da categoria em 01º de maio.",
-          "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2025/2026",
-          "validatedAt": "2026-09-04T12:26:22.334Z"
+          "validatedAt": "2026-09-04T18:41:39.799Z"
         }
       ],
-      "candidatosVerificados": 14,
-      "totalEncontradoNaConsulta": 18,
+      "candidatosVerificados": 2,
+      "totalEncontradoNaConsulta": 3,
       "consultasConfirmadas": 2,
-      "consultedAt": "2026-09-04T12:26:28.990Z"
+      "consultedAt": "2026-09-04T18:41:41.126Z"
     },
     {
       "id": "09",
       "patronal": "89.137.574/0001-10",
       "laboral": "93.074.185/0001-60",
       "status": "CONSULTADO",
-      "metodo": "Consulta oficial do Mediador + extração estruturada dos resultados + validação dos dois CNPJs no documento oficial",
+      "metodo": "Consulta oficial do Mediador — registros de 01/01/2026 até 04/09/2026 + filtro de vigência até 04/09/2026 + validação dos dois CNPJs no documento oficial",
+      "filtroRegistro": {
+        "de": "01/01/2026",
+        "ate": "04/09/2026",
+        "ano": 2026
+      },
+      "filtroVigencia": {
+        "somenteVigentes": true,
+        "referencia": "04/09/2026"
+      },
       "instrumentos": [
-        {
-          "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR013991%2F2025",
-          "registro": "RS000771/2025",
-          "solicitacao": "MR013991/2025",
-          "dataRegistro": "21/03/2025",
-          "vigencia": "01º de abril de 2024 a 31 de março de 2025 e a data-base da categoria em 01º de abril.",
-          "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2024/2025",
-          "validatedAt": "2026-09-04T12:26:39.075Z"
-        },
-        {
-          "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR013949%2F2025",
-          "registro": "RS000772/2025",
-          "solicitacao": "MR013949/2025",
-          "dataRegistro": "21/03/2025",
-          "vigencia": "01º de abril de 2024 a 31 de março de 2025 e a data-base da categoria em 01º de abril.",
-          "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2024/2025",
-          "validatedAt": "2026-09-04T12:26:40.450Z"
-        },
-        {
-          "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR013802%2F2025",
-          "registro": "RS000773/2025",
-          "solicitacao": "MR013802/2025",
-          "dataRegistro": "21/03/2025",
-          "vigencia": "01º de abril de 2024 a 21 de março de 2025 e a data-base da categoria em 01º de abril.",
-          "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2024/2025",
-          "validatedAt": "2026-09-04T12:26:42.703Z"
-        },
         {
           "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR027053%2F2026",
           "registro": "RS001980/2026",
           "solicitacao": "MR027053/2026",
           "dataRegistro": "26/06/2026",
           "vigencia": "01º de abril de 2026 a 31 de março de 2027 e a data-base da categoria em 01º de abril.",
+          "vigencia_status": "INDETERMINADO",
           "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2026/2027",
-          "validatedAt": "2026-09-04T12:26:44.126Z"
+          "validatedAt": "2026-09-04T18:41:47.327Z"
         },
         {
           "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR027068%2F2026",
@@ -390,8 +331,9 @@
           "solicitacao": "MR027068/2026",
           "dataRegistro": "26/06/2026",
           "vigencia": "01º de abril de 2026 a 31 de março de 2027 e a data-base da categoria em 01º de abril.",
+          "vigencia_status": "INDETERMINADO",
           "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2026/2027",
-          "validatedAt": "2026-09-04T12:26:45.498Z"
+          "validatedAt": "2026-09-04T18:41:48.651Z"
         },
         {
           "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR026388%2F2026",
@@ -399,110 +341,523 @@
           "solicitacao": "MR026388/2026",
           "dataRegistro": "26/06/2026",
           "vigencia": "01º de abril de 2026 a 31 de março de 2027 e a data-base da categoria em 01º de abril.",
+          "vigencia_status": "INDETERMINADO",
           "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2026/2027",
-          "validatedAt": "2026-09-04T12:26:46.886Z"
-        },
-        {
-          "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR034510%2F2025",
-          "registro": "RS002075/2025",
-          "solicitacao": "MR034510/2025",
-          "dataRegistro": "18/06/2025",
-          "vigencia": "01º de abril de 2025 a 31 de março de 2026 e a data-base da categoria em 01º de abril.",
-          "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2025/2026",
-          "validatedAt": "2026-09-04T12:26:51.625Z"
-        },
-        {
-          "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR034515%2F2025",
-          "registro": "RS002076/2025",
-          "solicitacao": "MR034515/2025",
-          "dataRegistro": "18/06/2025",
-          "vigencia": "01º de abril de 2025 a 31 de março de 2026 e a data-base da categoria em 01º de abril.",
-          "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2025/2026",
-          "validatedAt": "2026-09-04T12:26:53.038Z"
+          "validatedAt": "2026-09-04T18:41:50.598Z"
         }
       ],
-      "candidatosVerificados": 15,
-      "totalEncontradoNaConsulta": 20,
+      "candidatosVerificados": 5,
+      "totalEncontradoNaConsulta": 8,
       "consultasConfirmadas": 2,
-      "consultedAt": "2026-09-04T12:26:59.635Z"
+      "consultedAt": "2026-09-04T18:41:53.154Z"
     },
     {
       "id": "10",
       "patronal": "96.755.145/0001-71",
       "laboral": "96.758.008/0001-90",
       "status": "CONSULTADO",
-      "metodo": "Consulta oficial do Mediador + extração estruturada dos resultados + validação dos dois CNPJs no documento oficial",
+      "metodo": "Consulta oficial do Mediador — registros de 01/01/2026 até 04/09/2026 + filtro de vigência até 04/09/2026 + validação dos dois CNPJs no documento oficial",
+      "filtroRegistro": {
+        "de": "01/01/2026",
+        "ate": "04/09/2026",
+        "ano": 2026
+      },
+      "filtroVigencia": {
+        "somenteVigentes": true,
+        "referencia": "04/09/2026"
+      },
       "instrumentos": [
         {
-          "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR038191%2F2024",
-          "registro": "RS002778/2024",
-          "solicitacao": "MR038191/2024",
-          "dataRegistro": "09/08/2024",
-          "vigencia": "01º de julho de 2024 a 30 de junho de 2025 e a data-base da categoria em 01º de julho.",
-          "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2024/2025",
-          "validatedAt": "2026-09-04T12:27:35.599Z"
+          "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR055486%2F2026",
+          "registro": "RS003220/2026",
+          "solicitacao": "MR055486/2026",
+          "dataRegistro": "01/09/2026",
+          "vigencia": "01º de julho de 2026 a 30 de junho de 2027 e a data-base da categoria em 01º de julho.",
+          "vigencia_status": "INDETERMINADO",
+          "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2026/2027",
+          "validatedAt": "2026-09-04T18:42:12.165Z"
         }
       ],
-      "candidatosVerificados": 20,
-      "totalEncontradoNaConsulta": 20,
+      "candidatosVerificados": 12,
+      "totalEncontradoNaConsulta": 13,
       "consultasConfirmadas": 2,
-      "consultedAt": "2026-09-04T12:27:38.375Z"
+      "consultedAt": "2026-09-04T18:42:14.755Z"
     },
     {
       "id": "11",
       "patronal": "93.712.909/0001-53",
       "laboral": "93.074.383/0001-23",
       "status": "CONSULTADO",
-      "metodo": "Consulta oficial do Mediador + extração estruturada dos resultados + validação dos dois CNPJs no documento oficial",
-      "instrumentos": [
-        {
-          "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR072172%2F2023",
-          "registro": "RS000454/2024",
-          "solicitacao": "MR072172/2023",
-          "dataRegistro": "29/02/2024",
-          "vigencia": "01º de novembro de 2023 a 31 de outubro de 2024 e a data-base da categoria em 01º de novembro.",
-          "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2023/2024",
-          "validatedAt": "2026-09-04T12:27:49.393Z"
-        },
-        {
-          "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR072962%2F2024",
-          "registro": "RS004829/2024",
-          "solicitacao": "MR072962/2024",
-          "dataRegistro": "18/12/2024",
-          "vigencia": "01º de novembro de 2024 a 31 de outubro de 2025 e a data-base da categoria em 01º de novembro.",
-          "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2024/2025",
-          "validatedAt": "2026-09-04T12:27:50.754Z"
-        },
-        {
-          "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR071015%2F2025",
-          "registro": "RS005394/2025",
-          "solicitacao": "MR071015/2025",
-          "dataRegistro": "10/12/2025",
-          "vigencia": "01º de novembro de 2025 a 31 de outubro de 2026 e a data-base da categoria em 01º de novembro.",
-          "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2025/2026",
-          "validatedAt": "2026-09-04T12:27:52.123Z"
-        }
-      ],
-      "candidatosVerificados": 13,
-      "totalEncontradoNaConsulta": 13,
-      "consultasConfirmadas": 2,
-      "consultedAt": "2026-09-04T12:28:06.783Z"
+      "metodo": "Consulta oficial do Mediador — registros de 01/01/2026 até 04/09/2026 + filtro de vigência até 04/09/2026 + validação dos dois CNPJs no documento oficial",
+      "filtroRegistro": {
+        "de": "01/01/2026",
+        "ate": "04/09/2026",
+        "ano": 2026
+      },
+      "filtroVigencia": {
+        "somenteVigentes": true,
+        "referencia": "04/09/2026"
+      },
+      "instrumentos": [],
+      "candidatosVerificados": 6,
+      "totalEncontradoNaConsulta": 6,
+      "consultasConfirmadas": 1,
+      "observacao": "Consulta oficial retornou candidatos, mas nenhum documento foi validado para os dois CNPJs no ano corrente e com vigência ativa. Não interpretar como ausência de novidade.",
+      "consultedAt": "2026-09-04T18:42:30.136Z"
     },
     {
       "id": "12",
       "patronal": "93.712.909/0001-53",
       "laboral": "96.758.040/0001-76",
       "status": "CONSULTADO",
-      "metodo": "Consulta oficial do Mediador + extração estruturada dos resultados + validação dos dois CNPJs no documento oficial",
+      "metodo": "Consulta oficial do Mediador — registros de 01/01/2026 até 04/09/2026 + filtro de vigência até 04/09/2026 + validação dos dois CNPJs no documento oficial",
+      "filtroRegistro": {
+        "de": "01/01/2026",
+        "ate": "04/09/2026",
+        "ano": 2026
+      },
+      "filtroVigencia": {
+        "somenteVigentes": true,
+        "referencia": "04/09/2026"
+      },
       "instrumentos": [],
-      "candidatosVerificados": 13,
-      "totalEncontradoNaConsulta": 13,
-      "consultasConfirmadas": 2,
-      "observacao": "Consulta oficial retornou candidatos, mas nenhum documento foi validado para os dois CNPJs. Não interpretar como ausência de novidade.",
-      "consultedAt": "2026-09-04T12:28:34.254Z"
+      "candidatosVerificados": 10,
+      "totalEncontradoNaConsulta": 10,
+      "consultasConfirmadas": 1,
+      "observacao": "Consulta oficial retornou candidatos, mas nenhum documento foi validado para os dois CNPJs no ano corrente e com vigência ativa. Não interpretar como ausência de novidade.",
+      "consultedAt": "2026-09-04T18:42:52.714Z"
     }
   ],
   "history": [
+    {
+      "at": "2026-09-04T18:42:52.752Z",
+      "pairs": [
+        {
+          "id": "01",
+          "patronal": "93.246.940/0001-46",
+          "laboral": "89.069.835/0001-01",
+          "status": "CONSULTADO",
+          "metodo": "Consulta oficial do Mediador — registros de 01/01/2026 até 04/09/2026 + filtro de vigência até 04/09/2026 + validação dos dois CNPJs no documento oficial",
+          "filtroRegistro": {
+            "de": "01/01/2026",
+            "ate": "04/09/2026",
+            "ano": 2026
+          },
+          "filtroVigencia": {
+            "somenteVigentes": true,
+            "referencia": "04/09/2026"
+          },
+          "instrumentos": [],
+          "candidatosVerificados": 1,
+          "totalEncontradoNaConsulta": 1,
+          "consultasConfirmadas": 1,
+          "observacao": "Consulta oficial retornou candidatos, mas nenhum documento foi validado para os dois CNPJs no ano corrente e com vigência ativa. Não interpretar como ausência de novidade.",
+          "consultedAt": "2026-09-04T18:39:50.145Z"
+        },
+        {
+          "id": "02",
+          "patronal": "18.006.733/0001-07",
+          "laboral": "15.635.336/0001-06",
+          "status": "CONSULTADO",
+          "metodo": "Consulta oficial do Mediador — registros de 01/01/2026 até 04/09/2026 + filtro de vigência até 04/09/2026 + validação dos dois CNPJs no documento oficial",
+          "filtroRegistro": {
+            "de": "01/01/2026",
+            "ate": "04/09/2026",
+            "ano": 2026
+          },
+          "filtroVigencia": {
+            "somenteVigentes": true,
+            "referencia": "04/09/2026"
+          },
+          "instrumentos": [
+            {
+              "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR016935%2F2026",
+              "registro": "RS000868/2026",
+              "solicitacao": "MR016935/2026",
+              "dataRegistro": "16/04/2026",
+              "vigencia": "01º de janeiro de 2026 a 31 de dezembro de 2026 e a data-base da categoria em 01º de janeiro.",
+              "vigencia_status": "INDETERMINADO",
+              "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2026/2026",
+              "validatedAt": "2026-09-04T18:39:57.396Z"
+            }
+          ],
+          "candidatosVerificados": 1,
+          "totalEncontradoNaConsulta": 2,
+          "consultasConfirmadas": 2,
+          "consultedAt": "2026-09-04T18:39:57.396Z"
+        },
+        {
+          "id": "03",
+          "patronal": "91.100.339/0001-15",
+          "laboral": "96.757.612/0001-00",
+          "status": "CONSULTADO",
+          "metodo": "Consulta oficial do Mediador — registros de 01/01/2026 até 04/09/2026 + filtro de vigência até 04/09/2026 + validação dos dois CNPJs no documento oficial",
+          "filtroRegistro": {
+            "de": "01/01/2026",
+            "ate": "04/09/2026",
+            "ano": 2026
+          },
+          "filtroVigencia": {
+            "somenteVigentes": true,
+            "referencia": "04/09/2026"
+          },
+          "instrumentos": [
+            {
+              "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR018443%2F2026",
+              "registro": "RS000716/2026",
+              "solicitacao": "MR018443/2026",
+              "dataRegistro": "06/04/2026",
+              "vigencia": "01º de abril de 2026 a 30 de abril de 2026 e a data-base da categoria em 01º de abril.",
+              "vigencia_status": "INDETERMINADO",
+              "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2026/2026",
+              "validatedAt": "2026-09-04T18:40:03.790Z"
+            },
+            {
+              "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR023853%2F2026",
+              "registro": "RS000994/2026",
+              "solicitacao": "MR023853/2026",
+              "dataRegistro": "04/05/2026",
+              "vigencia": "01º de abril de 2026 a 31 de maio de 2026 e a data-base da categoria em 01º de abril.",
+              "vigencia_status": "INDETERMINADO",
+              "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2026/2026",
+              "validatedAt": "2026-09-04T18:40:05.013Z"
+            },
+            {
+              "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR023897%2F2026",
+              "registro": "RS000995/2026",
+              "solicitacao": "MR023897/2026",
+              "dataRegistro": "04/05/2026",
+              "vigencia": "01º de abril de 2026 a 31 de maio de 2026 e a data-base da categoria em 01º de abril.",
+              "vigencia_status": "INDETERMINADO",
+              "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2026/2026",
+              "validatedAt": "2026-09-04T18:40:06.248Z"
+            },
+            {
+              "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR025659%2F2026",
+              "registro": "RS001686/2026",
+              "solicitacao": "MR025659/2026",
+              "dataRegistro": "12/06/2026",
+              "vigencia": "01º de abril de 2026 a 31 de março de 2027 e a data-base da categoria em 01º de abril.",
+              "vigencia_status": "INDETERMINADO",
+              "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2026/2027",
+              "validatedAt": "2026-09-04T18:40:07.476Z"
+            },
+            {
+              "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR025640%2F2026",
+              "registro": "RS001687/2026",
+              "solicitacao": "MR025640/2026",
+              "dataRegistro": "12/06/2026",
+              "vigencia": "01º de abril de 2026 a 31 de março de 2027 e a data-base da categoria em 01º de abril.",
+              "vigencia_status": "INDETERMINADO",
+              "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2026/2027",
+              "validatedAt": "2026-09-04T18:40:08.753Z"
+            },
+            {
+              "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR034197%2F2026",
+              "registro": "RS001701/2026",
+              "solicitacao": "MR034197/2026",
+              "dataRegistro": "12/06/2026",
+              "vigencia": "01º de abril de 2026 a 31 de março de 2027 e a data-base da categoria em 01º de abril.",
+              "vigencia_status": "INDETERMINADO",
+              "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2026/2027",
+              "validatedAt": "2026-09-04T18:40:10.157Z"
+            },
+            {
+              "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR034195%2F2026",
+              "registro": "RS001702/2026",
+              "solicitacao": "MR034195/2026",
+              "dataRegistro": "12/06/2026",
+              "vigencia": "01º de abril de 2026 a 31 de março de 2027 e a data-base da categoria em 01º de abril.",
+              "vigencia_status": "INDETERMINADO",
+              "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2026/2027",
+              "validatedAt": "2026-09-04T18:40:11.588Z"
+            }
+          ],
+          "candidatosVerificados": 12,
+          "totalEncontradoNaConsulta": 17,
+          "consultasConfirmadas": 2,
+          "consultedAt": "2026-09-04T18:40:19.056Z"
+        },
+        {
+          "id": "04",
+          "patronal": "89.138.168/0001-71",
+          "laboral": "91.345.231/0001-92",
+          "status": "CONSULTADO",
+          "metodo": "Consulta oficial do Mediador — registros de 01/01/2026 até 04/09/2026 + filtro de vigência até 04/09/2026 + validação dos dois CNPJs no documento oficial",
+          "filtroRegistro": {
+            "de": "01/01/2026",
+            "ate": "04/09/2026",
+            "ano": 2026
+          },
+          "filtroVigencia": {
+            "somenteVigentes": true,
+            "referencia": "04/09/2026"
+          },
+          "instrumentos": [
+            {
+              "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR044845%2F2026",
+              "registro": "RS002860/2026",
+              "solicitacao": "MR044845/2026",
+              "dataRegistro": "17/08/2026",
+              "vigencia": "01º de maio de 2026 a 30 de abril de 2027 e a data-base da categoria em 01º de maio.",
+              "vigencia_status": "INDETERMINADO",
+              "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2026/2027",
+              "validatedAt": "2026-09-04T18:40:26.629Z"
+            }
+          ],
+          "candidatosVerificados": 11,
+          "totalEncontradoNaConsulta": 12,
+          "consultasConfirmadas": 2,
+          "consultedAt": "2026-09-04T18:40:38.894Z"
+        },
+        {
+          "id": "05",
+          "patronal": "88.368.592/0001-40",
+          "laboral": "97.202.535/0001-87",
+          "status": "CONSULTADO",
+          "metodo": "Consulta oficial do Mediador — registros de 01/01/2026 até 04/09/2026 + filtro de vigência até 04/09/2026 + validação dos dois CNPJs no documento oficial",
+          "filtroRegistro": {
+            "de": "01/01/2026",
+            "ate": "04/09/2026",
+            "ano": 2026
+          },
+          "filtroVigencia": {
+            "somenteVigentes": true,
+            "referencia": "04/09/2026"
+          },
+          "instrumentos": [
+            {
+              "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR025132%2F2026",
+              "registro": "RS001202/2026",
+              "solicitacao": "MR025132/2026",
+              "dataRegistro": "19/05/2026",
+              "vigencia": "01º de janeiro de 2026 a 31 de dezembro de 2026 e a data-base da categoria em 01º de janeiro.",
+              "vigencia_status": "INDETERMINADO",
+              "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2026/2026",
+              "validatedAt": "2026-09-04T18:40:48.248Z"
+            }
+          ],
+          "candidatosVerificados": 14,
+          "totalEncontradoNaConsulta": 16,
+          "consultasConfirmadas": 2,
+          "consultedAt": "2026-09-04T18:41:04.733Z"
+        },
+        {
+          "id": "06",
+          "patronal": "88.368.592/0001-40",
+          "laboral": "96.757.737/0001-22",
+          "status": "CONSULTADO",
+          "metodo": "Consulta oficial do Mediador — registros de 01/01/2026 até 04/09/2026 + filtro de vigência até 04/09/2026 + validação dos dois CNPJs no documento oficial",
+          "filtroRegistro": {
+            "de": "01/01/2026",
+            "ate": "04/09/2026",
+            "ano": 2026
+          },
+          "filtroVigencia": {
+            "somenteVigentes": true,
+            "referencia": "04/09/2026"
+          },
+          "instrumentos": [
+            {
+              "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR001036%2F2026",
+              "registro": "RS000531/2026",
+              "solicitacao": "MR001036/2026",
+              "dataRegistro": "19/03/2026",
+              "vigencia": "01º de janeiro de 2026 a 31 de dezembro de 2026 e a data-base da categoria em 01º de janeiro.",
+              "vigencia_status": "INDETERMINADO",
+              "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2026/2026",
+              "validatedAt": "2026-09-04T18:41:12.563Z"
+            }
+          ],
+          "candidatosVerificados": 6,
+          "totalEncontradoNaConsulta": 7,
+          "consultasConfirmadas": 2,
+          "consultedAt": "2026-09-04T18:41:18.109Z"
+        },
+        {
+          "id": "07",
+          "patronal": "89.138.168/0001-71",
+          "laboral": "91.343.194/0001-83",
+          "status": "CONSULTADO",
+          "metodo": "Consulta oficial do Mediador — registros de 01/01/2026 até 04/09/2026 + filtro de vigência até 04/09/2026 + validação dos dois CNPJs no documento oficial",
+          "filtroRegistro": {
+            "de": "01/01/2026",
+            "ate": "04/09/2026",
+            "ano": 2026
+          },
+          "filtroVigencia": {
+            "somenteVigentes": true,
+            "referencia": "04/09/2026"
+          },
+          "instrumentos": [],
+          "candidatosVerificados": 7,
+          "totalEncontradoNaConsulta": 7,
+          "consultasConfirmadas": 2,
+          "observacao": "Consulta oficial retornou candidatos, mas nenhum documento foi validado para os dois CNPJs no ano corrente e com vigência ativa. Não interpretar como ausência de novidade.",
+          "consultedAt": "2026-09-04T18:41:33.047Z"
+        },
+        {
+          "id": "08",
+          "patronal": "92.962.919/0001-84",
+          "laboral": "92.931.492/0001-57",
+          "status": "CONSULTADO",
+          "metodo": "Consulta oficial do Mediador — registros de 01/01/2026 até 04/09/2026 + filtro de vigência até 04/09/2026 + validação dos dois CNPJs no documento oficial",
+          "filtroRegistro": {
+            "de": "01/01/2026",
+            "ate": "04/09/2026",
+            "ano": 2026
+          },
+          "filtroVigencia": {
+            "somenteVigentes": true,
+            "referencia": "04/09/2026"
+          },
+          "instrumentos": [
+            {
+              "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR043884%2F2026",
+              "registro": "RS002477/2026",
+              "solicitacao": "MR043884/2026",
+              "dataRegistro": "22/07/2026",
+              "vigencia": "01º de maio de 2026 a 30 de abril de 2027 e a data-base da categoria em 01º de maio.",
+              "vigencia_status": "INDETERMINADO",
+              "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2026/2027",
+              "validatedAt": "2026-09-04T18:41:39.799Z"
+            }
+          ],
+          "candidatosVerificados": 2,
+          "totalEncontradoNaConsulta": 3,
+          "consultasConfirmadas": 2,
+          "consultedAt": "2026-09-04T18:41:41.126Z"
+        },
+        {
+          "id": "09",
+          "patronal": "89.137.574/0001-10",
+          "laboral": "93.074.185/0001-60",
+          "status": "CONSULTADO",
+          "metodo": "Consulta oficial do Mediador — registros de 01/01/2026 até 04/09/2026 + filtro de vigência até 04/09/2026 + validação dos dois CNPJs no documento oficial",
+          "filtroRegistro": {
+            "de": "01/01/2026",
+            "ate": "04/09/2026",
+            "ano": 2026
+          },
+          "filtroVigencia": {
+            "somenteVigentes": true,
+            "referencia": "04/09/2026"
+          },
+          "instrumentos": [
+            {
+              "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR027053%2F2026",
+              "registro": "RS001980/2026",
+              "solicitacao": "MR027053/2026",
+              "dataRegistro": "26/06/2026",
+              "vigencia": "01º de abril de 2026 a 31 de março de 2027 e a data-base da categoria em 01º de abril.",
+              "vigencia_status": "INDETERMINADO",
+              "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2026/2027",
+              "validatedAt": "2026-09-04T18:41:47.327Z"
+            },
+            {
+              "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR027068%2F2026",
+              "registro": "RS001981/2026",
+              "solicitacao": "MR027068/2026",
+              "dataRegistro": "26/06/2026",
+              "vigencia": "01º de abril de 2026 a 31 de março de 2027 e a data-base da categoria em 01º de abril.",
+              "vigencia_status": "INDETERMINADO",
+              "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2026/2027",
+              "validatedAt": "2026-09-04T18:41:48.651Z"
+            },
+            {
+              "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR026388%2F2026",
+              "registro": "RS001984/2026",
+              "solicitacao": "MR026388/2026",
+              "dataRegistro": "26/06/2026",
+              "vigencia": "01º de abril de 2026 a 31 de março de 2027 e a data-base da categoria em 01º de abril.",
+              "vigencia_status": "INDETERMINADO",
+              "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2026/2027",
+              "validatedAt": "2026-09-04T18:41:50.598Z"
+            }
+          ],
+          "candidatosVerificados": 5,
+          "totalEncontradoNaConsulta": 8,
+          "consultasConfirmadas": 2,
+          "consultedAt": "2026-09-04T18:41:53.154Z"
+        },
+        {
+          "id": "10",
+          "patronal": "96.755.145/0001-71",
+          "laboral": "96.758.008/0001-90",
+          "status": "CONSULTADO",
+          "metodo": "Consulta oficial do Mediador — registros de 01/01/2026 até 04/09/2026 + filtro de vigência até 04/09/2026 + validação dos dois CNPJs no documento oficial",
+          "filtroRegistro": {
+            "de": "01/01/2026",
+            "ate": "04/09/2026",
+            "ano": 2026
+          },
+          "filtroVigencia": {
+            "somenteVigentes": true,
+            "referencia": "04/09/2026"
+          },
+          "instrumentos": [
+            {
+              "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR055486%2F2026",
+              "registro": "RS003220/2026",
+              "solicitacao": "MR055486/2026",
+              "dataRegistro": "01/09/2026",
+              "vigencia": "01º de julho de 2026 a 30 de junho de 2027 e a data-base da categoria em 01º de julho.",
+              "vigencia_status": "INDETERMINADO",
+              "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2026/2027",
+              "validatedAt": "2026-09-04T18:42:12.165Z"
+            }
+          ],
+          "candidatosVerificados": 12,
+          "totalEncontradoNaConsulta": 13,
+          "consultasConfirmadas": 2,
+          "consultedAt": "2026-09-04T18:42:14.755Z"
+        },
+        {
+          "id": "11",
+          "patronal": "93.712.909/0001-53",
+          "laboral": "93.074.383/0001-23",
+          "status": "CONSULTADO",
+          "metodo": "Consulta oficial do Mediador — registros de 01/01/2026 até 04/09/2026 + filtro de vigência até 04/09/2026 + validação dos dois CNPJs no documento oficial",
+          "filtroRegistro": {
+            "de": "01/01/2026",
+            "ate": "04/09/2026",
+            "ano": 2026
+          },
+          "filtroVigencia": {
+            "somenteVigentes": true,
+            "referencia": "04/09/2026"
+          },
+          "instrumentos": [],
+          "candidatosVerificados": 6,
+          "totalEncontradoNaConsulta": 6,
+          "consultasConfirmadas": 1,
+          "observacao": "Consulta oficial retornou candidatos, mas nenhum documento foi validado para os dois CNPJs no ano corrente e com vigência ativa. Não interpretar como ausência de novidade.",
+          "consultedAt": "2026-09-04T18:42:30.136Z"
+        },
+        {
+          "id": "12",
+          "patronal": "93.712.909/0001-53",
+          "laboral": "96.758.040/0001-76",
+          "status": "CONSULTADO",
+          "metodo": "Consulta oficial do Mediador — registros de 01/01/2026 até 04/09/2026 + filtro de vigência até 04/09/2026 + validação dos dois CNPJs no documento oficial",
+          "filtroRegistro": {
+            "de": "01/01/2026",
+            "ate": "04/09/2026",
+            "ano": 2026
+          },
+          "filtroVigencia": {
+            "somenteVigentes": true,
+            "referencia": "04/09/2026"
+          },
+          "instrumentos": [],
+          "candidatosVerificados": 10,
+          "totalEncontradoNaConsulta": 10,
+          "consultasConfirmadas": 1,
+          "observacao": "Consulta oficial retornou candidatos, mas nenhum documento foi validado para os dois CNPJs no ano corrente e com vigência ativa. Não interpretar como ausência de novidade.",
+          "consultedAt": "2026-09-04T18:42:52.714Z"
+        }
+      ]
+    },
     {
       "at": "2026-09-04T12:28:34.290Z",
       "pairs": [
