@@ -58,8 +58,8 @@ async function searchByCnpj(page, cnpj) {
     params.append('sgUfDeRegistro', '')
     params.append('dtInicioRegistro', dataInicio)
     params.append('dtFimRegistro', dataFim)
-    params.append('dtInicioVigenciaInstrumentoColetivo', '')
-    params.append('dtFimVigenciaInstrumentoColetivo', '')
+    params.append('dtInicioVigenciaInstrumentoColetivo', dataInicio)
+    params.append('dtFimVigenciaInstrumentoColetivo', dataFim)
     params.append('tpAbrangencia', 'Todos os tipos')
     params.append('ufsAbrangidasTotalmente', '')
     params.append('cdMunicipiosAbrangidos', '')
@@ -106,6 +106,29 @@ async function searchByCnpj(page, cnpj) {
 
 function extractTextValue(text, regex) { return text.match(regex)?.[1]?.trim() || '' }
 
+function parseDateBR(value) {
+  const m = String(value || '').match(/(\d{1,2})\/(\d{1,2})\/(\d{4})/)
+  if (!m) return null
+  const d = new Date(Number(m[3]), Number(m[2]) - 1, Number(m[1]))
+  return Number.isNaN(d.getTime()) ? null : d
+}
+
+function extractVigencia(text) {
+  const lines = String(text || '').split(/\r?\n/).map(x => x.trim()).filter(Boolean)
+  const line = lines.find(x => /vig[eê]ncia|per[ií]odo de vig[eê]ncia/i.test(x) && /\d{1,2}\/\d{1,2}\/\d{4}/.test(x))
+  if (line) return line
+  return extractTextValue(text, /per[íi]odo de\s*([^\n]+)/i)
+}
+
+function vigenciaExpirada(vigencia) {
+  const dates = [...String(vigencia || '').matchAll(/\d{1,2}\/\d{1,2}\/\d{4}/g)].map(m => parseDateBR(m[0])).filter(Boolean)
+  if (dates.length < 2) return null
+  const fim = dates[dates.length - 1]
+  const hojeDate = new Date()
+  hojeDate.setHours(0, 0, 0, 0)
+  return fim < hojeDate
+}
+
 async function validate(page, solicitation, patronal, laboral, directUrl = null) {
   const url = directUrl && /^https:\/\/mediador\.trabalho\.gov\.br\/sistemas\/mediador\/Resumo\//i.test(directUrl)
     ? directUrl
@@ -119,12 +142,16 @@ async function validate(page, solicitation, patronal, laboral, directUrl = null)
   const dataRegistro = extractTextValue(text, /DATA DE REGISTRO NO MTE:\s*([^\n]+)/i)
   const anoRegistro = dataRegistro.match(/\b(20\d{2})\b/)?.[1]
   if (anoRegistro !== String(anoAtual())) return null
+  const vigencia = extractVigencia(text)
+  const expirada = vigenciaExpirada(vigencia)
+  if (expirada === true) return null
   return {
     url,
     registro: extractTextValue(text, /N[ÚU]MERO DE REGISTRO NO MTE:\s*([^\n]+)/i),
     solicitacao: extractTextValue(text, /N[ÚU]MERO DA SOLICITA[CÇ][AÃ]O:\s*([^\n]+)/i) || solicitation,
     dataRegistro,
-    vigencia: extractTextValue(text, /per[íi]odo de\s*([^\n]+)/i),
+    vigencia,
+    vigencia_status: expirada === false ? 'VIGENTE' : 'INDETERMINADO',
     titulo: text.match(/^(Acordo Coletivo[^\n]*|Conven[cç][aã]o Coletiva[^\n]*|Termo Aditivo[^\n]*)/im)?.[1]?.trim() || 'Instrumento coletivo',
     validatedAt: new Date().toISOString()
   }
@@ -184,13 +211,14 @@ async function main() {
         const unique = [...new Map(instrumentos.map(x => [x.registro || x.solicitacao || x.url, x])).values()]
         results.push({
           id, patronal, laboral, status: 'CONSULTADO',
-          metodo: `Consulta oficial do Mediador — registros de ${inicioAno()} até ${hoje()} + extração estruturada dos resultados + validação dos dois CNPJs no documento oficial`,
+          metodo: `Consulta oficial do Mediador — registros de ${inicioAno()} até ${hoje()} + filtro de vigência até ${hoje()} + validação dos dois CNPJs no documento oficial`,
           filtroRegistro: { de: inicioAno(), ate: hoje(), ano: anoAtual() },
+          filtroVigencia: { somenteVigentes: true, referencia: hoje() },
           instrumentos: unique,
           candidatosVerificados: discovery.solicitations.length,
           totalEncontradoNaConsulta: discovery.totalFound,
           consultasConfirmadas: discovery.successfulQueries,
-          observacao: unique.length === 0 && discovery.solicitations.length > 0 ? 'Consulta oficial retornou candidatos, mas nenhum documento foi validado para os dois CNPJs no ano corrente. Não interpretar como ausência de novidade.' : undefined,
+          observacao: unique.length === 0 && discovery.solicitations.length > 0 ? 'Consulta oficial retornou candidatos, mas nenhum documento foi validado para os dois CNPJs no ano corrente e com vigência ativa. Não interpretar como ausência de novidade.' : undefined,
           errosValidacao: validationErrors.length ? validationErrors.slice(0, 20) : undefined,
           consultedAt: new Date().toISOString()
         })
