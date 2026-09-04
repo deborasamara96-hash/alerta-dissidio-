@@ -12,12 +12,21 @@ const sleep = ms => new Promise(r => setTimeout(r, ms))
 const hoje = () => { const d = new Date(); return `${String(d.getDate()).padStart(2,'0')}/${String(d.getMonth()+1).padStart(2,'0')}/${d.getFullYear()}` }
 const solicitudUrl = s => `https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=${encodeURIComponent(s)}`
 
+function normalizeSolicitud(value) {
+  try { value = decodeURIComponent(String(value)) } catch {}
+  return String(value).replace(/\\\//g, '/').replace(/\s+/g, '').toUpperCase()
+}
+
 function extractSolicitations(html) {
-  const text = String(html || '').replace(/&amp;/g, '&').replace(/\\u002F/g, '/')
+  const text = String(html || '').replace(/&amp;/g, '&').replace(/\\u002F/gi, '/').replace(/\\\//g, '/')
   const found = new Set()
-  const re = /MR\s*\d+\s*(?:%2F|\/)+\s*\d{4}/gi
-  for (const m of text.matchAll(re)) {
-    const v = decodeURIComponent(m[0]).replace(/\s+/g, '').toUpperCase()
+  const patterns = [
+    /MR\s*\d+\s*(?:%2F|\/)+\s*\d{4}/gi,
+    /MR\d+%2F\d{4}/gi,
+    /MR\d+\/\d{4}/gi
+  ]
+  for (const re of patterns) for (const m of text.matchAll(re)) {
+    const v = normalizeSolicitud(m[0])
     if (/^MR\d+\/\d{4}$/.test(v)) found.add(v)
   }
   return [...found]
@@ -44,7 +53,6 @@ async function searchByCnpj(page, cnpj) {
     for (const value of ['acordo','acordoColetivoEspecificoPPE','acordoColetivoEspecificoDomingosFeriados','convencao','termoAditivoAcordo','termoAditivoConvecao','termoAditivoAcordoEspecificoPPE','termoAditivoAcordoEspecificoDomingoFeriado']) params.append('tpRequerimento', value)
     params.append('tpVigencia', '2')
     params.append('sgUfDeRegistro', '')
-    // Limita a pesquisa ao histórico recente, evitando o timeout do endpoint quando a consulta fica aberta.
     params.append('dtInicioRegistro', '01/01/2024')
     params.append('dtFimRegistro', dataFim)
     params.append('dtInicioVigenciaInstrumentoColetivo', '')
@@ -59,38 +67,88 @@ async function searchByCnpj(page, cnpj) {
     params.append('pagina', '1')
     params.append('qtdTotalRegistro', '-1')
     const response = await fetch(endpoint, { method: 'POST', credentials: 'same-origin', headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8', 'X-Requested-With': 'XMLHttpRequest', 'Accept': 'text/html, */*; q=0.01' }, body: params.toString() })
-    return { status: response.status, url: response.url, body: await response.text() }
+    const body = await response.text()
+    const doc = new DOMParser().parseFromString(body, 'text/html')
+    const rows = [...doc.querySelectorAll('#grdInstrumentos tr')]
+    const links = [...doc.querySelectorAll('a[href], [onclick]')]
+    const structured = []
+    for (const link of links) {
+      const raw = `${link.getAttribute('href') || ''} ${link.getAttribute('onclick') || ''} ${link.textContent || ''}`
+      const match = raw.match(/MR\s*\d+\s*(?:%2F|\/)+\s*\d{4}/i)
+      if (!match) continue
+      const solicitation = decodeURIComponent(match[0]).replace(/\s+/g, '').toUpperCase()
+      if (!/^MR\d+\/\d{4}$/.test(solicitation)) continue
+      const row = link.closest('tr')
+      structured.push({ solicitation, href: link.getAttribute('href') || '', onclick: link.getAttribute('onclick') || '', rowText: row?.innerText || '' })
+    }
+    return { status: response.status, url: response.url, body, structured, rowCount: rows.length }
   }, { endpoint: ENDPOINT, cnpj: clean(cnpj), dataFim: hoje() })
   if (result.status === 403) throw new Error('Mediador HTTP 403')
   if (result.status === 504) throw new Error('Mediador HTTP 504 (consulta oficial expirou)')
   if (result.status < 200 || result.status >= 400) throw new Error(`Mediador HTTP ${result.status}`)
-  const solicitations = extractSolicitations(result.body)
+  const solicitations = new Set(extractSolicitations(result.body))
+  for (const item of result.structured || []) solicitations.add(item.solicitation)
   const lower = result.body.toLowerCase()
-  return { requestSucceeded: true, noResults: /nenhum|não foram encontrados|nao foram encontrados|nenhum registro|0\s+registro/.test(lower), total: solicitations.length, solicitations, responseUrl: result.url, responseSize: result.body.length }
+  return {
+    requestSucceeded: true,
+    noResults: /nenhum|não foram encontrados|nao foram encontrados|nenhum registro|0\s+registro/.test(lower),
+    total: solicitations.size,
+    solicitations: [...solicitations],
+    structured: result.structured || [],
+    responseUrl: result.url,
+    responseSize: result.body.length,
+    rowCount: result.rowCount
+  }
 }
 
 function extractTextValue(text, regex) { return text.match(regex)?.[1]?.trim() || '' }
-async function validate(page, solicitation, patronal, laboral) {
-  const response = await page.goto(solicitacaoUrl(solicitation), { waitUntil: 'domcontentloaded', timeout: 30000 })
+
+async function validate(page, solicitation, patronal, laboral, directUrl = null) {
+  const url = directUrl && /^https:\/\/mediador\.trabalho\.gov\.br\/sistemas\/mediador\/Resumo\//i.test(directUrl)
+    ? directUrl
+    : solicitudUrl(solicitation)
+  const response = await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 30000 })
   if (!response || !response.ok()) return null
   await page.waitForLoadState('networkidle', { timeout: 10000 }).catch(() => {})
   const text = await page.locator('body').innerText()
   const normalized = clean(text)
   if (!normalized.includes(clean(patronal)) || !normalized.includes(clean(laboral))) return null
-  return { url: solicitudUrl(solicitation), registro: extractTextValue(text, /N[ÚU]MERO DE REGISTRO NO MTE:\s*([^\n]+)/i), solicitacao: extractTextValue(text, /N[ÚU]MERO DA SOLICITA[CÇ][AÃ]O:\s*([^\n]+)/i) || solicitation, dataRegistro: extractTextValue(text, /DATA DE REGISTRO NO MTE:\s*([^\n]+)/i), vigencia: extractTextValue(text, /per[íi]odo de\s*([^\n]+)/i), titulo: text.match(/^(Acordo Coletivo[^\n]*|Conven[cç][aã]o Coletiva[^\n]*|Termo Aditivo[^\n]*)/im)?.[1]?.trim() || 'Instrumento coletivo', validatedAt: new Date().toISOString() }
+  return {
+    url,
+    registro: extractTextValue(text, /N[ÚU]MERO DE REGISTRO NO MTE:\s*([^\n]+)/i),
+    solicitacao: extractTextValue(text, /N[ÚU]MERO DA SOLICITA[CÇ][AÃ]O:\s*([^\n]+)/i) || solicitation,
+    dataRegistro: extractTextValue(text, /DATA DE REGISTRO NO MTE:\s*([^\n]+)/i),
+    vigencia: extractTextValue(text, /per[íi]odo de\s*([^\n]+)/i),
+    titulo: text.match(/^(Acordo Coletivo[^\n]*|Conven[cç][aã]o Coletiva[^\n]*|Termo Aditivo[^\n]*)/im)?.[1]?.trim() || 'Instrumento coletivo',
+    validatedAt: new Date().toISOString()
+  }
 }
+
 async function discoverPair(page, patronal, laboral) {
-  const all = new Set(); let totalFound = 0; let successfulQueries = 0; const errors = []
+  const all = new Map(); let totalFound = 0; let successfulQueries = 0; const errors = []
   for (const cnpj of [patronal, laboral]) {
     let lastError = null
     for (let attempt = 1; attempt <= 2; attempt++) {
-      try { const result = await searchByCnpj(page, cnpj); successfulQueries++; totalFound += result.total; for (const s of result.solicitations) all.add(s); lastError = null; break }
-      catch (e) { lastError = e instanceof Error ? e.message : String(e); if (attempt < 2) await sleep(1500) }
+      try {
+        const result = await searchByCnpj(page, cnpj)
+        successfulQueries++
+        totalFound += result.total
+        for (const s of result.solicitations) {
+          const row = result.structured.find(x => x.solicitation === s)
+          all.set(s, row?.href || null)
+        }
+        lastError = null
+        break
+      } catch (e) {
+        lastError = e instanceof Error ? e.message : String(e)
+        if (attempt < 2) await sleep(1500)
+      }
     }
     if (lastError) errors.push(lastError)
   }
-  return { solicitations: [...all], totalFound, successfulQueries, error: errors.join('; ') || null }
+  return { solicitations: [...all.entries()].map(([solicitation, href]) => ({ solicitation, href })), totalFound, successfulQueries, error: errors.join('; ') || null }
 }
+
 async function main() {
   let store = { generatedAt: null, source: 'Mediador/MTE', overallStatus: 'NOT_RUN', pairs: [], history: [] }
   try { store = JSON.parse(await fs.readFile(OUT, 'utf8')) } catch {}
@@ -103,17 +161,43 @@ async function main() {
       try {
         await openOfficialSession(page)
         const discovery = await discoverPair(page, patronal, laboral)
-        if (discovery.successfulQueries === 0) { results.push({ id, patronal, laboral, status: 'FONTE INDISPONÍVEL', error: discovery.error || 'Não foi possível obter resposta da consulta oficial.', instrumentos: [], candidatosVerificados: 0, consultedAt: new Date().toISOString() }); continue }
+        if (discovery.successfulQueries === 0) {
+          results.push({ id, patronal, laboral, status: 'FONTE INDISPONÍVEL', error: discovery.error || 'Não foi possível obter resposta da consulta oficial.', instrumentos: [], candidatosVerificados: 0, consultedAt: new Date().toISOString() })
+          continue
+        }
         const instrumentos = []
-        for (const solicitation of discovery.solicitations.slice(0, 100)) { try { const doc = await validate(page, solicitation, patronal, laboral); if (doc) instrumentos.push(doc) } catch {} }
+        const validationErrors = []
+        for (const { solicitation, href } of discovery.solicitations.slice(0, 100)) {
+          try {
+            const doc = await validate(page, solicitation, patronal, laboral, href && href.startsWith('http') ? href : null)
+            if (doc) instrumentos.push(doc)
+          } catch (e) {
+            validationErrors.push(`${solicitation}: ${e instanceof Error ? e.message : String(e)}`)
+          }
+        }
         const unique = [...new Map(instrumentos.map(x => [x.registro || x.solicitacao || x.url, x])).values()]
-        results.push({ id, patronal, laboral, status: 'CONSULTADO', metodo: 'POST oficial do Mediador dentro da sessão do navegador + validação dos dois CNPJs no documento oficial', instrumentos: unique, candidatosVerificados: discovery.solicitations.length, totalEncontradoNaConsulta: discovery.totalFound, consultasConfirmadas: discovery.successfulQueries, consultedAt: new Date().toISOString() })
-      } catch (e) { results.push({ id, patronal, laboral, status: 'FONTE INDISPONÍVEL', error: e instanceof Error ? e.message : String(e), instrumentos: [], candidatosVerificados: 0, consultedAt: new Date().toISOString() }) }
-      finally { await page.close() }
+        results.push({
+          id, patronal, laboral, status: 'CONSULTADO',
+          metodo: 'Consulta oficial do Mediador + extração estruturada dos resultados + validação dos dois CNPJs no documento oficial',
+          instrumentos: unique,
+          candidatosVerificados: discovery.solicitations.length,
+          totalEncontradoNaConsulta: discovery.totalFound,
+          consultasConfirmadas: discovery.successfulQueries,
+          observacao: unique.length === 0 && discovery.solicitations.length > 0 ? 'Consulta oficial retornou candidatos, mas nenhum documento foi validado para os dois CNPJs. Não interpretar como ausência de novidade.' : undefined,
+          errosValidacao: validationErrors.length ? validationErrors.slice(0, 20) : undefined,
+          consultedAt: new Date().toISOString()
+        })
+      } catch (e) {
+        results.push({ id, patronal, laboral, status: 'FONTE INDISPONÍVEL', error: e instanceof Error ? e.message : String(e), instrumentos: [], candidatosVerificados: 0, consultedAt: new Date().toISOString() })
+      } finally { await page.close() }
     }
   } finally { await context.close(); await browser.close() }
   const run = { at: new Date().toISOString(), pairs: results }
-  store.generatedAt = run.at; store.source = 'Mediador/MTE'; store.overallStatus = results.every(x => x.status === 'CONSULTADO') ? 'CONSULTADO' : results.some(x => x.status === 'CONSULTADO') ? 'PARCIAL' : 'FONTE INDISPONÍVEL'; store.pairs = results; store.history = [run, ...(store.history || [])].slice(0, 90)
+  store.generatedAt = run.at
+  store.source = 'Mediador/MTE'
+  store.overallStatus = results.every(x => x.status === 'CONSULTADO') ? 'CONSULTADO' : results.some(x => x.status === 'CONSULTADO') ? 'PARCIAL' : 'FONTE INDISPONÍVEL'
+  store.pairs = results
+  store.history = [run, ...(store.history || [])].slice(0, 90)
   await fs.writeFile(OUT, JSON.stringify(store, null, 2) + '\n')
 }
 main().catch(e => { console.error(e); process.exit(1) })
