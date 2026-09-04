@@ -13,6 +13,8 @@ const agora = () => new Date()
 const anoAtual = () => agora().getFullYear()
 const hoje = () => { const d = agora(); return `${String(d.getDate()).padStart(2,'0')}/${String(d.getMonth()+1).padStart(2,'0')}/${d.getFullYear()}` }
 const inicioAno = () => `01/01/${anoAtual()}`
+const inicioHistorico = () => '01/01/2000'
+const fimHistorico = () => '31/12/2099'
 const solicitudUrl = s => `https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=${encodeURIComponent(s)}`
 
 function normalizeSolicitud(value) {
@@ -44,10 +46,16 @@ async function openOfficialSession(page) {
   if (!/Consultar Instrumentos Coletivos Registrados/i.test(body)) throw new Error('A página oficial de consulta não carregou o formulário esperado.')
 }
 
-async function searchByCnpj(page, cnpj) {
+async function searchByCnpj(page, cnpj, options = {}) {
+  const historico = Boolean(options.historico)
+  const dataInicioRegistro = historico ? inicioHistorico() : inicioAno()
+  const dataFimRegistro = hoje()
+  const dataInicioVigencia = historico ? inicioHistorico() : inicioAno()
+  const dataFimVigencia = historico ? fimHistorico() : hoje()
+
   await page.goto(CONSULTA, { waitUntil: 'domcontentloaded', timeout: 30000 })
   await page.waitForLoadState('networkidle', { timeout: 10000 }).catch(() => {})
-  const result = await page.evaluate(async ({ endpoint, cnpj, dataInicio, dataFim }) => {
+  const result = await page.evaluate(async ({ endpoint, cnpj, dataInicioRegistro, dataFimRegistro, dataInicioVigencia, dataFimVigencia }) => {
     const params = new URLSearchParams()
     params.append('nrCnpj', cnpj)
     params.append('nrCei', '')
@@ -56,10 +64,10 @@ async function searchByCnpj(page, cnpj) {
     for (const value of ['acordo','acordoColetivoEspecificoPPE','acordoColetivoEspecificoDomingosFeriados','convencao','termoAditivoAcordo','termoAditivoConvecao','termoAditivoAcordoEspecificoPPE','termoAditivoAcordoEspecificoDomingoFeriado']) params.append('tpRequerimento', value)
     params.append('tpVigencia', '2')
     params.append('sgUfDeRegistro', '')
-    params.append('dtInicioRegistro', dataInicio)
-    params.append('dtFimRegistro', dataFim)
-    params.append('dtInicioVigenciaInstrumentoColetivo', dataInicio)
-    params.append('dtFimVigenciaInstrumentoColetivo', dataFim)
+    params.append('dtInicioRegistro', dataInicioRegistro)
+    params.append('dtFimRegistro', dataFimRegistro)
+    params.append('dtInicioVigenciaInstrumentoColetivo', dataInicioVigencia)
+    params.append('dtFimVigenciaInstrumentoColetivo', dataFimVigencia)
     params.append('tpAbrangencia', 'Todos os tipos')
     params.append('ufsAbrangidasTotalmente', '')
     params.append('cdMunicipiosAbrangidos', '')
@@ -85,7 +93,7 @@ async function searchByCnpj(page, cnpj) {
       structured.push({ solicitation, href: link.getAttribute('href') || '', onclick: link.getAttribute('onclick') || '', rowText: row?.innerText || '' })
     }
     return { status: response.status, url: response.url, body, structured, rowCount: rows.length }
-  }, { endpoint: ENDPOINT, cnpj: clean(cnpj), dataInicio: inicioAno(), dataFim: hoje() })
+  }, { endpoint: ENDPOINT, cnpj: clean(cnpj), dataInicioRegistro, dataFimRegistro, dataInicioVigencia, dataFimVigencia })
   if (result.status === 403) throw new Error('Mediador HTTP 403')
   if (result.status === 504) throw new Error('Mediador HTTP 504 (consulta oficial expirou)')
   if (result.status < 200 || result.status >= 400) throw new Error(`Mediador HTTP ${result.status}`)
@@ -100,36 +108,76 @@ async function searchByCnpj(page, cnpj) {
     structured: result.structured || [],
     responseUrl: result.url,
     responseSize: result.body.length,
-    rowCount: result.rowCount
+    rowCount: result.rowCount,
+    historico,
+    filtros: { registroDe: dataInicioRegistro, registroAte: dataFimRegistro, vigenciaDe: dataInicioVigencia, vigenciaAte: dataFimVigencia }
   }
 }
 
 function extractTextValue(text, regex) { return text.match(regex)?.[1]?.trim() || '' }
 
+const MESES = {
+  janeiro: 0, fevereiro: 1, março: 2, marco: 2, abril: 3, maio: 4, junho: 5,
+  julho: 6, agosto: 7, setembro: 8, outubro: 9, novembro: 10, dezembro: 11
+}
+
 function parseDateBR(value) {
-  const m = String(value || '').match(/(\d{1,2})\/(\d{1,2})\/(\d{4})/)
-  if (!m) return null
-  const d = new Date(Number(m[3]), Number(m[2]) - 1, Number(m[1]))
+  const raw = String(value || '').trim()
+  const numeric = raw.match(/(\d{1,2})\/(\d{1,2})\/(\d{4})/)
+  if (numeric) {
+    const d = new Date(Number(numeric[3]), Number(numeric[2]) - 1, Number(numeric[1]))
+    return Number.isNaN(d.getTime()) ? null : d
+  }
+  const textual = raw.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').match(/(\d{1,2})(?:º|°)?\s+de\s+([a-zç]+)\s+de\s+(\d{4})/i)
+  if (!textual) return null
+  const mes = MESES[textual[2]]
+  if (mes === undefined) return null
+  const d = new Date(Number(textual[3]), mes, Number(textual[1]))
   return Number.isNaN(d.getTime()) ? null : d
 }
 
 function extractVigencia(text) {
   const lines = String(text || '').split(/\r?\n/).map(x => x.trim()).filter(Boolean)
-  const line = lines.find(x => /vig[eê]ncia|per[ií]odo de vig[eê]ncia/i.test(x) && /\d{1,2}\/\d{1,2}\/\d{4}/.test(x))
+  const line = lines.find(x => /vig[eê]ncia|per[ií]odo de vig[eê]ncia/i.test(x) && /(\d{1,2}\/\d{1,2}\/\d{4}|\d{1,2}(?:º|°)?\s+de\s+[a-zç]+\s+de\s+\d{4})/i.test(x))
   if (line) return line
   return extractTextValue(text, /per[íi]odo de\s*([^\n]+)/i)
 }
 
+function extractVigenciaDates(vigencia) {
+  const text = String(vigencia || '')
+  const dates = []
+  for (const match of text.matchAll(/\d{1,2}\/\d{1,2}\/\d{4}/g)) {
+    const date = parseDateBR(match[0])
+    if (date) dates.push(date)
+  }
+  const normalized = text.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+  const textualRe = /(\d{1,2})(?:º|°)?\s+de\s+(janeiro|fevereiro|marco|abril|maio|junho|julho|agosto|setembro|outubro|novembro|dezembro)\s+de\s+(\d{4})/gi
+  for (const match of normalized.matchAll(textualRe)) {
+    const date = parseDateBR(`${match[1]} de ${match[2]} de ${match[3]}`)
+    if (date) dates.push(date)
+  }
+  return dates.sort((a, b) => a - b)
+}
+
 function vigenciaExpirada(vigencia) {
-  const dates = [...String(vigencia || '').matchAll(/\d{1,2}\/\d{1,2}\/\d{4}/g)].map(m => parseDateBR(m[0])).filter(Boolean)
+  const dates = extractVigenciaDates(vigencia)
   if (dates.length < 2) return null
   const fim = dates[dates.length - 1]
-  const hojeDate = new Date()
-  hojeDate.setHours(0, 0, 0, 0)
+  const hojeDate = parseDateBR(hoje())
   return fim < hojeDate
 }
 
-async function validate(page, solicitation, patronal, laboral, directUrl = null) {
+function vigenciaFim(vigencia) {
+  const dates = extractVigenciaDates(vigencia)
+  return dates.length >= 2 ? dates[dates.length - 1] : null
+}
+
+function registroDate(dataRegistro) {
+  return parseDateBR(dataRegistro)
+}
+
+async function validate(page, solicitation, patronal, laboral, directUrl = null, options = {}) {
+  const requireCurrentYear = options.requireCurrentYear !== false
   const url = directUrl && /^https:\/\/mediador\.trabalho\.gov\.br\/sistemas\/mediador\/Resumo\//i.test(directUrl)
     ? directUrl
     : solicitudUrl(solicitation)
@@ -141,29 +189,30 @@ async function validate(page, solicitation, patronal, laboral, directUrl = null)
   if (!normalized.includes(clean(patronal)) || !normalized.includes(clean(laboral))) return null
   const dataRegistro = extractTextValue(text, /DATA DE REGISTRO NO MTE:\s*([^\n]+)/i)
   const anoRegistro = dataRegistro.match(/\b(20\d{2})\b/)?.[1]
-  if (anoRegistro !== String(anoAtual())) return null
+  if (requireCurrentYear && anoRegistro !== String(anoAtual())) return null
   const vigencia = extractVigencia(text)
   const expirada = vigenciaExpirada(vigencia)
-  if (expirada === true) return null
+  if (expirada !== false) return null
   return {
     url,
     registro: extractTextValue(text, /N[ÚU]MERO DE REGISTRO NO MTE:\s*([^\n]+)/i),
     solicitacao: extractTextValue(text, /N[ÚU]MERO DA SOLICITA[CÇ][AÃ]O:\s*([^\n]+)/i) || solicitation,
     dataRegistro,
     vigencia,
-    vigencia_status: expirada === false ? 'VIGENTE' : 'INDETERMINADO',
+    vigencia_status: 'VIGENTE',
+    anoRegistro: anoRegistro || null,
     titulo: text.match(/^(Acordo Coletivo[^\n]*|Conven[cç][aã]o Coletiva[^\n]*|Termo Aditivo[^\n]*)/im)?.[1]?.trim() || 'Instrumento coletivo',
     validatedAt: new Date().toISOString()
   }
 }
 
-async function discoverPair(page, patronal, laboral) {
+async function discoverPair(page, patronal, laboral, options = {}) {
   const all = new Map(); let totalFound = 0; let successfulQueries = 0; const errors = []
   for (const cnpj of [patronal, laboral]) {
     let lastError = null
     for (let attempt = 1; attempt <= 2; attempt++) {
       try {
-        const result = await searchByCnpj(page, cnpj)
+        const result = await searchByCnpj(page, cnpj, options)
         successfulQueries++
         totalFound += result.total
         for (const s of result.solicitations) {
@@ -182,6 +231,29 @@ async function discoverPair(page, patronal, laboral) {
   return { solicitations: [...all.entries()].map(([solicitation, href]) => ({ solicitation, href })), totalFound, successfulQueries, error: errors.join('; ') || null }
 }
 
+async function validateCandidates(page, discovery, patronal, laboral, options = {}) {
+  const docs = []
+  const errors = []
+  for (const { solicitation, href } of discovery.solicitations.slice(0, 150)) {
+    try {
+      const doc = await validate(page, solicitation, patronal, laboral, href && href.startsWith('http') ? href : null, options)
+      if (doc) docs.push(doc)
+    } catch (e) {
+      errors.push(`${solicitation}: ${e instanceof Error ? e.message : String(e)}`)
+    }
+  }
+  return { docs, errors }
+}
+
+function ordenarPorVigenciaMaisRecente(a, b) {
+  const fimA = vigenciaFim(a.vigencia)?.getTime() || 0
+  const fimB = vigenciaFim(b.vigencia)?.getTime() || 0
+  if (fimB !== fimA) return fimB - fimA
+  const regA = registroDate(a.dataRegistro)?.getTime() || 0
+  const regB = registroDate(b.dataRegistro)?.getTime() || 0
+  return regB - regA
+}
+
 async function main() {
   let store = { generatedAt: null, source: 'Mediador/MTE', overallStatus: 'NOT_RUN', pairs: [], history: [] }
   try { store = JSON.parse(await fs.readFile(OUT, 'utf8')) } catch {}
@@ -198,28 +270,61 @@ async function main() {
           results.push({ id, patronal, laboral, status: 'FONTE INDISPONÍVEL', error: discovery.error || 'Não foi possível obter resposta da consulta oficial.', instrumentos: [], candidatosVerificados: 0, consultedAt: new Date().toISOString() })
           continue
         }
-        const instrumentos = []
-        const validationErrors = []
-        for (const { solicitation, href } of discovery.solicitations.slice(0, 100)) {
-          try {
-            const doc = await validate(page, solicitation, patronal, laboral, href && href.startsWith('http') ? href : null)
-            if (doc) instrumentos.push(doc)
-          } catch (e) {
-            validationErrors.push(`${solicitation}: ${e instanceof Error ? e.message : String(e)}`)
+
+        const current = await validateCandidates(page, discovery, patronal, laboral, { requireCurrentYear: true })
+        let instrumentos = [...current.docs]
+        let origem = 'ANO_CORRENTE'
+        let fallbackDiscovery = null
+        let fallbackValidation = { docs: [], errors: [] }
+
+        if (instrumentos.length === 0) {
+          fallbackDiscovery = await discoverPair(page, patronal, laboral, { historico: true })
+          if (fallbackDiscovery.successfulQueries > 0 && fallbackDiscovery.solicitations.length > 0) {
+            fallbackValidation = await validateCandidates(page, fallbackDiscovery, patronal, laboral, { requireCurrentYear: false })
+            if (fallbackValidation.docs.length > 0) {
+              instrumentos = [fallbackValidation.docs.sort(ordenarPorVigenciaMaisRecente)[0]]
+              origem = 'ULTIMO_VIGENTE'
+            }
           }
         }
+
         const unique = [...new Map(instrumentos.map(x => [x.registro || x.solicitacao || x.url, x])).values()]
+        const allValidationErrors = [...current.errors, ...fallbackValidation.errors]
+        const currentHasCandidates = discovery.solicitations.length > 0
+        const fallbackConsulted = Boolean(fallbackDiscovery)
+        const fallbackHasCandidates = Boolean(fallbackDiscovery?.solicitations?.length)
+        const observacao = unique.length === 0
+          ? (currentHasCandidates
+              ? (fallbackConsulted && !fallbackHasCandidates
+                  ? 'Consulta oficial retornou candidatos no ano corrente, mas nenhum instrumento vigente foi validado. A busca histórica também não encontrou candidato vigente.'
+                  : 'Nenhum instrumento vigente foi validado para os dois CNPJs. A consulta oficial não deve ser interpretada como ausência de novidade.')
+              : 'Nenhum instrumento vigente encontrado na consulta oficial.')
+          : origem === 'ULTIMO_VIGENTE'
+            ? 'Não foi encontrado instrumento vigente registrado no ano corrente. Foi selecionado o último instrumento vigente localizado em consulta histórica, com validação dos dois CNPJs no documento oficial.'
+            : undefined
+
         results.push({
           id, patronal, laboral, status: 'CONSULTADO',
-          metodo: `Consulta oficial do Mediador — registros de ${inicioAno()} até ${hoje()} + filtro de vigência até ${hoje()} + validação dos dois CNPJs no documento oficial`,
+          metodo: `Consulta oficial do Mediador — prioridade para registros de ${inicioAno()} até ${hoje()} com vigência ativa; fallback histórico para o último instrumento vigente quando necessário; validação dos dois CNPJs no documento oficial`,
           filtroRegistro: { de: inicioAno(), ate: hoje(), ano: anoAtual() },
           filtroVigencia: { somenteVigentes: true, referencia: hoje() },
+          fallbackHistorico: {
+            utilizado: origem === 'ULTIMO_VIGENTE',
+            registroConsultadoDe: inicioHistorico(),
+            registroConsultadoAte: hoje(),
+            vigenciaConsultadaDe: inicioHistorico(),
+            vigenciaConsultadaAte: fimHistorico()
+          },
+          origem,
           instrumentos: unique,
           candidatosVerificados: discovery.solicitations.length,
           totalEncontradoNaConsulta: discovery.totalFound,
           consultasConfirmadas: discovery.successfulQueries,
-          observacao: unique.length === 0 && discovery.solicitations.length > 0 ? 'Consulta oficial retornou candidatos, mas nenhum documento foi validado para os dois CNPJs no ano corrente e com vigência ativa. Não interpretar como ausência de novidade.' : undefined,
-          errosValidacao: validationErrors.length ? validationErrors.slice(0, 20) : undefined,
+          candidatosVerificadosFallback: fallbackDiscovery?.solicitations?.length || 0,
+          consultasConfirmadasFallback: fallbackDiscovery?.successfulQueries || 0,
+          totalEncontradoNaConsultaFallback: fallbackDiscovery?.totalFound || 0,
+          observacao,
+          errosValidacao: allValidationErrors.length ? allValidationErrors.slice(0, 20) : undefined,
           consultedAt: new Date().toISOString()
         })
       } catch (e) {
