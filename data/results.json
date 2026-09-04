@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-03T20:07:47.938Z",
+  "generatedAt": "2026-09-04T10:18:50.144Z",
   "source": "Mediador/MTE",
-  "overallStatus": "PARCIAL",
+  "overallStatus": "CONSULTADO",
   "pairs": [
     {
       "id": "01",
@@ -10,10 +10,10 @@
       "status": "CONSULTADO",
       "metodo": "POST oficial do Mediador dentro da sessão do navegador + validação dos dois CNPJs no documento oficial",
       "instrumentos": [],
-      "candidatosVerificados": 4,
-      "totalEncontradoNaConsulta": 4,
-      "consultasConfirmadas": 1,
-      "consultedAt": "2026-09-03T19:54:25.675Z"
+      "candidatosVerificados": 6,
+      "totalEncontradoNaConsulta": 6,
+      "consultasConfirmadas": 2,
+      "consultedAt": "2026-09-04T10:17:08.178Z"
     },
     {
       "id": "02",
@@ -25,17 +25,19 @@
       "candidatosVerificados": 3,
       "totalEncontradoNaConsulta": 6,
       "consultasConfirmadas": 2,
-      "consultedAt": "2026-09-03T19:55:14.451Z"
+      "consultedAt": "2026-09-04T10:17:16.224Z"
     },
     {
       "id": "03",
       "patronal": "91.100.339/0001-15",
       "laboral": "96.757.612/0001-00",
-      "status": "FONTE INDISPONÍVEL",
-      "error": "Mediador HTTP 504 (consulta oficial expirou); Mediador HTTP 504 (consulta oficial expirou)",
+      "status": "CONSULTADO",
+      "metodo": "POST oficial do Mediador dentro da sessão do navegador + validação dos dois CNPJs no documento oficial",
       "instrumentos": [],
-      "candidatosVerificados": 0,
-      "consultedAt": "2026-09-03T19:56:54.289Z"
+      "candidatosVerificados": 18,
+      "totalEncontradoNaConsulta": 20,
+      "consultasConfirmadas": 2,
+      "consultedAt": "2026-09-04T10:17:25.167Z"
     },
     {
       "id": "04",
@@ -44,20 +46,22 @@
       "status": "CONSULTADO",
       "metodo": "POST oficial do Mediador dentro da sessão do navegador + validação dos dois CNPJs no documento oficial",
       "instrumentos": [],
-      "candidatosVerificados": 0,
-      "totalEncontradoNaConsulta": 0,
-      "consultasConfirmadas": 1,
-      "consultedAt": "2026-09-03T19:58:26.226Z"
+      "candidatosVerificados": 20,
+      "totalEncontradoNaConsulta": 20,
+      "consultasConfirmadas": 2,
+      "consultedAt": "2026-09-04T10:17:34.901Z"
     },
     {
       "id": "05",
       "patronal": "88.368.592/0001-40",
       "laboral": "97.202.535/0001-87",
-      "status": "FONTE INDISPONÍVEL",
-      "error": "A página oficial de consulta não carregou o formulário esperado.",
+      "status": "CONSULTADO",
+      "metodo": "POST oficial do Mediador dentro da sessão do navegador + validação dos dois CNPJs no documento oficial",
       "instrumentos": [],
-      "candidatosVerificados": 0,
-      "consultedAt": "2026-09-03T19:58:28.581Z"
+      "candidatosVerificados": 17,
+      "totalEncontradoNaConsulta": 20,
+      "consultasConfirmadas": 2,
+      "consultedAt": "2026-09-04T10:17:44.420Z"
     },
     {
       "id": "06",
@@ -66,10 +70,10 @@
       "status": "CONSULTADO",
       "metodo": "POST oficial do Mediador dentro da sessão do navegador + validação dos dois CNPJs no documento oficial",
       "instrumentos": [],
-      "candidatosVerificados": 3,
-      "totalEncontradoNaConsulta": 3,
-      "consultasConfirmadas": 1,
-      "consultedAt": "2026-09-03T19:59:27.541Z"
+      "candidatosVerificados": 10,
+      "totalEncontradoNaConsulta": 13,
+      "consultasConfirmadas": 2,
+      "consultedAt": "2026-09-04T10:17:52.819Z"
     },
     {
       "id": "07",
@@ -78,10 +82,10 @@
       "status": "CONSULTADO",
       "metodo": "POST oficial do Mediador dentro da sessão do navegador + validação dos dois CNPJs no documento oficial",
       "instrumentos": [],
-      "candidatosVerificados": 6,
-      "totalEncontradoNaConsulta": 6,
-      "consultasConfirmadas": 1,
-      "consultedAt": "2026-09-03T20:00:58.472Z"
+      "candidatosVerificados": 16,
+      "totalEncontradoNaConsulta": 16,
+      "consultasConfirmadas": 2,
+      "consultedAt": "2026-09-04T10:18:02.598Z"
     },
     {
       "id": "08",
@@ -90,30 +94,34 @@
       "status": "CONSULTADO",
       "metodo": "POST oficial do Mediador dentro da sessão do navegador + validação dos dois CNPJs no documento oficial",
       "instrumentos": [],
-      "candidatosVerificados": 8,
-      "totalEncontradoNaConsulta": 8,
-      "consultasConfirmadas": 1,
-      "consultedAt": "2026-09-03T20:02:27.717Z"
+      "candidatosVerificados": 14,
+      "totalEncontradoNaConsulta": 18,
+      "consultasConfirmadas": 2,
+      "consultedAt": "2026-09-04T10:18:11.641Z"
     },
     {
       "id": "09",
       "patronal": "89.137.574/0001-10",
       "laboral": "93.074.185/0001-60",
-      "status": "FONTE INDISPONÍVEL",
-      "error": "Mediador HTTP 504 (consulta oficial expirou); Mediador HTTP 504 (consulta oficial expirou)",
+      "status": "CONSULTADO",
+      "metodo": "POST oficial do Mediador dentro da sessão do navegador + validação dos dois CNPJs no documento oficial",
       "instrumentos": [],
-      "candidatosVerificados": 0,
-      "consultedAt": "2026-09-03T20:04:06.823Z"
+      "candidatosVerificados": 15,
+      "totalEncontradoNaConsulta": 20,
+      "consultasConfirmadas": 2,
+      "consultedAt": "2026-09-04T10:18:21.431Z"
     },
     {
       "id": "10",
       "patronal": "96.755.145/0001-71",
       "laboral": "96.758.008/0001-90",
-      "status": "FONTE INDISPONÍVEL",
-      "error": "Mediador HTTP 504 (consulta oficial expirou); Mediador HTTP 504 (consulta oficial expirou)",
+      "status": "CONSULTADO",
+      "metodo": "POST oficial do Mediador dentro da sessão do navegador + validação dos dois CNPJs no documento oficial",
       "instrumentos": [],
-      "candidatosVerificados": 0,
-      "consultedAt": "2026-09-03T20:05:49.351Z"
+      "candidatosVerificados": 20,
+      "totalEncontradoNaConsulta": 20,
+      "consultasConfirmadas": 2,
+      "consultedAt": "2026-09-04T10:18:31.984Z"
     },
     {
       "id": "11",
@@ -122,10 +130,10 @@
       "status": "CONSULTADO",
       "metodo": "POST oficial do Mediador dentro da sessão do navegador + validação dos dois CNPJs no documento oficial",
       "instrumentos": [],
-      "candidatosVerificados": 10,
-      "totalEncontradoNaConsulta": 10,
-      "consultasConfirmadas": 1,
-      "consultedAt": "2026-09-03T20:06:46.963Z"
+      "candidatosVerificados": 13,
+      "totalEncontradoNaConsulta": 13,
+      "consultasConfirmadas": 2,
+      "consultedAt": "2026-09-04T10:18:41.572Z"
     },
     {
       "id": "12",
@@ -137,10 +145,159 @@
       "candidatosVerificados": 13,
       "totalEncontradoNaConsulta": 13,
       "consultasConfirmadas": 2,
-      "consultedAt": "2026-09-03T20:07:47.904Z"
+      "consultedAt": "2026-09-04T10:18:50.115Z"
     }
   ],
   "history": [
+    {
+      "at": "2026-09-04T10:18:50.144Z",
+      "pairs": [
+        {
+          "id": "01",
+          "patronal": "93.246.940/0001-46",
+          "laboral": "89.069.835/0001-01",
+          "status": "CONSULTADO",
+          "metodo": "POST oficial do Mediador dentro da sessão do navegador + validação dos dois CNPJs no documento oficial",
+          "instrumentos": [],
+          "candidatosVerificados": 6,
+          "totalEncontradoNaConsulta": 6,
+          "consultasConfirmadas": 2,
+          "consultedAt": "2026-09-04T10:17:08.178Z"
+        },
+        {
+          "id": "02",
+          "patronal": "18.006.733/0001-07",
+          "laboral": "15.635.336/0001-06",
+          "status": "CONSULTADO",
+          "metodo": "POST oficial do Mediador dentro da sessão do navegador + validação dos dois CNPJs no documento oficial",
+          "instrumentos": [],
+          "candidatosVerificados": 3,
+          "totalEncontradoNaConsulta": 6,
+          "consultasConfirmadas": 2,
+          "consultedAt": "2026-09-04T10:17:16.224Z"
+        },
+        {
+          "id": "03",
+          "patronal": "91.100.339/0001-15",
+          "laboral": "96.757.612/0001-00",
+          "status": "CONSULTADO",
+          "metodo": "POST oficial do Mediador dentro da sessão do navegador + validação dos dois CNPJs no documento oficial",
+          "instrumentos": [],
+          "candidatosVerificados": 18,
+          "totalEncontradoNaConsulta": 20,
+          "consultasConfirmadas": 2,
+          "consultedAt": "2026-09-04T10:17:25.167Z"
+        },
+        {
+          "id": "04",
+          "patronal": "89.138.168/0001-71",
+          "laboral": "91.345.231/0001-92",
+          "status": "CONSULTADO",
+          "metodo": "POST oficial do Mediador dentro da sessão do navegador + validação dos dois CNPJs no documento oficial",
+          "instrumentos": [],
+          "candidatosVerificados": 20,
+          "totalEncontradoNaConsulta": 20,
+          "consultasConfirmadas": 2,
+          "consultedAt": "2026-09-04T10:17:34.901Z"
+        },
+        {
+          "id": "05",
+          "patronal": "88.368.592/0001-40",
+          "laboral": "97.202.535/0001-87",
+          "status": "CONSULTADO",
+          "metodo": "POST oficial do Mediador dentro da sessão do navegador + validação dos dois CNPJs no documento oficial",
+          "instrumentos": [],
+          "candidatosVerificados": 17,
+          "totalEncontradoNaConsulta": 20,
+          "consultasConfirmadas": 2,
+          "consultedAt": "2026-09-04T10:17:44.420Z"
+        },
+        {
+          "id": "06",
+          "patronal": "88.368.592/0001-40",
+          "laboral": "96.757.737/0001-22",
+          "status": "CONSULTADO",
+          "metodo": "POST oficial do Mediador dentro da sessão do navegador + validação dos dois CNPJs no documento oficial",
+          "instrumentos": [],
+          "candidatosVerificados": 10,
+          "totalEncontradoNaConsulta": 13,
+          "consultasConfirmadas": 2,
+          "consultedAt": "2026-09-04T10:17:52.819Z"
+        },
+        {
+          "id": "07",
+          "patronal": "89.138.168/0001-71",
+          "laboral": "91.343.194/0001-83",
+          "status": "CONSULTADO",
+          "metodo": "POST oficial do Mediador dentro da sessão do navegador + validação dos dois CNPJs no documento oficial",
+          "instrumentos": [],
+          "candidatosVerificados": 16,
+          "totalEncontradoNaConsulta": 16,
+          "consultasConfirmadas": 2,
+          "consultedAt": "2026-09-04T10:18:02.598Z"
+        },
+        {
+          "id": "08",
+          "patronal": "92.962.919/0001-84",
+          "laboral": "92.931.492/0001-57",
+          "status": "CONSULTADO",
+          "metodo": "POST oficial do Mediador dentro da sessão do navegador + validação dos dois CNPJs no documento oficial",
+          "instrumentos": [],
+          "candidatosVerificados": 14,
+          "totalEncontradoNaConsulta": 18,
+          "consultasConfirmadas": 2,
+          "consultedAt": "2026-09-04T10:18:11.641Z"
+        },
+        {
+          "id": "09",
+          "patronal": "89.137.574/0001-10",
+          "laboral": "93.074.185/0001-60",
+          "status": "CONSULTADO",
+          "metodo": "POST oficial do Mediador dentro da sessão do navegador + validação dos dois CNPJs no documento oficial",
+          "instrumentos": [],
+          "candidatosVerificados": 15,
+          "totalEncontradoNaConsulta": 20,
+          "consultasConfirmadas": 2,
+          "consultedAt": "2026-09-04T10:18:21.431Z"
+        },
+        {
+          "id": "10",
+          "patronal": "96.755.145/0001-71",
+          "laboral": "96.758.008/0001-90",
+          "status": "CONSULTADO",
+          "metodo": "POST oficial do Mediador dentro da sessão do navegador + validação dos dois CNPJs no documento oficial",
+          "instrumentos": [],
+          "candidatosVerificados": 20,
+          "totalEncontradoNaConsulta": 20,
+          "consultasConfirmadas": 2,
+          "consultedAt": "2026-09-04T10:18:31.984Z"
+        },
+        {
+          "id": "11",
+          "patronal": "93.712.909/0001-53",
+          "laboral": "93.074.383/0001-23",
+          "status": "CONSULTADO",
+          "metodo": "POST oficial do Mediador dentro da sessão do navegador + validação dos dois CNPJs no documento oficial",
+          "instrumentos": [],
+          "candidatosVerificados": 13,
+          "totalEncontradoNaConsulta": 13,
+          "consultasConfirmadas": 2,
+          "consultedAt": "2026-09-04T10:18:41.572Z"
+        },
+        {
+          "id": "12",
+          "patronal": "93.712.909/0001-53",
+          "laboral": "96.758.040/0001-76",
+          "status": "CONSULTADO",
+          "metodo": "POST oficial do Mediador dentro da sessão do navegador + validação dos dois CNPJs no documento oficial",
+          "instrumentos": [],
+          "candidatosVerificados": 13,
+          "totalEncontradoNaConsulta": 13,
+          "consultasConfirmadas": 2,
+          "consultedAt": "2026-09-04T10:18:50.115Z"
+        }
+      ]
+    },
     {
       "at": "2026-09-03T20:07:47.938Z",
       "pairs": [
