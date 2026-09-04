@@ -9,7 +9,10 @@ const pairs = [
 ]
 const clean = s => String(s || '').replace(/\D/g, '')
 const sleep = ms => new Promise(r => setTimeout(r, ms))
-const hoje = () => { const d = new Date(); return `${String(d.getDate()).padStart(2,'0')}/${String(d.getMonth()+1).padStart(2,'0')}/${d.getFullYear()}` }
+const agora = () => new Date()
+const anoAtual = () => agora().getFullYear()
+const hoje = () => { const d = agora(); return `${String(d.getDate()).padStart(2,'0')}/${String(d.getMonth()+1).padStart(2,'0')}/${d.getFullYear()}` }
+const inicioAno = () => `01/01/${anoAtual()}`
 const solicitudUrl = s => `https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=${encodeURIComponent(s)}`
 
 function normalizeSolicitud(value) {
@@ -44,7 +47,7 @@ async function openOfficialSession(page) {
 async function searchByCnpj(page, cnpj) {
   await page.goto(CONSULTA, { waitUntil: 'domcontentloaded', timeout: 30000 })
   await page.waitForLoadState('networkidle', { timeout: 10000 }).catch(() => {})
-  const result = await page.evaluate(async ({ endpoint, cnpj, dataFim }) => {
+  const result = await page.evaluate(async ({ endpoint, cnpj, dataInicio, dataFim }) => {
     const params = new URLSearchParams()
     params.append('nrCnpj', cnpj)
     params.append('nrCei', '')
@@ -53,7 +56,7 @@ async function searchByCnpj(page, cnpj) {
     for (const value of ['acordo','acordoColetivoEspecificoPPE','acordoColetivoEspecificoDomingosFeriados','convencao','termoAditivoAcordo','termoAditivoConvecao','termoAditivoAcordoEspecificoPPE','termoAditivoAcordoEspecificoDomingoFeriado']) params.append('tpRequerimento', value)
     params.append('tpVigencia', '2')
     params.append('sgUfDeRegistro', '')
-    params.append('dtInicioRegistro', '01/01/2024')
+    params.append('dtInicioRegistro', dataInicio)
     params.append('dtFimRegistro', dataFim)
     params.append('dtInicioVigenciaInstrumentoColetivo', '')
     params.append('dtFimVigenciaInstrumentoColetivo', '')
@@ -82,7 +85,7 @@ async function searchByCnpj(page, cnpj) {
       structured.push({ solicitation, href: link.getAttribute('href') || '', onclick: link.getAttribute('onclick') || '', rowText: row?.innerText || '' })
     }
     return { status: response.status, url: response.url, body, structured, rowCount: rows.length }
-  }, { endpoint: ENDPOINT, cnpj: clean(cnpj), dataFim: hoje() })
+  }, { endpoint: ENDPOINT, cnpj: clean(cnpj), dataInicio: inicioAno(), dataFim: hoje() })
   if (result.status === 403) throw new Error('Mediador HTTP 403')
   if (result.status === 504) throw new Error('Mediador HTTP 504 (consulta oficial expirou)')
   if (result.status < 200 || result.status >= 400) throw new Error(`Mediador HTTP ${result.status}`)
@@ -113,11 +116,14 @@ async function validate(page, solicitation, patronal, laboral, directUrl = null)
   const text = await page.locator('body').innerText()
   const normalized = clean(text)
   if (!normalized.includes(clean(patronal)) || !normalized.includes(clean(laboral))) return null
+  const dataRegistro = extractTextValue(text, /DATA DE REGISTRO NO MTE:\s*([^\n]+)/i)
+  const anoRegistro = dataRegistro.match(/\b(20\d{2})\b/)?.[1]
+  if (anoRegistro !== String(anoAtual())) return null
   return {
     url,
     registro: extractTextValue(text, /N[ÚU]MERO DE REGISTRO NO MTE:\s*([^\n]+)/i),
     solicitacao: extractTextValue(text, /N[ÚU]MERO DA SOLICITA[CÇ][AÃ]O:\s*([^\n]+)/i) || solicitation,
-    dataRegistro: extractTextValue(text, /DATA DE REGISTRO NO MTE:\s*([^\n]+)/i),
+    dataRegistro,
     vigencia: extractTextValue(text, /per[íi]odo de\s*([^\n]+)/i),
     titulo: text.match(/^(Acordo Coletivo[^\n]*|Conven[cç][aã]o Coletiva[^\n]*|Termo Aditivo[^\n]*)/im)?.[1]?.trim() || 'Instrumento coletivo',
     validatedAt: new Date().toISOString()
@@ -178,12 +184,13 @@ async function main() {
         const unique = [...new Map(instrumentos.map(x => [x.registro || x.solicitacao || x.url, x])).values()]
         results.push({
           id, patronal, laboral, status: 'CONSULTADO',
-          metodo: 'Consulta oficial do Mediador + extração estruturada dos resultados + validação dos dois CNPJs no documento oficial',
+          metodo: `Consulta oficial do Mediador — registros de ${inicioAno()} até ${hoje()} + extração estruturada dos resultados + validação dos dois CNPJs no documento oficial`,
+          filtroRegistro: { de: inicioAno(), ate: hoje(), ano: anoAtual() },
           instrumentos: unique,
           candidatosVerificados: discovery.solicitations.length,
           totalEncontradoNaConsulta: discovery.totalFound,
           consultasConfirmadas: discovery.successfulQueries,
-          observacao: unique.length === 0 && discovery.solicitations.length > 0 ? 'Consulta oficial retornou candidatos, mas nenhum documento foi validado para os dois CNPJs. Não interpretar como ausência de novidade.' : undefined,
+          observacao: unique.length === 0 && discovery.solicitations.length > 0 ? 'Consulta oficial retornou candidatos, mas nenhum documento foi validado para os dois CNPJs no ano corrente. Não interpretar como ausência de novidade.' : undefined,
           errosValidacao: validationErrors.length ? validationErrors.slice(0, 20) : undefined,
           consultedAt: new Date().toISOString()
         })
