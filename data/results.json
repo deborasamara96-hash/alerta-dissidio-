@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-04T19:22:41.958Z",
+  "generatedAt": "2026-09-05T10:20:15.433Z",
   "source": "Mediador/MTE",
   "overallStatus": "CONSULTADO",
   "pairs": [
@@ -8,20 +8,20 @@
       "patronal": "93.246.940/0001-46",
       "laboral": "89.069.835/0001-01",
       "status": "CONSULTADO",
-      "metodo": "Consulta oficial do Mediador — prioridade para registros de 01/01/2026 até 04/09/2026 com vigência ativa; fallback histórico para o último instrumento vigente quando necessário; validação dos dois CNPJs no documento oficial",
+      "metodo": "Consulta oficial do Mediador — prioridade para registros de 01/01/2026 até 05/09/2026 com vigência ativa; fallback histórico para o último instrumento vigente quando necessário; validação dos dois CNPJs no documento oficial",
       "filtroRegistro": {
         "de": "01/01/2026",
-        "ate": "04/09/2026",
+        "ate": "05/09/2026",
         "ano": 2026
       },
       "filtroVigencia": {
         "somenteVigentes": true,
-        "referencia": "04/09/2026"
+        "referencia": "05/09/2026"
       },
       "fallbackHistorico": {
         "utilizado": false,
         "registroConsultadoDe": "01/01/2000",
-        "registroConsultadoAte": "04/09/2026",
+        "registroConsultadoAte": "05/09/2026",
         "vigenciaConsultadaDe": "01/01/2000",
         "vigenciaConsultadaAte": "31/12/2099"
       },
@@ -34,27 +34,27 @@
       "consultasConfirmadasFallback": 2,
       "totalEncontradoNaConsultaFallback": 18,
       "observacao": "Nenhum instrumento vigente foi validado para os dois CNPJs. A consulta oficial não deve ser interpretada como ausência de novidade.",
-      "consultedAt": "2026-09-04T19:17:41.956Z"
+      "consultedAt": "2026-09-05T10:15:35.270Z"
     },
     {
       "id": "02",
       "patronal": "18.006.733/0001-07",
       "laboral": "15.635.336/0001-06",
       "status": "CONSULTADO",
-      "metodo": "Consulta oficial do Mediador — prioridade para registros de 01/01/2026 até 04/09/2026 com vigência ativa; fallback histórico para o último instrumento vigente quando necessário; validação dos dois CNPJs no documento oficial",
+      "metodo": "Consulta oficial do Mediador — prioridade para registros de 01/01/2026 até 05/09/2026 com vigência ativa; fallback histórico para o último instrumento vigente quando necessário; validação dos dois CNPJs no documento oficial",
       "filtroRegistro": {
         "de": "01/01/2026",
-        "ate": "04/09/2026",
+        "ate": "05/09/2026",
         "ano": 2026
       },
       "filtroVigencia": {
         "somenteVigentes": true,
-        "referencia": "04/09/2026"
+        "referencia": "05/09/2026"
       },
       "fallbackHistorico": {
         "utilizado": false,
         "registroConsultadoDe": "01/01/2000",
-        "registroConsultadoAte": "04/09/2026",
+        "registroConsultadoAte": "05/09/2026",
         "vigenciaConsultadaDe": "01/01/2000",
         "vigenciaConsultadaAte": "31/12/2099"
       },
@@ -69,7 +69,7 @@
           "vigencia_status": "VIGENTE",
           "anoRegistro": "2026",
           "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2026/2026",
-          "validatedAt": "2026-09-04T19:17:48.284Z"
+          "validatedAt": "2026-09-05T10:15:41.567Z"
         }
       ],
       "candidatosVerificados": 1,
@@ -78,27 +78,27 @@
       "candidatosVerificadosFallback": 0,
       "consultasConfirmadasFallback": 0,
       "totalEncontradoNaConsultaFallback": 0,
-      "consultedAt": "2026-09-04T19:17:48.285Z"
+      "consultedAt": "2026-09-05T10:15:41.567Z"
     },
     {
       "id": "03",
       "patronal": "91.100.339/0001-15",
       "laboral": "96.757.612/0001-00",
       "status": "CONSULTADO",
-      "metodo": "Consulta oficial do Mediador — prioridade para registros de 01/01/2026 até 04/09/2026 com vigência ativa; fallback histórico para o último instrumento vigente quando necessário; validação dos dois CNPJs no documento oficial",
+      "metodo": "Consulta oficial do Mediador — prioridade para registros de 01/01/2026 até 05/09/2026 com vigência ativa; fallback histórico para o último instrumento vigente quando necessário; validação dos dois CNPJs no documento oficial",
       "filtroRegistro": {
         "de": "01/01/2026",
-        "ate": "04/09/2026",
+        "ate": "05/09/2026",
         "ano": 2026
       },
       "filtroVigencia": {
         "somenteVigentes": true,
-        "referencia": "04/09/2026"
+        "referencia": "05/09/2026"
       },
       "fallbackHistorico": {
         "utilizado": false,
         "registroConsultadoDe": "01/01/2000",
-        "registroConsultadoAte": "04/09/2026",
+        "registroConsultadoAte": "05/09/2026",
         "vigenciaConsultadaDe": "01/01/2000",
         "vigenciaConsultadaAte": "31/12/2099"
       },
@@ -113,7 +113,7 @@
           "vigencia_status": "VIGENTE",
           "anoRegistro": "2026",
           "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2026/2027",
-          "validatedAt": "2026-09-04T19:17:58.151Z"
+          "validatedAt": "2026-09-05T10:15:51.252Z"
         },
         {
           "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR025640%2F2026",
@@ -124,7 +124,7 @@
           "vigencia_status": "VIGENTE",
           "anoRegistro": "2026",
           "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2026/2027",
-          "validatedAt": "2026-09-04T19:17:59.408Z"
+          "validatedAt": "2026-09-05T10:15:52.508Z"
         },
         {
           "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR034197%2F2026",
@@ -135,7 +135,7 @@
           "vigencia_status": "VIGENTE",
           "anoRegistro": "2026",
           "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2026/2027",
-          "validatedAt": "2026-09-04T19:18:00.912Z"
+          "validatedAt": "2026-09-05T10:15:53.930Z"
         },
         {
           "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR034195%2F2026",
@@ -146,7 +146,7 @@
           "vigencia_status": "VIGENTE",
           "anoRegistro": "2026",
           "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2026/2027",
-          "validatedAt": "2026-09-04T19:18:03.938Z"
+          "validatedAt": "2026-09-05T10:15:55.340Z"
         }
       ],
       "candidatosVerificados": 12,
@@ -155,27 +155,27 @@
       "candidatosVerificadosFallback": 0,
       "consultasConfirmadasFallback": 0,
       "totalEncontradoNaConsultaFallback": 0,
-      "consultedAt": "2026-09-04T19:18:10.807Z"
+      "consultedAt": "2026-09-05T10:16:02.093Z"
     },
     {
       "id": "04",
       "patronal": "89.138.168/0001-71",
       "laboral": "91.345.231/0001-92",
       "status": "CONSULTADO",
-      "metodo": "Consulta oficial do Mediador — prioridade para registros de 01/01/2026 até 04/09/2026 com vigência ativa; fallback histórico para o último instrumento vigente quando necessário; validação dos dois CNPJs no documento oficial",
+      "metodo": "Consulta oficial do Mediador — prioridade para registros de 01/01/2026 até 05/09/2026 com vigência ativa; fallback histórico para o último instrumento vigente quando necessário; validação dos dois CNPJs no documento oficial",
       "filtroRegistro": {
         "de": "01/01/2026",
-        "ate": "04/09/2026",
+        "ate": "05/09/2026",
         "ano": 2026
       },
       "filtroVigencia": {
         "somenteVigentes": true,
-        "referencia": "04/09/2026"
+        "referencia": "05/09/2026"
       },
       "fallbackHistorico": {
         "utilizado": false,
         "registroConsultadoDe": "01/01/2000",
-        "registroConsultadoAte": "04/09/2026",
+        "registroConsultadoAte": "05/09/2026",
         "vigenciaConsultadaDe": "01/01/2000",
         "vigenciaConsultadaAte": "31/12/2099"
       },
@@ -190,7 +190,7 @@
           "vigencia_status": "VIGENTE",
           "anoRegistro": "2026",
           "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2026/2027",
-          "validatedAt": "2026-09-04T19:18:18.870Z"
+          "validatedAt": "2026-09-05T10:16:09.484Z"
         }
       ],
       "candidatosVerificados": 11,
@@ -199,27 +199,27 @@
       "candidatosVerificadosFallback": 0,
       "consultasConfirmadasFallback": 0,
       "totalEncontradoNaConsultaFallback": 0,
-      "consultedAt": "2026-09-04T19:18:36.282Z"
+      "consultedAt": "2026-09-05T10:16:21.589Z"
     },
     {
       "id": "05",
       "patronal": "88.368.592/0001-40",
       "laboral": "97.202.535/0001-87",
       "status": "CONSULTADO",
-      "metodo": "Consulta oficial do Mediador — prioridade para registros de 01/01/2026 até 04/09/2026 com vigência ativa; fallback histórico para o último instrumento vigente quando necessário; validação dos dois CNPJs no documento oficial",
+      "metodo": "Consulta oficial do Mediador — prioridade para registros de 01/01/2026 até 05/09/2026 com vigência ativa; fallback histórico para o último instrumento vigente quando necessário; validação dos dois CNPJs no documento oficial",
       "filtroRegistro": {
         "de": "01/01/2026",
-        "ate": "04/09/2026",
+        "ate": "05/09/2026",
         "ano": 2026
       },
       "filtroVigencia": {
         "somenteVigentes": true,
-        "referencia": "04/09/2026"
+        "referencia": "05/09/2026"
       },
       "fallbackHistorico": {
         "utilizado": false,
         "registroConsultadoDe": "01/01/2000",
-        "registroConsultadoAte": "04/09/2026",
+        "registroConsultadoAte": "05/09/2026",
         "vigenciaConsultadaDe": "01/01/2000",
         "vigenciaConsultadaAte": "31/12/2099"
       },
@@ -234,7 +234,7 @@
           "vigencia_status": "VIGENTE",
           "anoRegistro": "2026",
           "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2026/2026",
-          "validatedAt": "2026-09-04T19:18:45.756Z"
+          "validatedAt": "2026-09-05T10:16:30.687Z"
         }
       ],
       "candidatosVerificados": 14,
@@ -243,27 +243,27 @@
       "candidatosVerificadosFallback": 0,
       "consultasConfirmadasFallback": 0,
       "totalEncontradoNaConsultaFallback": 0,
-      "consultedAt": "2026-09-04T19:19:01.633Z"
+      "consultedAt": "2026-09-05T10:16:46.316Z"
     },
     {
       "id": "06",
       "patronal": "88.368.592/0001-40",
       "laboral": "96.757.737/0001-22",
       "status": "CONSULTADO",
-      "metodo": "Consulta oficial do Mediador — prioridade para registros de 01/01/2026 até 04/09/2026 com vigência ativa; fallback histórico para o último instrumento vigente quando necessário; validação dos dois CNPJs no documento oficial",
+      "metodo": "Consulta oficial do Mediador — prioridade para registros de 01/01/2026 até 05/09/2026 com vigência ativa; fallback histórico para o último instrumento vigente quando necessário; validação dos dois CNPJs no documento oficial",
       "filtroRegistro": {
         "de": "01/01/2026",
-        "ate": "04/09/2026",
+        "ate": "05/09/2026",
         "ano": 2026
       },
       "filtroVigencia": {
         "somenteVigentes": true,
-        "referencia": "04/09/2026"
+        "referencia": "05/09/2026"
       },
       "fallbackHistorico": {
         "utilizado": false,
         "registroConsultadoDe": "01/01/2000",
-        "registroConsultadoAte": "04/09/2026",
+        "registroConsultadoAte": "05/09/2026",
         "vigenciaConsultadaDe": "01/01/2000",
         "vigenciaConsultadaAte": "31/12/2099"
       },
@@ -278,7 +278,7 @@
           "vigencia_status": "VIGENTE",
           "anoRegistro": "2026",
           "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2026/2026",
-          "validatedAt": "2026-09-04T19:19:09.491Z"
+          "validatedAt": "2026-09-05T10:16:53.722Z"
         }
       ],
       "candidatosVerificados": 6,
@@ -287,27 +287,27 @@
       "candidatosVerificadosFallback": 0,
       "consultasConfirmadasFallback": 0,
       "totalEncontradoNaConsultaFallback": 0,
-      "consultedAt": "2026-09-04T19:19:15.183Z"
+      "consultedAt": "2026-09-05T10:16:59.672Z"
     },
     {
       "id": "07",
       "patronal": "89.138.168/0001-71",
       "laboral": "91.343.194/0001-83",
       "status": "CONSULTADO",
-      "metodo": "Consulta oficial do Mediador — prioridade para registros de 01/01/2026 até 04/09/2026 com vigência ativa; fallback histórico para o último instrumento vigente quando necessário; validação dos dois CNPJs no documento oficial",
+      "metodo": "Consulta oficial do Mediador — prioridade para registros de 01/01/2026 até 05/09/2026 com vigência ativa; fallback histórico para o último instrumento vigente quando necessário; validação dos dois CNPJs no documento oficial",
       "filtroRegistro": {
         "de": "01/01/2026",
-        "ate": "04/09/2026",
+        "ate": "05/09/2026",
         "ano": 2026
       },
       "filtroVigencia": {
         "somenteVigentes": true,
-        "referencia": "04/09/2026"
+        "referencia": "05/09/2026"
       },
       "fallbackHistorico": {
         "utilizado": false,
         "registroConsultadoDe": "01/01/2000",
-        "registroConsultadoAte": "04/09/2026",
+        "registroConsultadoAte": "05/09/2026",
         "vigenciaConsultadaDe": "01/01/2000",
         "vigenciaConsultadaAte": "31/12/2099"
       },
@@ -320,27 +320,27 @@
       "consultasConfirmadasFallback": 2,
       "totalEncontradoNaConsultaFallback": 20,
       "observacao": "Nenhum instrumento vigente foi validado para os dois CNPJs. A consulta oficial não deve ser interpretada como ausência de novidade.",
-      "consultedAt": "2026-09-04T19:20:06.623Z"
+      "consultedAt": "2026-09-05T10:17:47.396Z"
     },
     {
       "id": "08",
       "patronal": "92.962.919/0001-84",
       "laboral": "92.931.492/0001-57",
       "status": "CONSULTADO",
-      "metodo": "Consulta oficial do Mediador — prioridade para registros de 01/01/2026 até 04/09/2026 com vigência ativa; fallback histórico para o último instrumento vigente quando necessário; validação dos dois CNPJs no documento oficial",
+      "metodo": "Consulta oficial do Mediador — prioridade para registros de 01/01/2026 até 05/09/2026 com vigência ativa; fallback histórico para o último instrumento vigente quando necessário; validação dos dois CNPJs no documento oficial",
       "filtroRegistro": {
         "de": "01/01/2026",
-        "ate": "04/09/2026",
+        "ate": "05/09/2026",
         "ano": 2026
       },
       "filtroVigencia": {
         "somenteVigentes": true,
-        "referencia": "04/09/2026"
+        "referencia": "05/09/2026"
       },
       "fallbackHistorico": {
         "utilizado": false,
         "registroConsultadoDe": "01/01/2000",
-        "registroConsultadoAte": "04/09/2026",
+        "registroConsultadoAte": "05/09/2026",
         "vigenciaConsultadaDe": "01/01/2000",
         "vigenciaConsultadaAte": "31/12/2099"
       },
@@ -355,7 +355,7 @@
           "vigencia_status": "VIGENTE",
           "anoRegistro": "2026",
           "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2026/2027",
-          "validatedAt": "2026-09-04T19:20:12.876Z"
+          "validatedAt": "2026-09-05T10:17:53.696Z"
         }
       ],
       "candidatosVerificados": 2,
@@ -364,27 +364,27 @@
       "candidatosVerificadosFallback": 0,
       "consultasConfirmadasFallback": 0,
       "totalEncontradoNaConsultaFallback": 0,
-      "consultedAt": "2026-09-04T19:20:14.204Z"
+      "consultedAt": "2026-09-05T10:17:55.030Z"
     },
     {
       "id": "09",
       "patronal": "89.137.574/0001-10",
       "laboral": "93.074.185/0001-60",
       "status": "CONSULTADO",
-      "metodo": "Consulta oficial do Mediador — prioridade para registros de 01/01/2026 até 04/09/2026 com vigência ativa; fallback histórico para o último instrumento vigente quando necessário; validação dos dois CNPJs no documento oficial",
+      "metodo": "Consulta oficial do Mediador — prioridade para registros de 01/01/2026 até 05/09/2026 com vigência ativa; fallback histórico para o último instrumento vigente quando necessário; validação dos dois CNPJs no documento oficial",
       "filtroRegistro": {
         "de": "01/01/2026",
-        "ate": "04/09/2026",
+        "ate": "05/09/2026",
         "ano": 2026
       },
       "filtroVigencia": {
         "somenteVigentes": true,
-        "referencia": "04/09/2026"
+        "referencia": "05/09/2026"
       },
       "fallbackHistorico": {
         "utilizado": false,
         "registroConsultadoDe": "01/01/2000",
-        "registroConsultadoAte": "04/09/2026",
+        "registroConsultadoAte": "05/09/2026",
         "vigenciaConsultadaDe": "01/01/2000",
         "vigenciaConsultadaAte": "31/12/2099"
       },
@@ -399,7 +399,7 @@
           "vigencia_status": "VIGENTE",
           "anoRegistro": "2026",
           "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2026/2027",
-          "validatedAt": "2026-09-04T19:20:20.343Z"
+          "validatedAt": "2026-09-05T10:18:01.416Z"
         },
         {
           "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR027068%2F2026",
@@ -410,7 +410,7 @@
           "vigencia_status": "VIGENTE",
           "anoRegistro": "2026",
           "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2026/2027",
-          "validatedAt": "2026-09-04T19:20:21.723Z"
+          "validatedAt": "2026-09-05T10:18:02.734Z"
         },
         {
           "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR026388%2F2026",
@@ -421,7 +421,7 @@
           "vigencia_status": "VIGENTE",
           "anoRegistro": "2026",
           "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2026/2027",
-          "validatedAt": "2026-09-04T19:20:23.100Z"
+          "validatedAt": "2026-09-05T10:18:04.059Z"
         }
       ],
       "candidatosVerificados": 5,
@@ -430,27 +430,27 @@
       "candidatosVerificadosFallback": 0,
       "consultasConfirmadasFallback": 0,
       "totalEncontradoNaConsultaFallback": 0,
-      "consultedAt": "2026-09-04T19:20:25.771Z"
+      "consultedAt": "2026-09-05T10:18:06.622Z"
     },
     {
       "id": "10",
       "patronal": "96.755.145/0001-71",
       "laboral": "96.758.008/0001-90",
       "status": "CONSULTADO",
-      "metodo": "Consulta oficial do Mediador — prioridade para registros de 01/01/2026 até 04/09/2026 com vigência ativa; fallback histórico para o último instrumento vigente quando necessário; validação dos dois CNPJs no documento oficial",
+      "metodo": "Consulta oficial do Mediador — prioridade para registros de 01/01/2026 até 05/09/2026 com vigência ativa; fallback histórico para o último instrumento vigente quando necessário; validação dos dois CNPJs no documento oficial",
       "filtroRegistro": {
         "de": "01/01/2026",
-        "ate": "04/09/2026",
+        "ate": "05/09/2026",
         "ano": 2026
       },
       "filtroVigencia": {
         "somenteVigentes": true,
-        "referencia": "04/09/2026"
+        "referencia": "05/09/2026"
       },
       "fallbackHistorico": {
         "utilizado": false,
         "registroConsultadoDe": "01/01/2000",
-        "registroConsultadoAte": "04/09/2026",
+        "registroConsultadoAte": "05/09/2026",
         "vigenciaConsultadaDe": "01/01/2000",
         "vigenciaConsultadaAte": "31/12/2099"
       },
@@ -465,7 +465,7 @@
           "vigencia_status": "VIGENTE",
           "anoRegistro": "2026",
           "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2026/2027",
-          "validatedAt": "2026-09-04T19:20:45.871Z"
+          "validatedAt": "2026-09-05T10:18:25.793Z"
         }
       ],
       "candidatosVerificados": 12,
@@ -474,27 +474,27 @@
       "candidatosVerificadosFallback": 0,
       "consultasConfirmadasFallback": 0,
       "totalEncontradoNaConsultaFallback": 0,
-      "consultedAt": "2026-09-04T19:20:48.516Z"
+      "consultedAt": "2026-09-05T10:18:28.326Z"
     },
     {
       "id": "11",
       "patronal": "93.712.909/0001-53",
       "laboral": "93.074.383/0001-23",
       "status": "CONSULTADO",
-      "metodo": "Consulta oficial do Mediador — prioridade para registros de 01/01/2026 até 04/09/2026 com vigência ativa; fallback histórico para o último instrumento vigente quando necessário; validação dos dois CNPJs no documento oficial",
+      "metodo": "Consulta oficial do Mediador — prioridade para registros de 01/01/2026 até 05/09/2026 com vigência ativa; fallback histórico para o último instrumento vigente quando necessário; validação dos dois CNPJs no documento oficial",
       "filtroRegistro": {
         "de": "01/01/2026",
-        "ate": "04/09/2026",
+        "ate": "05/09/2026",
         "ano": 2026
       },
       "filtroVigencia": {
         "somenteVigentes": true,
-        "referencia": "04/09/2026"
+        "referencia": "05/09/2026"
       },
       "fallbackHistorico": {
         "utilizado": false,
         "registroConsultadoDe": "01/01/2000",
-        "registroConsultadoAte": "04/09/2026",
+        "registroConsultadoAte": "05/09/2026",
         "vigenciaConsultadaDe": "01/01/2000",
         "vigenciaConsultadaAte": "31/12/2099"
       },
@@ -507,27 +507,27 @@
       "consultasConfirmadasFallback": 2,
       "totalEncontradoNaConsultaFallback": 20,
       "observacao": "Nenhum instrumento vigente foi validado para os dois CNPJs. A consulta oficial não deve ser interpretada como ausência de novidade.",
-      "consultedAt": "2026-09-04T19:21:43.122Z"
+      "consultedAt": "2026-09-05T10:19:19.747Z"
     },
     {
       "id": "12",
       "patronal": "93.712.909/0001-53",
       "laboral": "96.758.040/0001-76",
       "status": "CONSULTADO",
-      "metodo": "Consulta oficial do Mediador — prioridade para registros de 01/01/2026 até 04/09/2026 com vigência ativa; fallback histórico para o último instrumento vigente quando necessário; validação dos dois CNPJs no documento oficial",
+      "metodo": "Consulta oficial do Mediador — prioridade para registros de 01/01/2026 até 05/09/2026 com vigência ativa; fallback histórico para o último instrumento vigente quando necessário; validação dos dois CNPJs no documento oficial",
       "filtroRegistro": {
         "de": "01/01/2026",
-        "ate": "04/09/2026",
+        "ate": "05/09/2026",
         "ano": 2026
       },
       "filtroVigencia": {
         "somenteVigentes": true,
-        "referencia": "04/09/2026"
+        "referencia": "05/09/2026"
       },
       "fallbackHistorico": {
         "utilizado": false,
         "registroConsultadoDe": "01/01/2000",
-        "registroConsultadoAte": "04/09/2026",
+        "registroConsultadoAte": "05/09/2026",
         "vigenciaConsultadaDe": "01/01/2000",
         "vigenciaConsultadaAte": "31/12/2099"
       },
@@ -540,10 +540,554 @@
       "consultasConfirmadasFallback": 2,
       "totalEncontradoNaConsultaFallback": 20,
       "observacao": "Nenhum instrumento vigente foi validado para os dois CNPJs. A consulta oficial não deve ser interpretada como ausência de novidade.",
-      "consultedAt": "2026-09-04T19:22:41.919Z"
+      "consultedAt": "2026-09-05T10:20:15.400Z"
     }
   ],
   "history": [
+    {
+      "at": "2026-09-05T10:20:15.433Z",
+      "pairs": [
+        {
+          "id": "01",
+          "patronal": "93.246.940/0001-46",
+          "laboral": "89.069.835/0001-01",
+          "status": "CONSULTADO",
+          "metodo": "Consulta oficial do Mediador — prioridade para registros de 01/01/2026 até 05/09/2026 com vigência ativa; fallback histórico para o último instrumento vigente quando necessário; validação dos dois CNPJs no documento oficial",
+          "filtroRegistro": {
+            "de": "01/01/2026",
+            "ate": "05/09/2026",
+            "ano": 2026
+          },
+          "filtroVigencia": {
+            "somenteVigentes": true,
+            "referencia": "05/09/2026"
+          },
+          "fallbackHistorico": {
+            "utilizado": false,
+            "registroConsultadoDe": "01/01/2000",
+            "registroConsultadoAte": "05/09/2026",
+            "vigenciaConsultadaDe": "01/01/2000",
+            "vigenciaConsultadaAte": "31/12/2099"
+          },
+          "origem": "ANO_CORRENTE",
+          "instrumentos": [],
+          "candidatosVerificados": 1,
+          "totalEncontradoNaConsulta": 1,
+          "consultasConfirmadas": 1,
+          "candidatosVerificadosFallback": 18,
+          "consultasConfirmadasFallback": 2,
+          "totalEncontradoNaConsultaFallback": 18,
+          "observacao": "Nenhum instrumento vigente foi validado para os dois CNPJs. A consulta oficial não deve ser interpretada como ausência de novidade.",
+          "consultedAt": "2026-09-05T10:15:35.270Z"
+        },
+        {
+          "id": "02",
+          "patronal": "18.006.733/0001-07",
+          "laboral": "15.635.336/0001-06",
+          "status": "CONSULTADO",
+          "metodo": "Consulta oficial do Mediador — prioridade para registros de 01/01/2026 até 05/09/2026 com vigência ativa; fallback histórico para o último instrumento vigente quando necessário; validação dos dois CNPJs no documento oficial",
+          "filtroRegistro": {
+            "de": "01/01/2026",
+            "ate": "05/09/2026",
+            "ano": 2026
+          },
+          "filtroVigencia": {
+            "somenteVigentes": true,
+            "referencia": "05/09/2026"
+          },
+          "fallbackHistorico": {
+            "utilizado": false,
+            "registroConsultadoDe": "01/01/2000",
+            "registroConsultadoAte": "05/09/2026",
+            "vigenciaConsultadaDe": "01/01/2000",
+            "vigenciaConsultadaAte": "31/12/2099"
+          },
+          "origem": "ANO_CORRENTE",
+          "instrumentos": [
+            {
+              "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR016935%2F2026",
+              "registro": "RS000868/2026",
+              "solicitacao": "MR016935/2026",
+              "dataRegistro": "16/04/2026",
+              "vigencia": "As partes fixam a vigência da presente Convenção Coletiva de Trabalho no período de 01º de janeiro de 2026 a 31 de dezembro de 2026 e a data-base da categoria em 01º de janeiro.",
+              "vigencia_status": "VIGENTE",
+              "anoRegistro": "2026",
+              "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2026/2026",
+              "validatedAt": "2026-09-05T10:15:41.567Z"
+            }
+          ],
+          "candidatosVerificados": 1,
+          "totalEncontradoNaConsulta": 2,
+          "consultasConfirmadas": 2,
+          "candidatosVerificadosFallback": 0,
+          "consultasConfirmadasFallback": 0,
+          "totalEncontradoNaConsultaFallback": 0,
+          "consultedAt": "2026-09-05T10:15:41.567Z"
+        },
+        {
+          "id": "03",
+          "patronal": "91.100.339/0001-15",
+          "laboral": "96.757.612/0001-00",
+          "status": "CONSULTADO",
+          "metodo": "Consulta oficial do Mediador — prioridade para registros de 01/01/2026 até 05/09/2026 com vigência ativa; fallback histórico para o último instrumento vigente quando necessário; validação dos dois CNPJs no documento oficial",
+          "filtroRegistro": {
+            "de": "01/01/2026",
+            "ate": "05/09/2026",
+            "ano": 2026
+          },
+          "filtroVigencia": {
+            "somenteVigentes": true,
+            "referencia": "05/09/2026"
+          },
+          "fallbackHistorico": {
+            "utilizado": false,
+            "registroConsultadoDe": "01/01/2000",
+            "registroConsultadoAte": "05/09/2026",
+            "vigenciaConsultadaDe": "01/01/2000",
+            "vigenciaConsultadaAte": "31/12/2099"
+          },
+          "origem": "ANO_CORRENTE",
+          "instrumentos": [
+            {
+              "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR025659%2F2026",
+              "registro": "RS001686/2026",
+              "solicitacao": "MR025659/2026",
+              "dataRegistro": "12/06/2026",
+              "vigencia": "As partes fixam a vigência da presente Convenção Coletiva de Trabalho no período de 01º de abril de 2026 a 31 de março de 2027 e a data-base da categoria em 01º de abril.",
+              "vigencia_status": "VIGENTE",
+              "anoRegistro": "2026",
+              "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2026/2027",
+              "validatedAt": "2026-09-05T10:15:51.252Z"
+            },
+            {
+              "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR025640%2F2026",
+              "registro": "RS001687/2026",
+              "solicitacao": "MR025640/2026",
+              "dataRegistro": "12/06/2026",
+              "vigencia": "As partes fixam a vigência da presente Convenção Coletiva de Trabalho no período de 01º de abril de 2026 a 31 de março de 2027 e a data-base da categoria em 01º de abril.",
+              "vigencia_status": "VIGENTE",
+              "anoRegistro": "2026",
+              "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2026/2027",
+              "validatedAt": "2026-09-05T10:15:52.508Z"
+            },
+            {
+              "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR034197%2F2026",
+              "registro": "RS001701/2026",
+              "solicitacao": "MR034197/2026",
+              "dataRegistro": "12/06/2026",
+              "vigencia": "As partes fixam a vigência da presente Convenção Coletiva de Trabalho no período de 01º de abril de 2026 a 31 de março de 2027 e a data-base da categoria em 01º de abril.",
+              "vigencia_status": "VIGENTE",
+              "anoRegistro": "2026",
+              "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2026/2027",
+              "validatedAt": "2026-09-05T10:15:53.930Z"
+            },
+            {
+              "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR034195%2F2026",
+              "registro": "RS001702/2026",
+              "solicitacao": "MR034195/2026",
+              "dataRegistro": "12/06/2026",
+              "vigencia": "As partes fixam a vigência da presente Convenção Coletiva de Trabalho no período de 01º de abril de 2026 a 31 de março de 2027 e a data-base da categoria em 01º de abril.",
+              "vigencia_status": "VIGENTE",
+              "anoRegistro": "2026",
+              "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2026/2027",
+              "validatedAt": "2026-09-05T10:15:55.340Z"
+            }
+          ],
+          "candidatosVerificados": 12,
+          "totalEncontradoNaConsulta": 17,
+          "consultasConfirmadas": 2,
+          "candidatosVerificadosFallback": 0,
+          "consultasConfirmadasFallback": 0,
+          "totalEncontradoNaConsultaFallback": 0,
+          "consultedAt": "2026-09-05T10:16:02.093Z"
+        },
+        {
+          "id": "04",
+          "patronal": "89.138.168/0001-71",
+          "laboral": "91.345.231/0001-92",
+          "status": "CONSULTADO",
+          "metodo": "Consulta oficial do Mediador — prioridade para registros de 01/01/2026 até 05/09/2026 com vigência ativa; fallback histórico para o último instrumento vigente quando necessário; validação dos dois CNPJs no documento oficial",
+          "filtroRegistro": {
+            "de": "01/01/2026",
+            "ate": "05/09/2026",
+            "ano": 2026
+          },
+          "filtroVigencia": {
+            "somenteVigentes": true,
+            "referencia": "05/09/2026"
+          },
+          "fallbackHistorico": {
+            "utilizado": false,
+            "registroConsultadoDe": "01/01/2000",
+            "registroConsultadoAte": "05/09/2026",
+            "vigenciaConsultadaDe": "01/01/2000",
+            "vigenciaConsultadaAte": "31/12/2099"
+          },
+          "origem": "ANO_CORRENTE",
+          "instrumentos": [
+            {
+              "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR044845%2F2026",
+              "registro": "RS002860/2026",
+              "solicitacao": "MR044845/2026",
+              "dataRegistro": "17/08/2026",
+              "vigencia": "As partes fixam a vigência da presente Convenção Coletiva de Trabalho no período de 01º de maio de 2026 a 30 de abril de 2027 e a data-base da categoria em 01º de maio.",
+              "vigencia_status": "VIGENTE",
+              "anoRegistro": "2026",
+              "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2026/2027",
+              "validatedAt": "2026-09-05T10:16:09.484Z"
+            }
+          ],
+          "candidatosVerificados": 11,
+          "totalEncontradoNaConsulta": 12,
+          "consultasConfirmadas": 2,
+          "candidatosVerificadosFallback": 0,
+          "consultasConfirmadasFallback": 0,
+          "totalEncontradoNaConsultaFallback": 0,
+          "consultedAt": "2026-09-05T10:16:21.589Z"
+        },
+        {
+          "id": "05",
+          "patronal": "88.368.592/0001-40",
+          "laboral": "97.202.535/0001-87",
+          "status": "CONSULTADO",
+          "metodo": "Consulta oficial do Mediador — prioridade para registros de 01/01/2026 até 05/09/2026 com vigência ativa; fallback histórico para o último instrumento vigente quando necessário; validação dos dois CNPJs no documento oficial",
+          "filtroRegistro": {
+            "de": "01/01/2026",
+            "ate": "05/09/2026",
+            "ano": 2026
+          },
+          "filtroVigencia": {
+            "somenteVigentes": true,
+            "referencia": "05/09/2026"
+          },
+          "fallbackHistorico": {
+            "utilizado": false,
+            "registroConsultadoDe": "01/01/2000",
+            "registroConsultadoAte": "05/09/2026",
+            "vigenciaConsultadaDe": "01/01/2000",
+            "vigenciaConsultadaAte": "31/12/2099"
+          },
+          "origem": "ANO_CORRENTE",
+          "instrumentos": [
+            {
+              "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR025132%2F2026",
+              "registro": "RS001202/2026",
+              "solicitacao": "MR025132/2026",
+              "dataRegistro": "19/05/2026",
+              "vigencia": "As partes fixam a vigência da presente Convenção Coletiva de Trabalho no período de 01º de janeiro de 2026 a 31 de dezembro de 2026 e a data-base da categoria em 01º de janeiro.",
+              "vigencia_status": "VIGENTE",
+              "anoRegistro": "2026",
+              "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2026/2026",
+              "validatedAt": "2026-09-05T10:16:30.687Z"
+            }
+          ],
+          "candidatosVerificados": 14,
+          "totalEncontradoNaConsulta": 16,
+          "consultasConfirmadas": 2,
+          "candidatosVerificadosFallback": 0,
+          "consultasConfirmadasFallback": 0,
+          "totalEncontradoNaConsultaFallback": 0,
+          "consultedAt": "2026-09-05T10:16:46.316Z"
+        },
+        {
+          "id": "06",
+          "patronal": "88.368.592/0001-40",
+          "laboral": "96.757.737/0001-22",
+          "status": "CONSULTADO",
+          "metodo": "Consulta oficial do Mediador — prioridade para registros de 01/01/2026 até 05/09/2026 com vigência ativa; fallback histórico para o último instrumento vigente quando necessário; validação dos dois CNPJs no documento oficial",
+          "filtroRegistro": {
+            "de": "01/01/2026",
+            "ate": "05/09/2026",
+            "ano": 2026
+          },
+          "filtroVigencia": {
+            "somenteVigentes": true,
+            "referencia": "05/09/2026"
+          },
+          "fallbackHistorico": {
+            "utilizado": false,
+            "registroConsultadoDe": "01/01/2000",
+            "registroConsultadoAte": "05/09/2026",
+            "vigenciaConsultadaDe": "01/01/2000",
+            "vigenciaConsultadaAte": "31/12/2099"
+          },
+          "origem": "ANO_CORRENTE",
+          "instrumentos": [
+            {
+              "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR001036%2F2026",
+              "registro": "RS000531/2026",
+              "solicitacao": "MR001036/2026",
+              "dataRegistro": "19/03/2026",
+              "vigencia": "As partes fixam a vigência da presente Convenção Coletiva de Trabalho no período de 01º de janeiro de 2026 a 31 de dezembro de 2026 e a data-base da categoria em 01º de janeiro.",
+              "vigencia_status": "VIGENTE",
+              "anoRegistro": "2026",
+              "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2026/2026",
+              "validatedAt": "2026-09-05T10:16:53.722Z"
+            }
+          ],
+          "candidatosVerificados": 6,
+          "totalEncontradoNaConsulta": 7,
+          "consultasConfirmadas": 2,
+          "candidatosVerificadosFallback": 0,
+          "consultasConfirmadasFallback": 0,
+          "totalEncontradoNaConsultaFallback": 0,
+          "consultedAt": "2026-09-05T10:16:59.672Z"
+        },
+        {
+          "id": "07",
+          "patronal": "89.138.168/0001-71",
+          "laboral": "91.343.194/0001-83",
+          "status": "CONSULTADO",
+          "metodo": "Consulta oficial do Mediador — prioridade para registros de 01/01/2026 até 05/09/2026 com vigência ativa; fallback histórico para o último instrumento vigente quando necessário; validação dos dois CNPJs no documento oficial",
+          "filtroRegistro": {
+            "de": "01/01/2026",
+            "ate": "05/09/2026",
+            "ano": 2026
+          },
+          "filtroVigencia": {
+            "somenteVigentes": true,
+            "referencia": "05/09/2026"
+          },
+          "fallbackHistorico": {
+            "utilizado": false,
+            "registroConsultadoDe": "01/01/2000",
+            "registroConsultadoAte": "05/09/2026",
+            "vigenciaConsultadaDe": "01/01/2000",
+            "vigenciaConsultadaAte": "31/12/2099"
+          },
+          "origem": "ANO_CORRENTE",
+          "instrumentos": [],
+          "candidatosVerificados": 7,
+          "totalEncontradoNaConsulta": 7,
+          "consultasConfirmadas": 2,
+          "candidatosVerificadosFallback": 20,
+          "consultasConfirmadasFallback": 2,
+          "totalEncontradoNaConsultaFallback": 20,
+          "observacao": "Nenhum instrumento vigente foi validado para os dois CNPJs. A consulta oficial não deve ser interpretada como ausência de novidade.",
+          "consultedAt": "2026-09-05T10:17:47.396Z"
+        },
+        {
+          "id": "08",
+          "patronal": "92.962.919/0001-84",
+          "laboral": "92.931.492/0001-57",
+          "status": "CONSULTADO",
+          "metodo": "Consulta oficial do Mediador — prioridade para registros de 01/01/2026 até 05/09/2026 com vigência ativa; fallback histórico para o último instrumento vigente quando necessário; validação dos dois CNPJs no documento oficial",
+          "filtroRegistro": {
+            "de": "01/01/2026",
+            "ate": "05/09/2026",
+            "ano": 2026
+          },
+          "filtroVigencia": {
+            "somenteVigentes": true,
+            "referencia": "05/09/2026"
+          },
+          "fallbackHistorico": {
+            "utilizado": false,
+            "registroConsultadoDe": "01/01/2000",
+            "registroConsultadoAte": "05/09/2026",
+            "vigenciaConsultadaDe": "01/01/2000",
+            "vigenciaConsultadaAte": "31/12/2099"
+          },
+          "origem": "ANO_CORRENTE",
+          "instrumentos": [
+            {
+              "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR043884%2F2026",
+              "registro": "RS002477/2026",
+              "solicitacao": "MR043884/2026",
+              "dataRegistro": "22/07/2026",
+              "vigencia": "As partes fixam a vigência da presente Convenção Coletiva de Trabalho no período de 01º de maio de 2026 a 30 de abril de 2027 e a data-base da categoria em 01º de maio.",
+              "vigencia_status": "VIGENTE",
+              "anoRegistro": "2026",
+              "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2026/2027",
+              "validatedAt": "2026-09-05T10:17:53.696Z"
+            }
+          ],
+          "candidatosVerificados": 2,
+          "totalEncontradoNaConsulta": 3,
+          "consultasConfirmadas": 2,
+          "candidatosVerificadosFallback": 0,
+          "consultasConfirmadasFallback": 0,
+          "totalEncontradoNaConsultaFallback": 0,
+          "consultedAt": "2026-09-05T10:17:55.030Z"
+        },
+        {
+          "id": "09",
+          "patronal": "89.137.574/0001-10",
+          "laboral": "93.074.185/0001-60",
+          "status": "CONSULTADO",
+          "metodo": "Consulta oficial do Mediador — prioridade para registros de 01/01/2026 até 05/09/2026 com vigência ativa; fallback histórico para o último instrumento vigente quando necessário; validação dos dois CNPJs no documento oficial",
+          "filtroRegistro": {
+            "de": "01/01/2026",
+            "ate": "05/09/2026",
+            "ano": 2026
+          },
+          "filtroVigencia": {
+            "somenteVigentes": true,
+            "referencia": "05/09/2026"
+          },
+          "fallbackHistorico": {
+            "utilizado": false,
+            "registroConsultadoDe": "01/01/2000",
+            "registroConsultadoAte": "05/09/2026",
+            "vigenciaConsultadaDe": "01/01/2000",
+            "vigenciaConsultadaAte": "31/12/2099"
+          },
+          "origem": "ANO_CORRENTE",
+          "instrumentos": [
+            {
+              "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR027053%2F2026",
+              "registro": "RS001980/2026",
+              "solicitacao": "MR027053/2026",
+              "dataRegistro": "26/06/2026",
+              "vigencia": "As partes fixam a vigência da presente Convenção Coletiva de Trabalho no período de 01º de abril de 2026 a 31 de março de 2027 e a data-base da categoria em 01º de abril.",
+              "vigencia_status": "VIGENTE",
+              "anoRegistro": "2026",
+              "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2026/2027",
+              "validatedAt": "2026-09-05T10:18:01.416Z"
+            },
+            {
+              "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR027068%2F2026",
+              "registro": "RS001981/2026",
+              "solicitacao": "MR027068/2026",
+              "dataRegistro": "26/06/2026",
+              "vigencia": "As partes fixam a vigência da presente Convenção Coletiva de Trabalho no período de 01º de abril de 2026 a 31 de março de 2027 e a data-base da categoria em 01º de abril.",
+              "vigencia_status": "VIGENTE",
+              "anoRegistro": "2026",
+              "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2026/2027",
+              "validatedAt": "2026-09-05T10:18:02.734Z"
+            },
+            {
+              "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR026388%2F2026",
+              "registro": "RS001984/2026",
+              "solicitacao": "MR026388/2026",
+              "dataRegistro": "26/06/2026",
+              "vigencia": "As partes fixam a vigência da presente Convenção Coletiva de Trabalho no período de 01º de abril de 2026 a 31 de março de 2027 e a data-base da categoria em 01º de abril.",
+              "vigencia_status": "VIGENTE",
+              "anoRegistro": "2026",
+              "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2026/2027",
+              "validatedAt": "2026-09-05T10:18:04.059Z"
+            }
+          ],
+          "candidatosVerificados": 5,
+          "totalEncontradoNaConsulta": 8,
+          "consultasConfirmadas": 2,
+          "candidatosVerificadosFallback": 0,
+          "consultasConfirmadasFallback": 0,
+          "totalEncontradoNaConsultaFallback": 0,
+          "consultedAt": "2026-09-05T10:18:06.622Z"
+        },
+        {
+          "id": "10",
+          "patronal": "96.755.145/0001-71",
+          "laboral": "96.758.008/0001-90",
+          "status": "CONSULTADO",
+          "metodo": "Consulta oficial do Mediador — prioridade para registros de 01/01/2026 até 05/09/2026 com vigência ativa; fallback histórico para o último instrumento vigente quando necessário; validação dos dois CNPJs no documento oficial",
+          "filtroRegistro": {
+            "de": "01/01/2026",
+            "ate": "05/09/2026",
+            "ano": 2026
+          },
+          "filtroVigencia": {
+            "somenteVigentes": true,
+            "referencia": "05/09/2026"
+          },
+          "fallbackHistorico": {
+            "utilizado": false,
+            "registroConsultadoDe": "01/01/2000",
+            "registroConsultadoAte": "05/09/2026",
+            "vigenciaConsultadaDe": "01/01/2000",
+            "vigenciaConsultadaAte": "31/12/2099"
+          },
+          "origem": "ANO_CORRENTE",
+          "instrumentos": [
+            {
+              "url": "https://mediador.trabalho.gov.br/sistemas/mediador/Resumo/ResumoVisualizar?NrSolicitacao=MR055486%2F2026",
+              "registro": "RS003220/2026",
+              "solicitacao": "MR055486/2026",
+              "dataRegistro": "01/09/2026",
+              "vigencia": "As partes fixam a vigência da presente Convenção Coletiva de Trabalho no período de 01º de julho de 2026 a 30 de junho de 2027 e a data-base da categoria em 01º de julho.",
+              "vigencia_status": "VIGENTE",
+              "anoRegistro": "2026",
+              "titulo": "CONVENÇÃO COLETIVA DE TRABALHO 2026/2027",
+              "validatedAt": "2026-09-05T10:18:25.793Z"
+            }
+          ],
+          "candidatosVerificados": 12,
+          "totalEncontradoNaConsulta": 13,
+          "consultasConfirmadas": 2,
+          "candidatosVerificadosFallback": 0,
+          "consultasConfirmadasFallback": 0,
+          "totalEncontradoNaConsultaFallback": 0,
+          "consultedAt": "2026-09-05T10:18:28.326Z"
+        },
+        {
+          "id": "11",
+          "patronal": "93.712.909/0001-53",
+          "laboral": "93.074.383/0001-23",
+          "status": "CONSULTADO",
+          "metodo": "Consulta oficial do Mediador — prioridade para registros de 01/01/2026 até 05/09/2026 com vigência ativa; fallback histórico para o último instrumento vigente quando necessário; validação dos dois CNPJs no documento oficial",
+          "filtroRegistro": {
+            "de": "01/01/2026",
+            "ate": "05/09/2026",
+            "ano": 2026
+          },
+          "filtroVigencia": {
+            "somenteVigentes": true,
+            "referencia": "05/09/2026"
+          },
+          "fallbackHistorico": {
+            "utilizado": false,
+            "registroConsultadoDe": "01/01/2000",
+            "registroConsultadoAte": "05/09/2026",
+            "vigenciaConsultadaDe": "01/01/2000",
+            "vigenciaConsultadaAte": "31/12/2099"
+          },
+          "origem": "ANO_CORRENTE",
+          "instrumentos": [],
+          "candidatosVerificados": 6,
+          "totalEncontradoNaConsulta": 6,
+          "consultasConfirmadas": 1,
+          "candidatosVerificadosFallback": 20,
+          "consultasConfirmadasFallback": 2,
+          "totalEncontradoNaConsultaFallback": 20,
+          "observacao": "Nenhum instrumento vigente foi validado para os dois CNPJs. A consulta oficial não deve ser interpretada como ausência de novidade.",
+          "consultedAt": "2026-09-05T10:19:19.747Z"
+        },
+        {
+          "id": "12",
+          "patronal": "93.712.909/0001-53",
+          "laboral": "96.758.040/0001-76",
+          "status": "CONSULTADO",
+          "metodo": "Consulta oficial do Mediador — prioridade para registros de 01/01/2026 até 05/09/2026 com vigência ativa; fallback histórico para o último instrumento vigente quando necessário; validação dos dois CNPJs no documento oficial",
+          "filtroRegistro": {
+            "de": "01/01/2026",
+            "ate": "05/09/2026",
+            "ano": 2026
+          },
+          "filtroVigencia": {
+            "somenteVigentes": true,
+            "referencia": "05/09/2026"
+          },
+          "fallbackHistorico": {
+            "utilizado": false,
+            "registroConsultadoDe": "01/01/2000",
+            "registroConsultadoAte": "05/09/2026",
+            "vigenciaConsultadaDe": "01/01/2000",
+            "vigenciaConsultadaAte": "31/12/2099"
+          },
+          "origem": "ANO_CORRENTE",
+          "instrumentos": [],
+          "candidatosVerificados": 10,
+          "totalEncontradoNaConsulta": 10,
+          "consultasConfirmadas": 1,
+          "candidatosVerificadosFallback": 20,
+          "consultasConfirmadasFallback": 2,
+          "totalEncontradoNaConsultaFallback": 20,
+          "observacao": "Nenhum instrumento vigente foi validado para os dois CNPJs. A consulta oficial não deve ser interpretada como ausência de novidade.",
+          "consultedAt": "2026-09-05T10:20:15.400Z"
+        }
+      ]
+    },
     {
       "at": "2026-09-04T19:22:41.958Z",
       "pairs": [
