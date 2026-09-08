@@ -31,13 +31,24 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install Playwright
+      - name: Instalar Playwright
         run: |
           npm install --no-save playwright@1.55.0
           npx playwright install --with-deps chromium
 
+      - name: Guardar resultado anterior
+        run: |
+          if [ -f data/results.json ]; then cp data/results.json /tmp/previous-results.json; else echo '{"pairs":[]}' > /tmp/previous-results.json; fi
+
       - name: Consultar Mediador
         run: node scripts/monitor-mediador.mjs
+
+      - name: Enviar alertas por e-mail
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          ALERTA_FROM_EMAIL: ${{ secrets.ALERTA_FROM_EMAIL }}
+          ALERTA_EMAILS: ${{ secrets.ALERTA_EMAILS }}
+        run: node scripts/send-email-alerts.mjs /tmp/previous-results.json
 
       - name: Publicar resultado do teste
         uses: actions/upload-artifact@v4
